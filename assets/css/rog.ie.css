@@ -257,6 +257,8 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 100;
+  text-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -281,9 +283,7 @@ nav {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-  z-index: 100;
-  text-align: center; }
+  -ms-flex-pack: center; }
   nav .contact-me {
     position: fixed;
     right: 20px;
@@ -349,9 +349,9 @@ nav .identity {
   margin: 0;
   padding: 0;
   margin: 0;
-  -webkit-perspective: 300px;
-  -moz-perspective: 300px;
-  perspective: 300px; }
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px; }
   nav .identity > a {
     width: 300px;
     height: 216px;
@@ -364,9 +364,6 @@ nav .identity {
     position: relative;
     z-index: 1;
     cursor: pointer;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
-    perspective: 500px;
     -webkit-animation: 1.25s band ease-in-out;
     -moz-animation: 1.25s band ease-in-out;
     animation: 1.25s band ease-in-out; }
@@ -387,22 +384,22 @@ nav .identity {
       -webkit-filter: url(#logo-shadow);
       filter: url(#logo-shadow);
       opacity: 0.8;
-      -webkit-transform: translateZ(-40px) translateY(20px);
-      -moz-transform: translateZ(-40px) translateY(20px);
-      -ms-transform: translateZ(-40px) translateY(20px);
-      -o-transform: translateZ(-40px) translateY(20px);
-      transform: translateZ(-40px) translateY(20px); }
+      -webkit-transform: translateZ(-40px) translateY(10px);
+      -moz-transform: translateZ(-40px) translateY(10px);
+      -ms-transform: translateZ(-40px) translateY(10px);
+      -o-transform: translateZ(-40px) translateY(10px);
+      transform: translateZ(-40px) translateY(10px); }
     nav .identity > a i.graphic {
       z-index: 1;
       background: url(../img/rog.ie.svg) center center no-repeat;
       background-size: 270px 194px; }
     nav .identity > a:active i.shadow {
       opacity: 0.6;
-      -webkit-transform: translateZ(-40px) translateY(30px) !important;
-      -moz-transform: translateZ(-40px) translateY(30px) !important;
-      -ms-transform: translateZ(-40px) translateY(30px) !important;
-      -o-transform: translateZ(-40px) translateY(30px) !important;
-      transform: translateZ(-40px) translateY(30px) !important; }
+      -webkit-transform: translateZ(-40px) translateY(20px) !important;
+      -moz-transform: translateZ(-40px) translateY(20px) !important;
+      -ms-transform: translateZ(-40px) translateY(20px) !important;
+      -o-transform: translateZ(-40px) translateY(20px) !important;
+      transform: translateZ(-40px) translateY(20px) !important; }
     nav .identity > a:active i.graphic {
       -webkit-transform: translateY(20px) !important;
       -moz-transform: translateY(20px) !important;
@@ -727,7 +724,6 @@ footer {
   .view > * {
     list-style: none;
     margin: 0;
-    display: inline-block;
     width: auto;
     position: relative;
     overflow: visible;
@@ -736,14 +732,17 @@ footer {
     opacity: 0;
     font-size: 1rem;
     white-space: normal;
+    display: none;
     -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
     .view > *.next, .view > *.previous {
-      cursor: pointer; }
+      cursor: pointer;
+      display: inline-block; }
     .view > *.current {
       opacity: 1;
       z-index: 1;
+      display: inline-block;
       -webkit-transform: translateX(15vw);
       -moz-transform: translateX(15vw);
       -ms-transform: translateX(15vw);

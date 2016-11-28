@@ -8,7 +8,6 @@
   .view > * {
     list-style: none;
     margin: 0;
-    display: inline-block;
     width: auto;
     position: relative;
     overflow: visible;
@@ -17,14 +16,17 @@
     opacity: 0;
     font-size: 1rem;
     white-space: normal;
+    display: none;
     -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
     .view > *.next, .view > *.previous {
-      cursor: pointer; }
+      cursor: pointer;
+      display: inline-block; }
     .view > *.current {
       opacity: 1;
       z-index: 1;
+      display: inline-block;
       -webkit-transform: translateX(15vw);
       -moz-transform: translateX(15vw);
       -ms-transform: translateX(15vw);
