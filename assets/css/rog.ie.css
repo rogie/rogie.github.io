@@ -1394,17 +1394,23 @@ main :visited {
       -webkit-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
       -moz-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
       transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
-      -webkit-transform: translate(-50%, -0.5em);
-      -moz-transform: translate(-50%, -0.5em);
-      -ms-transform: translate(-50%, -0.5em);
-      -o-transform: translate(-50%, -0.5em);
-      transform: translate(-50%, -0.5em); }
+      -webkit-transform: translate(-50%, -0.6em);
+      -moz-transform: translate(-50%, -0.6em);
+      -ms-transform: translate(-50%, -0.6em);
+      -o-transform: translate(-50%, -0.6em);
+      transform: translate(-50%, -0.6em); }
     .click .connections > a:hover:before {
       opacity: 1;
       content: attr(title); }
     .connections > a.featured {
       width: 4em;
       height: 4em; }
+      .click .connections > a.featured:before {
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0); }
     .connections > a:hover {
       -webkit-transform: translateY(-10%);
       -moz-transform: translateY(-10%);
