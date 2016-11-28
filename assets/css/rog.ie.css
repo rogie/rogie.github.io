@@ -1370,14 +1370,41 @@ main :visited {
   .connections > a {
     width: 2em;
     height: 2em;
-    margin: 0 .5em;
+    margin: 0 .33em;
     display: inline-block;
     will-change: transform;
+    vertical-align: middle;
+    position: relative;
     -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: -moz-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     transition: transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     -webkit-filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3)); }
+    .click .connections > a:before {
+      position: absolute;
+      bottom: 100%;
+      white-space: nowrap;
+      display: inline-block;
+      padding: 0.25em 1em;
+      border-radius: 1em;
+      left: 50%;
+      font-size: 0.9rem;
+      opacity: 0;
+      color: white;
+      -webkit-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
+      -moz-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
+      transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
+      -webkit-transform: translate(-50%, -0.5em);
+      -moz-transform: translate(-50%, -0.5em);
+      -ms-transform: translate(-50%, -0.5em);
+      -o-transform: translate(-50%, -0.5em);
+      transform: translate(-50%, -0.5em); }
+    .click .connections > a:hover:before {
+      opacity: 1;
+      content: attr(title); }
+    .connections > a.featured {
+      width: 4em;
+      height: 4em; }
     .connections > a:hover {
       -webkit-transform: translateY(-10%);
       -moz-transform: translateY(-10%);
