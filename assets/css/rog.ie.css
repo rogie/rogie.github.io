@@ -129,6 +129,7 @@
   left: 0;
   top: 0;
   pointer-events: none;
+  will-change: opacity,transform,contents;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -351,7 +352,8 @@ nav .identity {
   margin: 0;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
-  perspective: 600px; }
+  perspective: 600px;
+  will-change: transform; }
   nav .identity > a {
     width: 300px;
     height: 216px;
@@ -364,6 +366,7 @@ nav .identity {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    will-change: transform;
     -webkit-animation: 1.25s band ease-in-out;
     -moz-animation: 1.25s band ease-in-out;
     animation: 1.25s band ease-in-out; }
@@ -384,6 +387,7 @@ nav .identity {
       -webkit-filter: url(#logo-shadow);
       filter: url(#logo-shadow);
       opacity: 0.8;
+      will-change: transform;
       -webkit-transform: translateZ(-40px) translateY(10px);
       -moz-transform: translateZ(-40px) translateY(10px);
       -ms-transform: translateZ(-40px) translateY(10px);
@@ -392,7 +396,8 @@ nav .identity {
     nav .identity > a i.graphic {
       z-index: 1;
       background: url(../img/rog.ie.svg) center center no-repeat;
-      background-size: 270px 194px; }
+      background-size: 270px 194px;
+      will-change: transform; }
     nav .identity > a:active i.shadow {
       opacity: 0.6;
       -webkit-transform: translateZ(-40px) translateY(20px) !important;
@@ -653,6 +658,7 @@ footer {
   cursor: pointer;
   display: inline-block;
   font-family: "haptik", Futura, Trebuchet MS, Arial, sans-serif;
+  will-change: contents,transform;
   -webkit-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   -moz-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1); }
@@ -733,35 +739,36 @@ footer {
     font-size: 1rem;
     white-space: normal;
     display: none;
+    will-change: transform;
     -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
-    .view > *.next, .view > *.previous {
-      cursor: pointer;
-      display: inline-block; }
-    .view > *.current {
-      opacity: 1;
-      z-index: 1;
-      display: inline-block;
-      -webkit-transform: translateX(15vw);
-      -moz-transform: translateX(15vw);
-      -ms-transform: translateX(15vw);
-      -o-transform: translateX(15vw);
-      transform: translateX(15vw); }
-    .view > *.next {
-      opacity: 1;
-      -webkit-transform: translateX(85vw);
-      -moz-transform: translateX(85vw);
-      -ms-transform: translateX(85vw);
-      -o-transform: translateX(85vw);
-      transform: translateX(85vw); }
-    .view > *.previous {
-      opacity: 1;
-      -webkit-transform: translateX(0vw);
-      -moz-transform: translateX(0vw);
-      -ms-transform: translateX(0vw);
-      -o-transform: translateX(0vw);
-      transform: translateX(0vw); }
+  .view > .next, .view > .previous {
+    cursor: pointer;
+    display: inline-block; }
+  .view > .current {
+    opacity: 1;
+    z-index: 1;
+    display: inline-block;
+    -webkit-transform: translateX(15vw);
+    -moz-transform: translateX(15vw);
+    -ms-transform: translateX(15vw);
+    -o-transform: translateX(15vw);
+    transform: translateX(15vw); }
+  .view > .next {
+    opacity: 1;
+    -webkit-transform: translateX(85vw);
+    -moz-transform: translateX(85vw);
+    -ms-transform: translateX(85vw);
+    -o-transform: translateX(85vw);
+    transform: translateX(85vw); }
+  .view > .previous {
+    opacity: 1;
+    -webkit-transform: translateX(0vw);
+    -moz-transform: translateX(0vw);
+    -ms-transform: translateX(0vw);
+    -o-transform: translateX(0vw);
+    transform: translateX(0vw); }
 
 .portfolio {
   padding: 0;
@@ -770,6 +777,7 @@ footer {
   padding: 80px 0; }
   .portfolio > div {
     opacity: 0;
+    will-change: opacity;
     -webkit-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
     transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1); }
@@ -784,6 +792,7 @@ footer {
     content: '';
     background: url(../img/arrow.svg) center center no-repeat;
     background-size: contain;
+    will-change: opacity;
     -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
@@ -870,6 +879,7 @@ footer {
       -o-transform-origin: 0 50%;
       transform-origin: 0 50%; }
     .portfolio .view > * figure, .portfolio .view > * img, .portfolio .view > * figcaption {
+      will-change: transform, opacity;
       -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
       -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
       transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
@@ -1140,8 +1150,8 @@ footer {
       font-size: 70vw !important;
       left: 15vw !important; }
       .portfolio .frame.mobile {
-        font-size: 40vw !important;
-        left: 30vw !important; }
+        font-size: 50vw !important;
+        left: 25vw !important; }
     .portfolio .view > .current figure {
       padding: 0; }
     .portfolio .view figure {
@@ -1149,14 +1159,59 @@ footer {
       display: block; }
       .portfolio .view figure img {
         width: 70vw !important;
-        min-width: 70vw !important; }
+        min-width: 70vw !important;
+        margin-bottom: 20px; }
       .portfolio .view figure figcaption {
         padding: 20px 0;
         text-align: left; }
+    .portfolio.other .view > .previous img {
+      -webkit-transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      -moz-transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      -ms-transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      -o-transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%; }
+    .portfolio.other .view > .next img {
+      -webkit-transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      -moz-transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      -ms-transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      -o-transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%; }
     .portfolio.mobile .view figure img {
-      width: 40vw !important;
-      min-width: 40vw !important;
-      margin-bottom: 40px; } }
+      width: 50vw !important;
+      min-width: 50vw !important;
+      margin-bottom: 80px; }
+    .portfolio.mobile .view > .previous img {
+      -webkit-transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      -moz-transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      -ms-transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      -o-transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%; }
+    .portfolio.mobile .view > .next img {
+      -webkit-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      -moz-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      -ms-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      -o-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%; } }
 .modal {
   position: fixed;
   top: 0;
@@ -1317,6 +1372,7 @@ main :visited {
     height: 2em;
     margin: 0 .5em;
     display: inline-block;
+    will-change: transform;
     -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: -moz-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     transition: transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);

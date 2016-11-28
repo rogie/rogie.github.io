@@ -98,7 +98,8 @@ nav .identity {
   margin: 0;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
-  perspective: 600px; }
+  perspective: 600px;
+  will-change: transform; }
   nav .identity > a {
     width: 300px;
     height: 216px;
@@ -111,6 +112,7 @@ nav .identity {
     position: relative;
     z-index: 1;
     cursor: pointer;
+    will-change: transform;
     -webkit-animation: 1.25s band ease-in-out;
     -moz-animation: 1.25s band ease-in-out;
     animation: 1.25s band ease-in-out; }
@@ -131,6 +133,7 @@ nav .identity {
       -webkit-filter: url(#logo-shadow);
       filter: url(#logo-shadow);
       opacity: 0.8;
+      will-change: transform;
       -webkit-transform: translateZ(-40px) translateY(10px);
       -moz-transform: translateZ(-40px) translateY(10px);
       -ms-transform: translateZ(-40px) translateY(10px);
@@ -139,7 +142,8 @@ nav .identity {
     nav .identity > a i.graphic {
       z-index: 1;
       background: url(../img/rog.ie.svg) center center no-repeat;
-      background-size: 270px 194px; }
+      background-size: 270px 194px;
+      will-change: transform; }
     nav .identity > a:active i.shadow {
       opacity: 0.6;
       -webkit-transform: translateZ(-40px) translateY(20px) !important;

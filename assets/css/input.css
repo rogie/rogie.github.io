@@ -11,6 +11,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: "haptik", Futura, Trebuchet MS, Arial, sans-serif;
+  will-change: contents,transform;
   -webkit-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   -moz-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1); }

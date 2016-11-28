@@ -12,6 +12,7 @@
   left: 0;
   top: 0;
   pointer-events: none;
+  will-change: opacity,transform,contents;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
