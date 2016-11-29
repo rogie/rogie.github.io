@@ -486,12 +486,14 @@ nav .identity {
   font-stretch: normal; }
 section,
 footer,
-header {
+header,
+main {
   position: relative;
   overflow: hidden; }
   section > svg,
   footer > svg,
-  header > svg {
+  header > svg,
+  main > svg {
     position: absolute;
     left: 50%;
     top: 0;
@@ -513,10 +515,33 @@ header {
     transition: all 0.3s ease-in-out; }
     section > svg path,
     footer > svg path,
-    header > svg path {
+    header > svg path,
+    main > svg path {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+
+main {
+  padding-top: 20vh; }
+  main:before {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    right: 0;
+    height: 60px;
+    text-align: center;
+    opacity: 1;
+    content: '';
+    background: url(../img/arrow.svg) center center no-repeat;
+    background-size: contain;
+    will-change: opacity;
+    -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
+    -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
+    transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
+  .nav-docking main > div {
+    opacity: 1; }
+  .nav-docking main:before {
+    opacity: 0; }
 
 header {
   min-height: 100%;
@@ -533,7 +558,7 @@ header {
       -webkit-animation: 30s top-wave linear infinite alternate;
       -moz-animation: 30s top-wave linear infinite alternate;
       animation: 30s top-wave linear infinite alternate; }
-  header ~ main section:first-child > svg path {
+  header ~ main > svg path {
     d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
     -webkit-animation: 30s bottom-wave linear infinite alternate;
     -moz-animation: 30s bottom-wave linear infinite alternate;
@@ -587,12 +612,6 @@ footer > svg path {
     d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
   to {
     d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
-.portfolio:nth-child(2n) .portfolio--header {
-  color: #00CAFF; }
-
-.portfolio:nth-child(3n) .portfolio--header {
-  color: #6122FF; }
-
 footer {
   text-align: center;
   padding: 40px 0;
@@ -775,31 +794,6 @@ footer {
   position: relative;
   margin: 0 auto;
   padding: 80px 0; }
-  .portfolio > div {
-    opacity: 0;
-    will-change: opacity;
-    -webkit-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
-    transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1); }
-  .portfolio:before {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    right: 0;
-    height: 60px;
-    text-align: center;
-    opacity: 1;
-    content: '';
-    background: url(../img/arrow.svg) center center no-repeat;
-    background-size: contain;
-    will-change: opacity;
-    -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
-  .nav-docking .portfolio > div {
-    opacity: 1; }
-  .nav-docking .portfolio:before {
-    opacity: 0; }
   .portfolio .body-content {
     padding-top: 0;
     padding-bottom: 0;
@@ -817,6 +811,7 @@ footer {
     left: 17vw;
     top: 120px;
     z-index: 10;
+    margin-left: 0;
     font-size: 260px;
     opacity: 1; }
   .portfolio .frame.web {
@@ -903,6 +898,12 @@ footer {
         transform: rotateY(0); }
       .portfolio .view > *.current figure figcaption {
         opacity: 1; }
+
+.portfolio:nth-child(2n) .portfolio--header {
+  color: #00CAFF; }
+
+.portfolio:nth-child(3n) .portfolio--header {
+  color: #6122FF; }
 
 .portfolio--header {
   position: absolute;
@@ -993,7 +994,8 @@ footer {
   transform: rotateY(20deg) scale(0.85) translateX(-70%); }
 .portfolio.mobile .view figure img {
   width: 260px;
-  min-width: 260px; }
+  min-width: 260px;
+  margin-left: 13px; }
 .portfolio.mobile .view > .current figure img {
   box-shadow: none;
   border-radius: 0px; }
@@ -1151,7 +1153,8 @@ footer {
       left: 15vw !important; }
       .portfolio .frame.mobile {
         font-size: 50vw !important;
-        left: 25vw !important; }
+        left: 25vw !important;
+        margin: -.2em -.05em; }
     .portfolio .view > .current figure {
       padding: 0; }
     .portfolio .view figure {
@@ -1189,7 +1192,8 @@ footer {
     .portfolio.mobile .view figure img {
       width: 50vw !important;
       min-width: 50vw !important;
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      margin-left: 0; }
     .portfolio.mobile .view > .previous img {
       -webkit-transform: rotateY(20deg) scale(0.85) translateX(-100%);
       -moz-transform: rotateY(20deg) scale(0.85) translateX(-100%);
@@ -1370,7 +1374,7 @@ main :visited {
   .connections > a {
     width: 2em;
     height: 2em;
-    margin: 0 .33em;
+    margin: 0 .2em;
     display: inline-block;
     will-change: transform;
     vertical-align: middle;
@@ -1403,8 +1407,8 @@ main :visited {
       opacity: 1;
       content: attr(title); }
     .connections > a.featured {
-      width: 4em;
-      height: 4em; }
+      width: 3.5em;
+      height: 3.5em; }
       .click .connections > a.featured:before {
         -webkit-transform: translate(-50%, 0);
         -moz-transform: translate(-50%, 0);

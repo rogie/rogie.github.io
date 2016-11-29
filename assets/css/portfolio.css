@@ -3,31 +3,6 @@
   position: relative;
   margin: 0 auto;
   padding: 80px 0; }
-  .portfolio > div {
-    opacity: 0;
-    will-change: opacity;
-    -webkit-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1);
-    transition: opacity 0.666s cubic-bezier(0.68, 0, 0.265, 1); }
-  .portfolio:before {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    right: 0;
-    height: 60px;
-    text-align: center;
-    opacity: 1;
-    content: '';
-    background: url(../img/arrow.svg) center center no-repeat;
-    background-size: contain;
-    will-change: opacity;
-    -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
-  .nav-docking .portfolio > div {
-    opacity: 1; }
-  .nav-docking .portfolio:before {
-    opacity: 0; }
   .portfolio .body-content {
     padding-top: 0;
     padding-bottom: 0;
@@ -45,6 +20,7 @@
     left: 17vw;
     top: 120px;
     z-index: 10;
+    margin-left: 0;
     font-size: 260px;
     opacity: 1; }
   .portfolio .frame.web {
@@ -131,6 +107,12 @@
         transform: rotateY(0); }
       .portfolio .view > *.current figure figcaption {
         opacity: 1; }
+
+.portfolio:nth-child(2n) .portfolio--header {
+  color: #00CAFF; }
+
+.portfolio:nth-child(3n) .portfolio--header {
+  color: #6122FF; }
 
 .portfolio--header {
   position: absolute;
@@ -221,7 +203,8 @@
   transform: rotateY(20deg) scale(0.85) translateX(-70%); }
 .portfolio.mobile .view figure img {
   width: 260px;
-  min-width: 260px; }
+  min-width: 260px;
+  margin-left: 13px; }
 .portfolio.mobile .view > .current figure img {
   box-shadow: none;
   border-radius: 0px; }
@@ -379,7 +362,8 @@
       left: 15vw !important; }
       .portfolio .frame.mobile {
         font-size: 50vw !important;
-        left: 25vw !important; }
+        left: 25vw !important;
+        margin: -.2em -.05em; }
     .portfolio .view > .current figure {
       padding: 0; }
     .portfolio .view figure {
@@ -417,7 +401,8 @@
     .portfolio.mobile .view figure img {
       width: 50vw !important;
       min-width: 50vw !important;
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      margin-left: 0; }
     .portfolio.mobile .view > .previous img {
       -webkit-transform: rotateY(20deg) scale(0.85) translateX(-100%);
       -moz-transform: rotateY(20deg) scale(0.85) translateX(-100%);

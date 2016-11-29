@@ -1,11 +1,13 @@
 section,
 footer,
-header {
+header,
+main {
   position: relative;
   overflow: hidden; }
   section > svg,
   footer > svg,
-  header > svg {
+  header > svg,
+  main > svg {
     position: absolute;
     left: 50%;
     top: 0;
@@ -27,10 +29,33 @@ header {
     transition: all 0.3s ease-in-out; }
     section > svg path,
     footer > svg path,
-    header > svg path {
+    header > svg path,
+    main > svg path {
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
+
+main {
+  padding-top: 20vh; }
+  main:before {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    right: 0;
+    height: 60px;
+    text-align: center;
+    opacity: 1;
+    content: '';
+    background: url(../img/arrow.svg) center center no-repeat;
+    background-size: contain;
+    will-change: opacity;
+    -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
+    -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
+    transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
+  .nav-docking main > div {
+    opacity: 1; }
+  .nav-docking main:before {
+    opacity: 0; }
 
 header {
   min-height: 100%;
@@ -47,7 +72,7 @@ header {
       -webkit-animation: 30s top-wave linear infinite alternate;
       -moz-animation: 30s top-wave linear infinite alternate;
       animation: 30s top-wave linear infinite alternate; }
-  header ~ main section:first-child > svg path {
+  header ~ main > svg path {
     d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
     -webkit-animation: 30s bottom-wave linear infinite alternate;
     -moz-animation: 30s bottom-wave linear infinite alternate;
@@ -101,12 +126,6 @@ footer > svg path {
     d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
   to {
     d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
-.portfolio:nth-child(2n) .portfolio--header {
-  color: #00CAFF; }
-
-.portfolio:nth-child(3n) .portfolio--header {
-  color: #6122FF; }
-
 footer {
   text-align: center;
   padding: 40px 0;
