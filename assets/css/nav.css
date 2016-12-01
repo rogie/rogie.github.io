@@ -139,6 +139,9 @@ nav .identity {
       -ms-transform: translateZ(-40px) translateY(10px);
       -o-transform: translateZ(-40px) translateY(10px);
       transform: translateZ(-40px) translateY(10px); }
+      html[data-useragent*='Edge'] nav .identity > a i.shadow {
+        opacity: 0.6;
+        filter: blur(14px); }
     nav .identity > a i.graphic {
       z-index: 1;
       background: url(../img/rog.ie.svg) center center no-repeat;
