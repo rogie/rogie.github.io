@@ -51,8 +51,8 @@
     -ms-transform-origin: 50% 0;
     -o-transform-origin: 50% 0;
     transform-origin: 50% 0; }
-  .menu-item:after,
-  .menu-item .jubilee.jetwash {
+  .menu-item:hover:after,
+  .menu-item:hover .jubilee.jetwash {
     display: block;
     -webkit-transform: translateX(-50%) scale(1, 1);
     -moz-transform: translateX(-50%) scale(1, 1);
