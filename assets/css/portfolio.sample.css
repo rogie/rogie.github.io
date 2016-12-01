@@ -5,7 +5,7 @@
     display: block;
     content: "";
     width: 100%;
-    padding-top: 54.54545%; }
+    padding-top: 33.33333%; }
   .portfolio--sample--frame > * {
     position: absolute;
     top: 0;
@@ -55,7 +55,7 @@
 
 .portfolio--sample {
   width: 100%;
-  margin: 0 20px;
+  margin: 0 10px;
   background: #EEFFFF;
   display: -webkit-inline-box;
   display: -moz-inline-box;
@@ -100,3 +100,34 @@
     margin-left: 0; }
   .portfolio--sample:last-child {
     margin-right: 0; }
+
+@media screen and (max-width: 900px) {
+  .portfolio--sample--frame {
+    position: relative; }
+    .portfolio--sample--frame:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 200%; }
+    .portfolio--sample--frame > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; } }
+@media screen and (max-width: 594px) {
+  .portfolio--samples {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; }
+
+  .portfolio--sample {
+    margin: 10px 0;
+    height: 100%; } }

@@ -6,6 +6,7 @@ nav {
   bottom: 0;
   z-index: 100;
   text-align: center;
+  backface-visibility: hidden;
   display: -webkit-box;
   display: -moz-box;
   display: box;
