@@ -52,10 +52,12 @@ main {
     -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
-  .nav-docking main > div {
+  .nav-docked main > div, .nav-docking main > div {
     opacity: 1; }
-  .nav-docking main:before {
+  .nav-docked main:before, .nav-docking main:before {
     opacity: 0; }
+  .nav-docked main {
+    padding-top: 0; }
 
 header {
   min-height: 100%;
