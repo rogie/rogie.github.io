@@ -36,6 +36,7 @@ main {
       transition: all 0.3s ease-in-out; }
 
 main {
+  overflow: visible;
   padding-top: 20vh; }
   main:before {
     position: absolute;
@@ -62,7 +63,8 @@ main {
 header {
   min-height: 100%;
   min-height: 80vh;
-  position: relative; }
+  position: relative;
+  z-index: 100; }
   header > svg {
     fill: black;
     fill: url(#grad-header);

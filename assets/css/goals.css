@@ -1,0 +1,230 @@
+.goals header > svg {
+  height: 150px;
+  z-index: 10; }
+.goals.nav-docked header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+  .goals.nav-docked header nav {
+    position: absolute; }
+.goals.nav-docked .goals-header {
+  margin-top: 0; }
+.goals h2 {
+  text-align: center; }
+
+.goals-header {
+  background: black;
+  text-align: center;
+  margin-top: -180px;
+  padding-top: 180px;
+  position: relative;
+  z-index: auto;
+  overflow: hidden; }
+  .goals-header > div {
+    margin: 40px auto 200px auto;
+    width: 66.666%;
+    line-height: 1.2;
+    z-index: 10;
+    position: relative; }
+    .goals-header > div p {
+      color: #00CAFF;
+      font-size: 1.2rem;
+      letter-spacing: 0.0125rem;
+      text-shadow: 0 0 20px black,0 0 20px black; }
+    .goals-header > div h1 {
+      padding: 20px 0;
+      background-color: #6122FF;
+      letter-spacing: 0.025em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -ms-background-clip: text;
+      -ms-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #A732FF);
+      background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF); }
+  .goals-header .goal-heading {
+    display: block;
+    text-align: center;
+    transform: rotate(-90deg) translateX(-50%) translateY(-50%); }
+  .goals-header svg {
+    background: transparent;
+    bottom: -5px;
+    top: auto;
+    z-index: 2;
+    height: 150px; }
+    .goals-header svg path {
+      d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
+      -webkit-animation: 30s bottom-wave linear infinite alternate;
+      -moz-animation: 30s bottom-wave linear infinite alternate;
+      animation: 30s bottom-wave linear infinite alternate; }
+  .goals-header svg + svg {
+    height: 350px;
+    width: 102%;
+    bottom: -100px;
+    z-index: 1; }
+    .goals-header svg + svg path {
+      fill: transparent;
+      stroke: white;
+      stroke: url(#grad-bright-pink);
+      stroke-width: 0.075; }
+  .goals-header svg + svg + svg {
+    height: 350px;
+    width: 102%;
+    top: -100px;
+    bottom: auto;
+    z-index: 1;
+    transform: scaleY(-1); }
+    .goals-header svg + svg + svg path {
+      stroke: url(#grad-bright-blue); }
+
+.goal {
+  position: relative;
+  overflow: visible;
+  border-top: 1px solid rgba(203, 203, 203, 0.5);
+  /*
+  &:nth-child(4n){
+    .goal-heading{
+      color: $colors-2;
+    }
+  }
+  &:nth-child(4n+1){
+    .goal-heading{
+      color: $colors-7;
+    }
+  }
+  &:nth-child(4n+2){
+    .goal-heading{
+      color: $colors-5;
+    }
+  }
+  &:nth-child(4n+3){
+    .goal-heading{
+      color: $colors-6;
+    }
+  }*/ }
+  .goal-heading {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    z-index: 2;
+    text-align: right;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateX(-50%) translateY(0%);
+    transform-origin: 0% 0%; }
+  .goal .tweets {
+    padding: 40px 0;
+    padding-left: 5rem;
+    position: relative; }
+    .goal .tweets > li {
+      vertical-align: middle;
+      box-shadow: none;
+      transition: all .2s ease-in;
+      /*
+
+      &:nth-child(1){
+        box-shadow: 0 2px 4px fade-out(black,0.9), 0 30px 40px -10px fade-out(black,0.8);
+      }
+      &:nth-child(2){
+        margin: 0 -20px;
+        transform: scale(0.8) ;
+      }
+      &:nth-child(3){
+        margin: 0 -40px;
+        transform: scale(0.6);
+      }
+      &:nth-child(4){
+        margin: 0 -60px;
+        transform: scale(0.5);
+      }
+      &:nth-child(5){
+        margin: 0 -80px;
+        transform: scale(0.4);
+      }
+      &:nth-child(6){
+        margin: 0 -100px;
+        transform: scale(0.3);
+      }
+      &:nth-child(7){
+        margin: 0 -120px;
+        transform: scale(0.2);
+      }*/ }
+      .goal .tweets > li.victory, .goal .tweets > li.noob {
+        padding: 20px;
+        font-size: 1rem;
+        text-align: center;
+        overflow: visible;
+        user-select: none; }
+        .goal .tweets > li.victory, .goal .tweets > li.victory:hover, .goal .tweets > li.noob, .goal .tweets > li.noob:hover {
+          box-shadow: none; }
+        .goal .tweets > li.victory .jubilee, .goal .tweets > li.noob .jubilee {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 0;
+          width: 0; }
+        .goal .tweets > li.victory em, .goal .tweets > li.noob em {
+          display: block;
+          font-size: 3rem;
+          background-color: #6122FF;
+          color: white;
+          border-radius: 4rem;
+          width: 5rem;
+          height: 5rem;
+          line-height: 5rem;
+          text-align: center;
+          display: inline-block;
+          font-style: normal;
+          margin-bottom: 20px;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: -webkit-linear-gradient( top left, #3EFF58, #00CAFF);
+          background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF);
+          box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
+        .goal .tweets > li.victory.noob em, .goal .tweets > li.noob.noob em {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #6122FF);
+          background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #6122FF); }
+      .goal .tweets > li:hover {
+        box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
+
+@media screen and (max-width: 640px) {
+  .goals-header > div {
+    margin: 0 auto 160px auto; }
+
+  .goal .goal-heading {
+    position: static;
+    transform: none;
+    display: block;
+    text-align: center;
+    padding: 40px 0 0 0; }
+  .goal .tweets {
+    padding: 40px 5vw;
+    -webkit-scroll-snap-points-x: repeat(90vw); }
+    .goal .tweets > li {
+      width: 90vw;
+      margin-left: 0;
+      margin-right: 0; }
+      .goal .tweets > li .twitter-tweet {
+        width: 92vw !important;
+        margin: -1vw !important;
+        max-width: 92vw !important; } }

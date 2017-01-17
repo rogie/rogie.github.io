@@ -31,7 +31,8 @@ nav {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
+  -ms-flex-pack: center;
+  mix-blend-mode: hard-light; }
   nav .contact-me {
     position: fixed;
     right: 20px;
@@ -189,7 +190,8 @@ nav .identity {
 
 .nav-docked nav {
   bottom: auto;
-  height: 100px; }
+  height: 100px;
+  mix-blend-mode: normal; }
   .nav-docked nav .identity {
     -webkit-transform: scale(0.4);
     -moz-transform: scale(0.4);
