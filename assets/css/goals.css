@@ -34,6 +34,7 @@
       text-shadow: 0 0 20px black,0 0 20px black; }
     .goals-header > div h1 {
       padding: 20px 0;
+      margin: 0;
       background-color: #6122FF;
       letter-spacing: 0.025em;
       -webkit-background-clip: text;
@@ -208,8 +209,15 @@
         box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
 
 @media screen and (max-width: 640px) {
-  .goals-header > div {
-    margin: 0 auto 160px auto; }
+  .goals-header {
+    padding-top: 100px; }
+    .goals-header > div {
+      margin: 0 auto 120px auto; }
+    .goals-header svg {
+      height: 80px; }
+
+  .goals header > svg {
+    height: 80px; }
 
   .goal .goal-heading {
     position: static;
@@ -221,9 +229,7 @@
     padding: 40px 5vw;
     -webkit-scroll-snap-points-x: repeat(90vw); }
     .goal .tweets > li {
-      width: 90vw;
-      margin-left: 0;
-      margin-right: 0; }
+      width: 90vw; }
       .goal .tweets > li .twitter-tweet {
         width: 92vw !important;
         margin: -1vw !important;
