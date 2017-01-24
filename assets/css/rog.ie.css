@@ -1,42 +1,10 @@
 @charset "UTF-8";
 @import url(normalize.css);
-@-webkit-keyframes tilty {
-  from {
-    -webkit-transform: rotateZ(15deg); }
-  to {
-    -webkit-transform: rotateZ(-15deg); } }
-@-moz-keyframes tilty {
-  from {
-    -moz-transform: rotateZ(15deg); }
-  to {
-    -moz-transform: rotateZ(-15deg); } }
 @keyframes tilty {
   from {
-    -webkit-transform: rotateZ(15deg);
-    -moz-transform: rotateZ(15deg);
-    -ms-transform: rotateZ(15deg);
-    -o-transform: rotateZ(15deg);
     transform: rotateZ(15deg); }
   to {
-    -webkit-transform: rotateZ(-15deg);
-    -moz-transform: rotateZ(-15deg);
-    -ms-transform: rotateZ(-15deg);
-    -o-transform: rotateZ(-15deg);
     transform: rotateZ(-15deg); } }
-@-webkit-keyframes fader {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-@-moz-keyframes fader {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 @keyframes fader {
   0% {
     opacity: 0; }
@@ -44,20 +12,6 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
-@-webkit-keyframes logo-enter {
-  from {
-    transform: translate3d(0, 300%, -200px); }
-  50% {
-    transform: translate3d(0, 0, 0) rotateY(90deg); }
-  to {
-    transform: scale3d(1, 1, 1) rotateY(0); } }
-@-moz-keyframes logo-enter {
-  from {
-    transform: translate3d(0, 300%, -200px); }
-  50% {
-    transform: translate3d(0, 0, 0) rotateY(90deg); }
-  to {
-    transform: scale3d(1, 1, 1) rotateY(0); } }
 @keyframes logo-enter {
   from {
     transform: translate3d(0, 300%, -200px); }
@@ -65,40 +19,6 @@
     transform: translate3d(0, 0, 0) rotateY(90deg); }
   to {
     transform: scale3d(1, 1, 1) rotateY(0); } }
-@-webkit-keyframes band {
-  from {
-    transform: translate3d(0, 100%, -500px) scale3d(0.5, 1, 1) rotateX(-35deg);
-    opacity: 0; }
-  30% {
-    transform: scale3d(1.5, 0.75, 1);
-    opacity: 1; }
-  40% {
-    transform: scale3d(0.65, 1.25, 1); }
-  50% {
-    transform: scale3d(1.15, 0.85, 1); }
-  65% {
-    transform: scale3d(0.95, 1.05, 1); }
-  75% {
-    transform: scale3d(1.05, 0.95, 1); }
-  to {
-    transform: scale3d(1, 1, 1); } }
-@-moz-keyframes band {
-  from {
-    transform: translate3d(0, 100%, -500px) scale3d(0.5, 1, 1) rotateX(-35deg);
-    opacity: 0; }
-  30% {
-    transform: scale3d(1.5, 0.75, 1);
-    opacity: 1; }
-  40% {
-    transform: scale3d(0.65, 1.25, 1); }
-  50% {
-    transform: scale3d(1.15, 0.85, 1); }
-  65% {
-    transform: scale3d(0.95, 1.05, 1); }
-  75% {
-    transform: scale3d(1.05, 0.95, 1); }
-  to {
-    transform: scale3d(1, 1, 1); } }
 @keyframes band {
   from {
     transform: translate3d(0, 100%, -500px) scale3d(0.5, 1, 1) rotateX(-35deg);
@@ -130,14 +50,8 @@
   top: 0;
   pointer-events: none;
   will-change: opacity,transform,contents;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  -webkit-animation-duration: 0.3s;
-  -moz-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
   .particle > i {
     position: absolute;
@@ -186,7 +100,6 @@
     display: block;
     width: 7px;
     height: 10px;
-    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
     border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%; }
   .particle.triangle {
     width: 0;
@@ -229,27 +142,11 @@
       height: 10px;
       background: currentColor;
       border-radius: 2.5px 2.5px 0 0;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      -webkit-transform-origin: 0 100%;
-      -moz-transform-origin: 0 100%;
-      -ms-transform-origin: 0 100%;
-      -o-transform-origin: 0 100%;
       transform-origin: 0 100%; }
     .particle.heart:after {
       left: 0;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
       transform: rotate(45deg);
-      -webkit-transform-origin: 100% 100%;
-      -moz-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-      -o-transform-origin: 100% 100%;
       transform-origin: 100% 100%; }
 
 nav {
@@ -260,27 +157,21 @@ nav {
   bottom: 0;
   z-index: 100;
   text-align: center;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
   box-pack: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
@@ -300,16 +191,10 @@ nav {
     margin: 0;
     padding: 1em 0 0 0; }
     nav .tagline:hover .delight:before {
-      -webkit-animation: 1.5s fader 0s linear infinite alternate;
-      -moz-animation: 1.5s fader 0s linear infinite alternate;
       animation: 1.5s fader 0s linear infinite alternate; }
     nav .tagline:hover .delight:after {
-      -webkit-animation: 1.5s fader 1s linear infinite alternate;
-      -moz-animation: 1.5s fader 1s linear infinite alternate;
       animation: 1.5s fader 1s linear infinite alternate; }
     nav .tagline:hover .surprise > * {
-      -webkit-animation: tilty 1s ease-in-out infinite alternate;
-      -moz-animation: tilty 1s ease-in-out infinite alternate;
       animation: tilty 1s ease-in-out infinite alternate; }
     nav .tagline p {
       margin: 0.5em 0;
@@ -352,8 +237,6 @@ nav .identity {
   margin: 0;
   padding: 0;
   margin: 0;
-  -webkit-perspective: 600px;
-  -moz-perspective: 600px;
   perspective: 600px;
   will-change: transform; }
   nav .identity > a {
@@ -369,8 +252,6 @@ nav .identity {
     z-index: 1;
     cursor: pointer;
     will-change: transform;
-    -webkit-animation: 1.25s band ease-in-out;
-    -moz-animation: 1.25s band ease-in-out;
     animation: 1.25s band ease-in-out; }
     nav .identity > a i {
       content: '';
@@ -380,8 +261,6 @@ nav .identity {
       right: 0;
       top: 0;
       bottom: 0;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
       transition: all 0.1s ease-in-out; }
     nav .identity > a i.shadow {
       background: url(../img/rog.ie.svg) center center no-repeat;
@@ -390,14 +269,11 @@ nav .identity {
       filter: url(#logo-shadow);
       opacity: 0.8;
       will-change: transform;
-      -webkit-transform: translateZ(-40px) translateY(10px);
-      -moz-transform: translateZ(-40px) translateY(10px);
-      -ms-transform: translateZ(-40px) translateY(10px);
-      -o-transform: translateZ(-40px) translateY(10px);
       transform: translateZ(-40px) translateY(10px); }
       html[data-useragent*='Edge'] nav .identity > a i.shadow {
         opacity: 0.6;
-        filter: blur(14px); }
+        -webkit-filter: blur(14px);
+                filter: blur(14px); }
     nav .identity > a i.graphic {
       z-index: 1;
       background-size: 270px 194px;
@@ -407,16 +283,8 @@ nav .identity {
         height: 100%; }
     nav .identity > a:active i.shadow {
       opacity: 0.6;
-      -webkit-transform: translateZ(-40px) translateY(20px) !important;
-      -moz-transform: translateZ(-40px) translateY(20px) !important;
-      -ms-transform: translateZ(-40px) translateY(20px) !important;
-      -o-transform: translateZ(-40px) translateY(20px) !important;
       transform: translateZ(-40px) translateY(20px) !important; }
     nav .identity > a:active i.graphic {
-      -webkit-transform: translateY(20px) !important;
-      -moz-transform: translateY(20px) !important;
-      -ms-transform: translateY(20px) !important;
-      -o-transform: translateY(20px) !important;
       transform: translateY(20px) !important; }
   nav .identity .jubilee.celebrate {
     position: absolute;
@@ -427,10 +295,6 @@ nav .identity {
     height: 0 !important;
     width: 0 !important;
     display: block;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     -webkit-filter: url(#jubilee-shadow);
     filter: url(#jubilee-shadow); }
@@ -438,8 +302,6 @@ nav .identity {
 .jubilee.celebrate .particle {
   opacity: 0; }
   .jubilee.celebrate .particle.play {
-    -webkit-animation: 1s fader linear;
-    -moz-animation: 1s fader linear;
     animation: 1s fader linear; }
 
 .nav-docked nav {
@@ -447,10 +309,6 @@ nav .identity {
   height: 100px;
   mix-blend-mode: normal; }
   .nav-docked nav .identity {
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    -ms-transform: scale(0.4);
-    -o-transform: scale(0.4);
     transform: scale(0.4); }
     .nav-docked nav .identity .graphic path {
       fill: white; }
@@ -464,10 +322,6 @@ nav .identity {
 
 @media screen and (max-width: 640px) {
   nav .identity {
-    -webkit-transform-origin: -15% 45%;
-    -moz-transform-origin: -15% 45%;
-    -ms-transform-origin: -15% 45%;
-    -o-transform-origin: -15% 45%;
     transform-origin: -15% 45%; } }
 @font-face {
   font-family: 'haptik';
@@ -514,13 +368,15 @@ nav .identity {
 section,
 footer,
 header,
-main {
+main,
+.section {
   position: relative;
   overflow: hidden; }
   section > svg,
   footer > svg,
   header > svg,
-  main > svg {
+  main > svg,
+  .section > svg {
     position: absolute;
     left: 50%;
     top: 0;
@@ -532,20 +388,13 @@ main {
     fill: white;
     fill: url(#grad-green);
     pointer-events: none;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     section > svg path,
     footer > svg path,
     header > svg path,
-    main > svg path {
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
+    main > svg path,
+    .section > svg path {
       transition: all 0.3s ease-in-out; }
 
 main {
@@ -563,8 +412,6 @@ main {
     background: url(../img/arrow.svg) center center no-repeat;
     background-size: contain;
     will-change: opacity;
-    -webkit-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: opacity 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
   .nav-docked main > div, .nav-docking main > div {
     opacity: 1; }
@@ -586,35 +433,14 @@ header {
     top: -5px; }
     header > svg path {
       d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z");
-      -webkit-animation: 30s top-wave linear infinite alternate;
-      -moz-animation: 30s top-wave linear infinite alternate;
       animation: 30s top-wave linear infinite alternate; }
   header ~ main > svg path {
     d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
-    -webkit-animation: 30s bottom-wave linear infinite alternate;
-    -moz-animation: 30s bottom-wave linear infinite alternate;
     animation: 30s bottom-wave linear infinite alternate; }
 
 footer > svg path {
   d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
-  -webkit-animation: 30s bottom-wave linear infinite alternate;
-  -moz-animation: 30s bottom-wave linear infinite alternate;
   animation: 30s bottom-wave linear infinite alternate; }
-
-@-webkit-keyframes top-wave {
-  from {
-    d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z"); }
-  50% {
-    d: path("M 27 14C 12 14 5 7 0 7L 0 0L 54 0L 54 7C 49 7 42 14 27 14Z"); }
-  to {
-    d: path("M 27 10C 21 12 14 14 0 14L 0 0L 54 0L 54 3C 40 3 33 8 27 10Z"); } }
-@-moz-keyframes top-wave {
-  from {
-    d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z"); }
-  50% {
-    d: path("M 27 14C 12 14 5 7 0 7L 0 0L 54 0L 54 7C 49 7 42 14 27 14Z"); }
-  to {
-    d: path("M 27 10C 21 12 14 14 0 14L 0 0L 54 0L 54 3C 40 3 33 8 27 10Z"); } }
 @keyframes top-wave {
   from {
     d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z"); }
@@ -622,20 +448,6 @@ footer > svg path {
     d: path("M 27 14C 12 14 5 7 0 7L 0 0L 54 0L 54 7C 49 7 42 14 27 14Z"); }
   to {
     d: path("M 27 10C 21 12 14 14 0 14L 0 0L 54 0L 54 3C 40 3 33 8 27 10Z"); } }
-@-webkit-keyframes bottom-wave {
-  from {
-    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
-  50% {
-    d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
-  to {
-    d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
-@-moz-keyframes bottom-wave {
-  from {
-    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
-  50% {
-    d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
-  to {
-    d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
 @keyframes bottom-wave {
   from {
     d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
@@ -656,21 +468,6 @@ footer {
     height: 100%;
     fill: black;
     fill: url(#grad-footer); }
-
-@-webkit-keyframes wavy {
-  from {
-    d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
-  50% {
-    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
-  to {
-    d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
-@-moz-keyframes wavy {
-  from {
-    d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
-  50% {
-    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
-  to {
-    d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); } }
 @keyframes wavy {
   from {
     d: path("M 27 0C 12.0883 0 5 4 0 4L 0 14L 54 14L 54 4C 48 4 41.9117 0 27 0Z"); }
@@ -709,8 +506,6 @@ footer {
   display: inline-block;
   font-family: "haptik", Futura, Trebuchet MS, Arial, sans-serif;
   will-change: contents,transform;
-  -webkit-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
-  -moz-transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
   -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)); }
@@ -723,7 +518,6 @@ footer {
     -ms-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #A732FF);
     background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF); }
   .btn svg {
     position: absolute;
@@ -738,27 +532,17 @@ footer {
     .btn svg polyline,
     .btn svg line,
     .btn svg path {
-      -webkit-transition: all 0.1s ease-in;
-      -moz-transition: all 0.1s ease-in;
       transition: all 0.1s ease-in;
       fill: white; }
   .btn:focus {
     outline: none; }
   .btn:hover {
-    -webkit-transform: scaleY(1.05) translateY(-5%);
-    -moz-transform: scaleY(1.05) translateY(-5%);
-    -ms-transform: scaleY(1.05) translateY(-5%);
-    -o-transform: scaleY(1.05) translateY(-5%);
     transform: scaleY(1.05) translateY(-5%);
     -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)); }
     .btn:hover svg path {
       d: path("M 0.00133062 4.87477C 0.0426975 2.92812 1.68703 1.45562 3.57025 0.961007C 5.68024 0.406833 8.80455 0 14 0L 14 4.89702e-34C 19.1954 1.62983e-17 22.3197 0.40683 24.4297 0.961001C 26.313 1.45562 27.9573 2.92814 27.9987 4.87481C 28.0004 4.95827 28.0004 5.04174 27.9987 5.1252C 27.9573 7.07187 26.313 8.54438 24.4297 9.039C 22.3197 9.59317 19.1954 10 14 10L 14 10C 8.80454 10 5.68024 9.59317 3.57025 9.03899C 1.68703 8.54438 0.0426977 7.07188 0.00133063 5.12523C -0.000443418 5.04174 -0.000443424 4.95826 0.00133062 4.87477Z"); }
   .btn:active {
-    -webkit-transform: scale(0.95) translateY(10%);
-    -moz-transform: scale(0.95) translateY(10%);
-    -ms-transform: scale(0.95) translateY(10%);
-    -o-transform: scale(0.95) translateY(10%);
     transform: scale(0.95) translateY(10%);
     -webkit-filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1)); }
@@ -785,8 +569,6 @@ footer {
     white-space: normal;
     display: none;
     will-change: transform;
-    -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
     transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
   .view > .next, .view > .previous {
     cursor: pointer;
@@ -795,24 +577,12 @@ footer {
     opacity: 1;
     z-index: 1;
     display: inline-block;
-    -webkit-transform: translateX(15vw);
-    -moz-transform: translateX(15vw);
-    -ms-transform: translateX(15vw);
-    -o-transform: translateX(15vw);
     transform: translateX(15vw); }
   .view > .next {
     opacity: 1;
-    -webkit-transform: translateX(85vw);
-    -moz-transform: translateX(85vw);
-    -ms-transform: translateX(85vw);
-    -o-transform: translateX(85vw);
     transform: translateX(85vw); }
   .view > .previous {
     opacity: 1;
-    -webkit-transform: translateX(0vw);
-    -moz-transform: translateX(0vw);
-    -ms-transform: translateX(0vw);
-    -o-transform: translateX(0vw);
     transform: translateX(0vw); }
 
 .portfolio {
@@ -852,16 +622,8 @@ footer {
     .portfolio .view > *.previous, .portfolio .view > *.next {
       cursor: pointer; }
       .portfolio .view > *.previous:hover figure, .portfolio .view > *.next:hover figure {
-        -webkit-transform: translateY(-2%);
-        -moz-transform: translateY(-2%);
-        -ms-transform: translateY(-2%);
-        -o-transform: translateY(-2%);
         transform: translateY(-2%); }
       .portfolio .view > *.previous:focus figure, .portfolio .view > *.previous:active figure, .portfolio .view > *.next:focus figure, .portfolio .view > *.next:active figure {
-        -webkit-transform: translateY(2%);
-        -moz-transform: translateY(2%);
-        -ms-transform: translateY(2%);
-        -o-transform: translateY(2%);
         transform: translateY(2%); }
       .portfolio .view > *.previous:focus img, .portfolio .view > *.previous:active img, .portfolio .view > *.next:focus img, .portfolio .view > *.next:active img {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 10px 10px -12px rgba(0, 0, 0, 0.1); }
@@ -870,45 +632,21 @@ footer {
         margin: 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 30px 40px -10px rgba(0, 0, 0, 0.2); }
     .portfolio .view > *.previous figure {
-      -webkit-perspective-origin: 100% 50%;
-      -moz-perspective-origin: 100% 50%;
       perspective-origin: 100% 50%; }
     .portfolio .view > *.previous img {
-      -webkit-transform: rotateY(20deg) scale(0.85) translateX(-50%);
-      -moz-transform: rotateY(20deg) scale(0.85) translateX(-50%);
-      -ms-transform: rotateY(20deg) scale(0.85) translateX(-50%);
-      -o-transform: rotateY(20deg) scale(0.85) translateX(-50%);
       transform: rotateY(20deg) scale(0.85) translateX(-50%);
-      -webkit-transform-origin: 0% 50%;
-      -moz-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-      -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%; }
     .portfolio .view > *.next figure {
-      -webkit-perspective-origin: 0 50%;
-      -moz-perspective-origin: 0 50%;
       perspective-origin: 0 50%; }
     .portfolio .view > *.next img {
-      -webkit-transform: rotateY(-20deg) scale(0.85) translateX(50%);
-      -moz-transform: rotateY(-20deg) scale(0.85) translateX(50%);
-      -ms-transform: rotateY(-20deg) scale(0.85) translateX(50%);
-      -o-transform: rotateY(-20deg) scale(0.85) translateX(50%);
       transform: rotateY(-20deg) scale(0.85) translateX(50%);
-      -webkit-transform-origin: 0 50%;
-      -moz-transform-origin: 0 50%;
-      -ms-transform-origin: 0 50%;
-      -o-transform-origin: 0 50%;
       transform-origin: 0 50%; }
     .portfolio .view > * figure, .portfolio .view > * img, .portfolio .view > * figcaption {
       will-change: transform, opacity;
-      -webkit-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
-      -moz-transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1);
       transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
     .portfolio .view > * figcaption {
       opacity: 0; }
     .portfolio .view > * figure {
-      -webkit-perspective: 900px;
-      -moz-perspective: 900px;
       perspective: 900px; }
       .portfolio .view > * figure img {
         border-radius: 10px;
@@ -917,10 +655,6 @@ footer {
     .portfolio .view > *.current figure {
       padding: 0 2vw; }
       .portfolio .view > *.current figure img {
-        -webkit-transform: rotateY(0);
-        -moz-transform: rotateY(0);
-        -ms-transform: rotateY(0);
-        -o-transform: rotateY(0);
         transform: rotateY(0); }
       .portfolio .view > *.current figure figcaption {
         opacity: 1; }
@@ -943,15 +677,7 @@ footer {
   padding: 0;
   line-height: 1;
   z-index: 2;
-  -webkit-transform: rotate(-90deg) translateX(-100%);
-  -moz-transform: rotate(-90deg) translateX(-100%);
-  -ms-transform: rotate(-90deg) translateX(-100%);
-  -o-transform: rotate(-90deg) translateX(-100%);
   transform: rotate(-90deg) translateX(-100%);
-  -webkit-transform-origin: 0% 0%;
-  -moz-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
   transform-origin: 0% 0%; }
 
 .portfolio .view figure {
@@ -959,42 +685,31 @@ footer {
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-lines: single;
   -moz-box-lines: single;
   box-lines: single;
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
   box-pack: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -webkit-box-align: start;
-  -moz-box-align: start;
   box-align: start;
-  -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
   -o-align-items: flex-start;
   align-items: flex-start;
   -ms-flex-align: start; }
   .portfolio .view figure img {
-    -webkit-flex-grow: 0;
     -moz-flex-grow: 0;
     flex-grow: 0;
     -ms-flex-positive: 0; }
   .portfolio .view figure figcaption {
-    -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     flex-grow: 1;
     -ms-flex-positive: 1; }
@@ -1012,16 +727,8 @@ footer {
     -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3)); }
 .portfolio.other .view > .next img {
-  -webkit-transform: rotateY(-20deg) scale(0.85) translateX(20%);
-  -moz-transform: rotateY(-20deg) scale(0.85) translateX(20%);
-  -ms-transform: rotateY(-20deg) scale(0.85) translateX(20%);
-  -o-transform: rotateY(-20deg) scale(0.85) translateX(20%);
   transform: rotateY(-20deg) scale(0.85) translateX(20%); }
 .portfolio.other .view > .previous img {
-  -webkit-transform: rotateY(20deg) scale(0.85) translateX(-70%);
-  -moz-transform: rotateY(20deg) scale(0.85) translateX(-70%);
-  -ms-transform: rotateY(20deg) scale(0.85) translateX(-70%);
-  -o-transform: rotateY(20deg) scale(0.85) translateX(-70%);
   transform: rotateY(20deg) scale(0.85) translateX(-70%); }
 .portfolio.mobile .view figure img {
   width: 260px;
@@ -1037,16 +744,8 @@ footer {
   box-shadow: none;
   border-radius: 0px; }
 .portfolio.web .view > .next img {
-  -webkit-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-  -moz-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-  -ms-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-  -o-transform: rotateY(-20deg) scale(0.85) translateX(10%);
   transform: rotateY(-20deg) scale(0.85) translateX(10%); }
 .portfolio.web .view > .previous img {
-  -webkit-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-  -moz-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-  -ms-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-  -o-transform: rotateY(20deg) scale(0.85) translateX(-90%);
   transform: rotateY(20deg) scale(0.85) translateX(-90%); }
 
 .frame.web,
@@ -1082,7 +781,6 @@ footer {
     height: .03em;
     top: -0.045em;
     border-radius: .015em;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
   .frame.web > :nth-child(1):before, .frame.web > :nth-child(2):before, .frame.web > :nth-child(2):after {
     left: .02em;
@@ -1090,7 +788,6 @@ footer {
     width: .02em;
     top: -0.04em;
     border-radius: .01em;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
   .frame.web > :nth-child(2):before {
     margin-left: 0.03em; }
@@ -1135,12 +832,7 @@ footer {
     bottom: -0.16em;
     left: 50%;
     border-radius: .06em;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
-    -webkit-transform: translate3d(-50%, 0, 0);
-    -moz-transform: translate3d(-50%, 0, 0);
-    -ms-transform: translate3d(-50%, 0, 0);
-    -o-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); }
   .frame.mobile > :nth-child(2):after {
     left: 0;
@@ -1154,7 +846,6 @@ footer {
     height: .02em;
     top: -0.11em;
     border-radius: .01em;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
   .frame.mobile > :nth-child(3):after {
     left: 34%;
@@ -1162,17 +853,12 @@ footer {
     height: .04em;
     top: -0.12em;
     border-radius: .02em;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
 
 @media screen and (max-width: 900px) {
   .portfolio {
     margin: -80px auto; }
     .portfolio .portfolio--header {
-      -webkit-transform: rotate(0);
-      -moz-transform: rotate(0);
-      -ms-transform: rotate(0);
-      -o-transform: rotate(0);
       transform: rotate(0);
       display: block;
       top: -20px;
@@ -1199,26 +885,10 @@ footer {
         padding: 20px 0;
         text-align: left; }
     .portfolio.other .view > .previous img {
-      -webkit-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-      -moz-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-      -ms-transform: rotateY(20deg) scale(0.85) translateX(-90%);
-      -o-transform: rotateY(20deg) scale(0.85) translateX(-90%);
       transform: rotateY(20deg) scale(0.85) translateX(-90%);
-      -webkit-transform-origin: 0% 50%;
-      -moz-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-      -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%; }
     .portfolio.other .view > .next img {
-      -webkit-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-      -moz-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-      -ms-transform: rotateY(-20deg) scale(0.85) translateX(10%);
-      -o-transform: rotateY(-20deg) scale(0.85) translateX(10%);
       transform: rotateY(-20deg) scale(0.85) translateX(10%);
-      -webkit-transform-origin: 0% 50%;
-      -moz-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-      -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%; }
     .portfolio.mobile .view figure img {
       width: 50vw !important;
@@ -1226,26 +896,10 @@ footer {
       margin-bottom: 80px;
       margin-left: 0; }
     .portfolio.mobile .view > .previous img {
-      -webkit-transform: rotateY(20deg) scale(0.85) translateX(-100%);
-      -moz-transform: rotateY(20deg) scale(0.85) translateX(-100%);
-      -ms-transform: rotateY(20deg) scale(0.85) translateX(-100%);
-      -o-transform: rotateY(20deg) scale(0.85) translateX(-100%);
       transform: rotateY(20deg) scale(0.85) translateX(-100%);
-      -webkit-transform-origin: 0% 50%;
-      -moz-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-      -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%; }
     .portfolio.mobile .view > .next img {
-      -webkit-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
-      -moz-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
-      -ms-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
-      -o-transform: rotateY(-20deg) scale(0.85) translateX(-10%);
       transform: rotateY(-20deg) scale(0.85) translateX(-10%);
-      -webkit-transform-origin: 0% 50%;
-      -moz-transform-origin: 0% 50%;
-      -ms-transform-origin: 0% 50%;
-      -o-transform-origin: 0% 50%;
       transform-origin: 0% 50%; } }
 .portfolio--sample--frame {
   position: relative;
@@ -1275,27 +929,18 @@ footer {
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-  -moz-box-align: stretch;
   box-align: stretch;
-  -webkit-align-items: stretch;
   -moz-align-items: stretch;
   -ms-align-items: stretch;
   -o-align-items: stretch;
   align-items: stretch;
   -ms-flex-align: stretch;
-  -webkit-align-content: stretch;
-  -moz-align-content: stretch;
   align-content: stretch;
   -ms-flex-line-pack: stretch;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
   box-pack: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
@@ -1309,27 +954,18 @@ footer {
   display: -webkit-inline-box;
   display: -moz-inline-box;
   display: inline-box;
-  display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
   box-pack: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -webkit-align-content: center;
-  -moz-align-content: center;
   align-content: center;
   -ms-flex-line-pack: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
   box-align: center;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
@@ -1366,13 +1002,8 @@ footer {
       bottom: 0; } }
 @media screen and (max-width: 594px) {
   .portfolio--samples {
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
     box-orient: vertical;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
     box-direction: normal;
-    -webkit-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column; }
@@ -1393,10 +1024,6 @@ footer {
   opacity: 0;
   display: none\9;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-transform: translate3d(0, 100%, 0);
-  -moz-transform: translate3d(0, 100%, 0);
-  -ms-transform: translate3d(0, 100%, 0);
-  -o-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   white-space: nowrap;
   text-align: center;
@@ -1411,10 +1038,6 @@ footer {
     width: auto;
     height: auto;
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0); }
   .modal .dialog {
     background: white;
@@ -1426,6 +1049,54 @@ footer {
     white-space: normal;
     display: inline-block;
     vertical-align: middle; }
+
+.goals-summary.goals-header {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 202, 255, 0.3), 0 30px 40px -10px rgba(97, 34, 255, 0.2);
+  text-align: center;
+  height: auto;
+  padding: 0;
+  background: black;
+  position: relative; }
+  .goals-summary.goals-header > a {
+    margin: 0;
+    width: 100%;
+    padding: 40px;
+    display: block; }
+    .goals-summary.goals-header > a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: block; }
+  .goals-summary.goals-header h3, .goals-summary.goals-header p {
+    margin: 0;
+    padding: 0; }
+  .goals-summary.goals-header svg {
+    width: 80%; }
+    .goals-summary.goals-header svg path {
+      fill: transparent;
+      stroke: white;
+      stroke: url(#grad-bright-pink);
+      stroke-width: 0.075;
+      animation: none !important; }
+  .goals-summary.goals-header svg + svg {
+    bottom: -200px;
+    margin-left: -20%; }
+    .goals-summary.goals-header svg + svg path {
+      stroke: url(#grad-bright-green); }
+  .goals-summary.goals-header svg + svg + svg {
+    top: -200px;
+    margin-right: -20%; }
+    .goals-summary.goals-header svg + svg + svg path {
+      stroke: url(#grad-bright-blue); }
 
 .goals header > svg {
   height: 150px;
@@ -1474,7 +1145,6 @@ footer {
       -ms-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
-      background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #A732FF);
       background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF); }
   .goals-header .goal-heading {
     display: block;
@@ -1488,8 +1158,6 @@ footer {
     height: 150px; }
     .goals-header svg path {
       d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
-      -webkit-animation: 30s bottom-wave linear infinite alternate;
-      -moz-animation: 30s bottom-wave linear infinite alternate;
       animation: 30s bottom-wave linear infinite alternate; }
   .goals-header svg + svg {
     height: 350px;
@@ -1554,43 +1222,17 @@ footer {
     position: relative; }
     .goal .tweets > li {
       vertical-align: middle;
-      box-shadow: none;
-      transition: all .2s ease-in;
-      /*
-
-      &:nth-child(1){
-        box-shadow: 0 2px 4px fade-out(black,0.9), 0 30px 40px -10px fade-out(black,0.8);
-      }
-      &:nth-child(2){
-        margin: 0 -20px;
-        transform: scale(0.8) ;
-      }
-      &:nth-child(3){
-        margin: 0 -40px;
-        transform: scale(0.6);
-      }
-      &:nth-child(4){
-        margin: 0 -60px;
-        transform: scale(0.5);
-      }
-      &:nth-child(5){
-        margin: 0 -80px;
-        transform: scale(0.4);
-      }
-      &:nth-child(6){
-        margin: 0 -100px;
-        transform: scale(0.3);
-      }
-      &:nth-child(7){
-        margin: 0 -120px;
-        transform: scale(0.2);
-      }*/ }
+      box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2);
+      transition: all .2s ease-in; }
       .goal .tweets > li.victory, .goal .tweets > li.noob {
         padding: 20px;
         font-size: 1rem;
         text-align: center;
         overflow: visible;
-        user-select: none; }
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none; }
         .goal .tweets > li.victory, .goal .tweets > li.victory:hover, .goal .tweets > li.noob, .goal .tweets > li.noob:hover {
           box-shadow: none; }
         .goal .tweets > li.victory .jubilee, .goal .tweets > li.noob .jubilee {
@@ -1620,7 +1262,6 @@ footer {
           -ms-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
-          background-image: -webkit-linear-gradient( top left, #3EFF58, #00CAFF);
           background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF);
           box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
         .goal .tweets > li.victory.noob em, .goal .tweets > li.noob.noob em {
@@ -1632,10 +1273,9 @@ footer {
           -ms-text-fill-color: transparent;
           background-clip: text;
           text-fill-color: transparent;
-          background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #6122FF);
           background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #6122FF); }
       .goal .tweets > li:hover {
-        box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
+        box-shadow: 0 2px 4px rgba(0, 202, 255, 0.5), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
 
 @media screen and (max-width: 640px) {
   .goals-header {
@@ -1655,10 +1295,12 @@ footer {
     text-align: center;
     padding: 40px 0 0 0; }
   .goal .tweets {
-    padding: 40px 5vw;
-    -webkit-scroll-snap-points-x: repeat(90vw); }
+    padding: 40px 0;
+    width: 100vw;
+    -webkit-scroll-snap-points-x: repeat(100vw); }
     .goal .tweets > li {
-      width: 90vw; }
+      width: 90vw;
+      margin: 10px 5vw; }
       .goal .tweets > li .twitter-tweet {
         width: 92vw !important;
         margin: -1vw !important;
@@ -1732,6 +1374,9 @@ small, .small {
 strong, .strong {
   font-weight: 600; }
 
+.center {
+  text-align: center; }
+
 :link:hover,
 :visited:hover,
 a:hover {
@@ -1776,42 +1421,23 @@ main :visited {
   -ms-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  background-image: -webkit-linear-gradient( top left, #FFB948, #FF43AD, #A732FF);
   background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF);
-  -webkit-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
-  -moz-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
   transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1); }
   main :link:hover,
   main :visited:hover {
     background-image: none;
     text-shadow: 0 3px 8px #00CAFF;
-    -webkit-transform: translateY(-5%);
-    -moz-transform: translateY(-5%);
-    -ms-transform: translateY(-5%);
-    -o-transform: translateY(-5%);
     transform: translateY(-5%); }
 
 .styled-letters {
   display: inline-block;
   position: relative;
   letter-spacing: .1em;
-  -webkit-perspective: 500px;
-  -moz-perspective: 500px;
   perspective: 500px;
-  -webkit-perspective-origin: center center;
-  -moz-perspective-origin: center center;
   perspective-origin: center center; }
   .styled-letters > * {
     display: inline-block;
-    -webkit-transform: rotateZ(15deg);
-    -moz-transform: rotateZ(15deg);
-    -ms-transform: rotateZ(15deg);
-    -o-transform: rotateZ(15deg);
     transform: rotateZ(15deg);
-    -webkit-transform-origin: 50% 100%;
-    -moz-transform-origin: 50% 100%;
-    -ms-transform-origin: 50% 100%;
-    -o-transform-origin: 50% 100%;
     transform-origin: 50% 100%; }
 
 .body-content {
@@ -1835,12 +1461,6 @@ main :visited {
     will-change: transform;
     vertical-align: middle;
     position: relative;
-    /*.click &:hover:before{
-      opacity: 1;
-      content: attr(title);
-    }*/
-    -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: -moz-transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     transition: transform 0.1s cubic-bezier(0.68, 0, 0.265, 1);
     -webkit-filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3)); }
@@ -1855,37 +1475,19 @@ main :visited {
       font-size: 0.9rem;
       opacity: 0;
       color: white;
-      -webkit-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
-      -moz-transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
       transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1);
-      -webkit-transform: translate(-50%, -0.6em);
-      -moz-transform: translate(-50%, -0.6em);
-      -ms-transform: translate(-50%, -0.6em);
-      -o-transform: translate(-50%, -0.6em);
       transform: translate(-50%, -0.6em); }
     .connections > a.featured {
       width: 3.5em;
       height: 3.5em; }
       .click .connections > a.featured:before {
-        -webkit-transform: translate(-50%, 0);
-        -moz-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
         transform: translate(-50%, 0); }
     .connections > a:hover {
-      -webkit-transform: translateY(-10%);
-      -moz-transform: translateY(-10%);
-      -ms-transform: translateY(-10%);
-      -o-transform: translateY(-10%);
       transform: translateY(-10%);
       -webkit-filter: drop-shadow(0 0.2em 0.2em rgba(0, 0, 0, 0.8));
       filter: drop-shadow(0 0.2em 0.2em rgba(0, 0, 0, 0.8)); }
     .connections > a:active {
       outline: none;
-      -webkit-transform: translateY(5%);
-      -moz-transform: translateY(5%);
-      -ms-transform: translateY(5%);
-      -o-transform: translateY(5%);
       transform: translateY(5%);
       -webkit-filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3));
       filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.3)); }

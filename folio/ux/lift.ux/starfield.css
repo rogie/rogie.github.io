@@ -2,10 +2,6 @@
 .masthead.starfield {
   position: relative;
   overflow: hidden;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   .masthead.starfield .space-backdrop {
     position: absolute;
@@ -13,12 +9,10 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: -webkit-linear-gradient(top, transparent, rgba(50, 0, 96, 0.6));
     background-image: linear-gradient(to bottom, transparent, rgba(50, 0, 96, 0.6)); }
   .masthead.starfield.black {
     background-color: #000100; }
     .masthead.starfield.black .space-backdrop {
-      background-image: -webkit-linear-gradient(top, transparent, rgba(0, 1, 0, 0.6));
       background-image: linear-gradient(to bottom, transparent, rgba(0, 1, 0, 0.6)); }
   .masthead.starfield .jubilee.space-gas {
     position: absolute;
@@ -40,22 +34,14 @@
     top: 50% !important;
     right: auto !important;
     z-index: 100;
-    -webkit-perspective: 300px;
-    -moz-perspective: 300px;
     perspective: 300px;
-    -webkit-perspective-origin: 50% 50%;
-    -moz-perspective-origin: 50% 50%;
     perspective-origin: 50% 50%; }
     .masthead.starfield .jubilee.starfield .particle {
       opacity: 0; }
       .masthead.starfield .jubilee.starfield .particle.play {
-        -webkit-animation-name: stars-enter;
-        -moz-animation-name: stars-enter;
         animation-name: stars-enter; }
       .masthead.starfield .jubilee.starfield .particle.twinkle {
         opacity: 0;
-        -webkit-animation: stars-twinkle linear infinite alternate;
-        -moz-animation: stars-twinkle linear infinite alternate;
         animation: stars-twinkle linear infinite alternate; }
   .masthead.starfield .page-header {
     margin: 4rem 0;
@@ -73,12 +59,7 @@
   left: 50%;
   top: 50%;
   margin-top: -5%;
-  background: -webkit-linear-gradient( left , rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%); }
 .particle.star > i:before, .particle.star:before {
   height: 600%;
@@ -86,18 +67,9 @@
   left: 50%;
   top: 50%;
   margin-left: -5%;
-  background: -webkit-linear-gradient( top , rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 .particle.star > i {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg); }
   .particle.star > i:after {
     width: 400%; }
@@ -109,53 +81,15 @@
   height: 30px;
   border-radius: 100%;
   box-shadow: 0 0 60px 10px currentColor;
-  backface-visibility: hidden;
-  -webkit-transform: scale(0.1);
-  -moz-transform: scale(0.1);
-  -ms-transform: scale(0.1);
-  -o-transform: scale(0.1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   transform: scale(0.1);
-  -webkit-transition: all 0.3s linear, opacity 0.3s cubic-bezier(0, 4, 0.84, 1);
-  -moz-transition: all 0.3s linear, opacity 0.3s cubic-bezier(0, 4, 0.84, 1);
   transition: all 0.3s linear, opacity 0.3s cubic-bezier(0, 4, 0.84, 1); }
-
-@-webkit-keyframes space-travel {
-  0% {
-    -webkit-transform: translate3d(-50%, -50%, -100px); }
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 100px); } }
-@-moz-keyframes space-travel {
-  0% {
-    -moz-transform: translate3d(-50%, -50%, -100px); }
-  100% {
-    -moz-transform: translate3d(-50%, -50%, 100px); } }
 @keyframes space-travel {
   0% {
-    -webkit-transform: translate3d(-50%, -50%, -100px);
-    -moz-transform: translate3d(-50%, -50%, -100px);
-    -ms-transform: translate3d(-50%, -50%, -100px);
-    -o-transform: translate3d(-50%, -50%, -100px);
     transform: translate3d(-50%, -50%, -100px); }
   100% {
-    -webkit-transform: translate3d(-50%, -50%, 100px);
-    -moz-transform: translate3d(-50%, -50%, 100px);
-    -ms-transform: translate3d(-50%, -50%, 100px);
-    -o-transform: translate3d(-50%, -50%, 100px);
     transform: translate3d(-50%, -50%, 100px); } }
-@-webkit-keyframes stars-enter {
-  0% {
-    opacity: 0; }
-  10%,90% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-@-moz-keyframes stars-enter {
-  0% {
-    opacity: 0; }
-  10%,90% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 @keyframes stars-enter {
   0% {
     opacity: 0; }
@@ -163,16 +97,6 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
-@-webkit-keyframes stars-twinkle {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-moz-keyframes stars-twinkle {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 @keyframes stars-twinkle {
   0% {
     opacity: 0; }
