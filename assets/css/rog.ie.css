@@ -1130,6 +1130,8 @@ footer {
     .goals-header > div p {
       color: #00CAFF;
       font-size: 1.2rem;
+      margin: 0 auto;
+      max-width: 30em;
       letter-spacing: 0.0125rem;
       text-shadow: 0 0 20px black,0 0 20px black; }
     .goals-header > div h1 {
@@ -1182,7 +1184,7 @@ footer {
 .goal {
   position: relative;
   overflow: visible;
-  border-top: 1px solid rgba(203, 203, 203, 0.5);
+  border-top: 1px solid rgba(202, 190, 216, 0.5);
   /*
   &:nth-child(4n){
     .goal-heading{
@@ -1406,7 +1408,7 @@ small, .small {
   letter-spacing: .15em; }
 
 .subdued {
-  color: #cbcbcb; }
+  color: #cabed8; }
 
 strong, .strong {
   font-weight: 600; }
