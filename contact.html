@@ -6,7 +6,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg"/>
   
-  <link rel='stylesheet' href='assets/04546948f357a342635cbab92c3a3b8a.css'>
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/rog.ie.css'>
   <title>Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev</title>
   <meta content="Surprising and Delightful Design, Illustration &amp; Development by Rogie King. HTML5, CSS3, JavaScript, Angular and React. " name="description"\>
   <meta content="Rogie King" name="author"\>
@@ -22,7 +45,12 @@
 
   <script src="//platform.twitter.com/widgets.js"></script>
 
-  <script src='assets/7b2e5f9e4f235f74c1506f6fe74a793e.js'></script>
+  <script src='assets/Jubilee.js/jubilee.js'></script>
+<script src='assets/js/inview.rogie.js'></script>
+<script src='assets/js/view.rogie.js'></script>
+<script src='assets/js/svg-button.rogie.js'></script>
+<script src='assets/js/rog.ie.js'></script>
+<script src='assets/js/tweets.rogie.js'></script>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rog.ie" />
@@ -182,6 +210,194 @@
     <svg preserveAspectRatio="none" width="54" height="14" viewBox="0 0 54 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="url(#grad-green)" d='M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z'/></svg>
 
 <div class="body-content">
+
+  <div id='product-component-d15c02fae97'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'super-team-deluxe.myshopify.com',
+      apiKey: '6bdc01e47091f7e747a2f89a22f60ce7',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [9942621130],
+        node: document.getElementById('product-component-d15c02fae97'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "variantId": "all",
+    "contents": {
+      "variantTitle": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "font-family": "Source Sans Pro, sans-serif",
+        "font-weight": "bold",
+        "background-image": "linear-gradient(to right,red,blue)"
+      },
+      "variantTitle": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "description": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "price": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "compareAt": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "googleFonts": [
+      "Source Sans Pro",
+      "Lato",
+      "Lato",
+      "Lato",
+      "Lato"
+    ]
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "font-family": "Source Sans Pro, sans-serif",
+        "font-weight": "bold"
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    },
+    "googleFonts": [
+      "Source Sans Pro"
+    ]
+  },
+  "modalProduct": {
+    "contents": {
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "font-family": "Source Sans Pro, sans-serif",
+        "font-weight": "bold"
+      },
+      "variantTitle": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "description": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "price": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "compareAt": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "googleFonts": [
+      "Source Sans Pro",
+      "Lato",
+      "Lato",
+      "Lato",
+      "Lato"
+    ]
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Source Sans Pro, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "googleFonts": [
+      "Source Sans Pro"
+    ]
+  },
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      },
+      "select": {
+        "font-family": "Lato, sans-serif",
+        "font-weight": "bold"
+      }
+    },
+    "googleFonts": [
+      "Lato",
+      "Lato"
+    ]
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
 
   <form id="form" onsubmit="contact(event);">
     <input name="name" placeholder="Name">

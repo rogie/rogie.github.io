@@ -6,7 +6,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg"/>
   
-  <link rel='stylesheet' href='assets/04546948f357a342635cbab92c3a3b8a.css'>
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/rog.ie.css'>
   <title>Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev</title>
   <meta content="Surprising and Delightful Design, Illustration &amp; Development by Rogie King. HTML5, CSS3, JavaScript, Angular and React. " name="description"\>
   <meta content="Rogie King" name="author"\>
@@ -22,7 +45,12 @@
 
   <script src="//platform.twitter.com/widgets.js"></script>
 
-  <script src='assets/7b2e5f9e4f235f74c1506f6fe74a793e.js'></script>
+  <script src='assets/Jubilee.js/jubilee.js'></script>
+<script src='assets/js/inview.rogie.js'></script>
+<script src='assets/js/view.rogie.js'></script>
+<script src='assets/js/svg-button.rogie.js'></script>
+<script src='assets/js/rog.ie.js'></script>
+<script src='assets/js/tweets.rogie.js'></script>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rog.ie" />

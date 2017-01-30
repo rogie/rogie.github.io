@@ -1216,6 +1216,8 @@ footer {
     white-space: nowrap;
     transform: rotate(-90deg) translateX(-50%) translateY(0%);
     transform-origin: 0% 0%; }
+    .goal-heading .subdued {
+      margin-bottom: .5em; }
   .goal .tweets {
     padding: 40px 0;
     padding-left: 5rem;
@@ -1224,7 +1226,7 @@ footer {
       vertical-align: middle;
       box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2);
       transition: all .2s ease-in; }
-      .goal .tweets > li.victory, .goal .tweets > li.noob {
+      .goal .tweets > li.n00b, .goal .tweets > li.victory, .goal .tweets > li.fail {
         padding: 20px;
         font-size: 1rem;
         text-align: center;
@@ -1232,16 +1234,21 @@ footer {
         -webkit-user-select: none;
            -moz-user-select: none;
             -ms-user-select: none;
-                user-select: none; }
-        .goal .tweets > li.victory, .goal .tweets > li.victory:hover, .goal .tweets > li.noob, .goal .tweets > li.noob:hover {
+                user-select: none;
+        white-space: normal;
+        line-height: 1.2; }
+        .goal .tweets > li.n00b, .goal .tweets > li.n00b:hover, .goal .tweets > li.victory, .goal .tweets > li.victory:hover, .goal .tweets > li.fail, .goal .tweets > li.fail:hover {
           box-shadow: none; }
-        .goal .tweets > li.victory .jubilee, .goal .tweets > li.noob .jubilee {
+        .goal .tweets > li.n00b .jubilee, .goal .tweets > li.victory .jubilee, .goal .tweets > li.fail .jubilee {
           position: absolute;
           left: 50%;
           top: 50%;
           height: 0;
           width: 0; }
-        .goal .tweets > li.victory em, .goal .tweets > li.noob em {
+        .goal .tweets > li.n00b em ~ *, .goal .tweets > li.victory em ~ *, .goal .tweets > li.fail em ~ * {
+          padding-top: 0;
+          margin-top: 0; }
+        .goal .tweets > li.n00b em, .goal .tweets > li.victory em, .goal .tweets > li.fail em {
           display: block;
           font-size: 3rem;
           background-color: #6122FF;
@@ -1254,6 +1261,7 @@ footer {
           display: inline-block;
           font-style: normal;
           margin-bottom: 20px;
+          position: relative;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           -moz-background-clip: text;
@@ -1264,7 +1272,7 @@ footer {
           text-fill-color: transparent;
           background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF);
           box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
-        .goal .tweets > li.victory.noob em, .goal .tweets > li.noob.noob em {
+        .goal .tweets > li.n00b.fail em, .goal .tweets > li.victory.fail em, .goal .tweets > li.fail.fail em {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           -moz-background-clip: text;
@@ -1274,6 +1282,26 @@ footer {
           background-clip: text;
           text-fill-color: transparent;
           background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #6122FF); }
+        .goal .tweets > li.n00b.n00b em, .goal .tweets > li.victory.n00b em, .goal .tweets > li.fail.n00b em {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: linear-gradient(to bottom right, #b09ec5, #e4deeb);
+          font-size: 1.8rem;
+          line-height: 5.6rem;
+          font-family: sans-serif;
+          padding-left: .6em; }
+          .goal .tweets > li.n00b.n00b em:before, .goal .tweets > li.victory.n00b em:before, .goal .tweets > li.fail.n00b em:before {
+            content: '\2022\2022\2022';
+            white-space: nowrap;
+            animation: ellipsis 900ms infinite alternate;
+            text-align: left;
+            display: block; }
       .goal .tweets > li:hover {
         box-shadow: 0 2px 4px rgba(0, 202, 255, 0.5), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
 
@@ -1305,6 +1333,15 @@ footer {
         width: 92vw !important;
         margin: -1vw !important;
         max-width: 92vw !important; } }
+@keyframes ellipsis {
+  from {
+    content: '\200a'; }
+  33% {
+    content: '\2022'; }
+  66% {
+    content: '\2022\2022'; }
+  to {
+    content: '\2022\2022\2022'; } }
 .tweets {
   position: relative;
   font-size: 0;
