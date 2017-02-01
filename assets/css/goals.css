@@ -208,6 +208,16 @@ html.goals {
             display: block;
             z-index: 1;
             font-style: normal; }
+        .goal .tweets > li.n00b.victory em > *, .goal .tweets > li.victory.victory em > *, .goal .tweets > li.fail.victory em > * {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF); }
         .goal .tweets > li.n00b.fail em > *, .goal .tweets > li.victory.fail em > *, .goal .tweets > li.fail.fail em > * {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
