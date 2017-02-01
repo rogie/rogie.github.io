@@ -194,6 +194,7 @@ html.goals {
           display: inline-block;
           margin-bottom: 20px;
           position: relative;
+          font-style: normal;
           box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
           .goal .tweets > li.n00b em > *, .goal .tweets > li.victory em > *, .goal .tweets > li.fail em > * {
             content: '';
@@ -206,16 +207,7 @@ html.goals {
             border-radius: 4rem;
             display: block;
             z-index: 1;
-            font-style: normal;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-            -ms-background-clip: text;
-            -ms-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF); }
+            font-style: normal; }
         .goal .tweets > li.n00b.fail em > *, .goal .tweets > li.victory.fail em > *, .goal .tweets > li.fail.fail em > * {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -226,23 +218,16 @@ html.goals {
           background-clip: text;
           text-fill-color: transparent;
           background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #6122FF); }
-        .goal .tweets > li.n00b.n00b em > *, .goal .tweets > li.victory.n00b em > *, .goal .tweets > li.fail.n00b em > * {
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          -moz-background-clip: text;
-          -moz-text-fill-color: transparent;
-          -ms-background-clip: text;
-          -ms-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
-          background-image: linear-gradient(to bottom right, #b09ec5, #e4deeb);
+        .goal .tweets > li.n00b.n00b em, .goal .tweets > li.victory.n00b em, .goal .tweets > li.fail.n00b em {
           font-size: 1.8rem;
           line-height: 5.4rem;
           font-family: sans-serif;
+          color: #cabed8;
           padding-left: .6em; }
-          .goal .tweets > li.n00b.n00b em > *:before, .goal .tweets > li.victory.n00b em > *:before, .goal .tweets > li.fail.n00b em > *:before {
+          .goal .tweets > li.n00b.n00b em:before, .goal .tweets > li.victory.n00b em:before, .goal .tweets > li.fail.n00b em:before {
             content: '\2022\2022\2022';
             white-space: nowrap;
+            display: block;
             animation: ellipsis 900ms infinite alternate;
             text-align: left;
             display: block; }
