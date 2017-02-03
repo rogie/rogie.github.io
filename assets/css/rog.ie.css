@@ -1053,6 +1053,28 @@ footer {
 html.goals {
   background-color: #F0FEFF; }
 
+.goal-list {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 202, 255, 0.5), 0 30px 40px -10px rgba(97, 34, 255, 0.2);
+  display: none; }
+  .goal-list:target {
+    display: block; }
+  .goal-list ul {
+    margin: 0;
+    padding: 0; }
+  .goal-list li {
+    padding: .66em 0;
+    margin: 0;
+    border-top: 1px solid rgba(202, 190, 216, 0.5);
+    list-style: none; }
+    .goal-list li:first-child {
+      border: 0; }
+
 .goals-summary.goals-header {
   margin: 0 auto;
   padding: 0;
