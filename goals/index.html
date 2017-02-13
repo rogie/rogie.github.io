@@ -6,30 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.svg"/>
   
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  <link rel='stylesheet' href='../assets/css/rog.ie.css'>
+  <link rel='stylesheet' href='../assets/93c44f934f67e1bc550eff19a681e077.css'>
 
   <title>The 48 Week Challenge</title>
   <meta content="The 48 Week Challenge" name="description"\>
@@ -45,12 +22,7 @@
   <meta name="referrer" content="always">
 
   <script src="//platform.twitter.com/widgets.js"></script>
-  <script src='../assets/Jubilee.js/jubilee.js'></script>
-<script src='../assets/js/inview.rogie.js'></script>
-<script src='../assets/js/view.rogie.js'></script>
-<script src='../assets/js/svg-button.rogie.js'></script>
-<script src='../assets/js/rog.ie.js'></script>
-<script src='../assets/js/tweets.rogie.js'></script>
+  <script src='../assets/7b2e5f9e4f235f74c1506f6fe74a793e.js'></script>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rog.ie" />
@@ -232,15 +204,14 @@
   <div id="goal-list" class="goal-list">
     <ul>
       <li><strong>Have an idea?</strong> <a href="http://twitter.com/home?status=@rogie Here's a challenge for you: ">Tweet it to me</a></li>
-      <li>Lunch of Service — buy a lunch for a less fortunate and ask their story</li>
-      <li>Lunch of Teaching — open streaming, AMA, live on Twitch</li>
-      <li>Moment with Kids</li>
-      <li>Moment with Toni</li>
-      <li>Share Failure — Vulnerable sharing of one failure/story</li>
-      <li>200 pushups</li>
+      <li>Lunch of service — buy a lunch for a less fortunate and ask their story</li>
+      <li>Lunch of teaching — open streaming, AMA, live on Twitch</li>
+      <li>Moment with kids</li>
+      <li>Moment with wife</li>
+      <li>Vulnerable sharing of one failure/story</li>
       <li>Vegan</li>
       <li>Fasting</li>
-      <li>No Caffeine</li>
+      <li>No caffeine</li>
       <li>Write a letter</li>
       <li>Blog</li>
       <li>Female sketch</li>
@@ -253,13 +224,10 @@
       <li>Allowing pleasure</li>
       <li>Random act of selflessness</li>
       <li>Random act of selfishness</li>
-      <li>Lapel pin/Patch</li>
-      <li>Random act of encouragement</li>
-      <li>Buy a $5 gift for a random person online</li>
       <li>Random tournament per day</li>
       <li>Act like a kid (video games,lan parties,no work,school)</li>
       <li>Gift of art - make something for someone for free!</li>
-      <li>#1: Read a book: tools of the titans</li>
+      <li>#1: Read a book: Tools of the titans/Not a fan</li>
       <li>Eat nothing with sugar</li>
       <li>Almonds raw/ hard boiled eggs/sprouts + protein / spinach + nuts / broth</li>
       <li>No stimulants</li>
@@ -285,14 +253,35 @@
 
   <section class="goal">
     <h3 class="goal-heading">
-      <div class="small subdued caps">Week 4/Jan 6</div>
-      5k a day
+      <div class="small subdued caps">Week 5/Feb 13</div>
+      1 design per day
     </h3>
     <ul class="tweets">
       <li class="n00b">
         <em></em>
-        <p>Every day, run a 5k.</p>
+        <p>
+          In honor of <a href="http://superteamdeluxe.com">Super Team Deluxe</a>,
+          I am to creating 1 design per day.
+        </p>
       </li>
+    </ul>
+  </section>
+
+  <section class="goal">
+    <h3 class="goal-heading">
+      <div class="small subdued caps">Week 4/Feb 6</div>
+      5k a day
+    </h3>
+    <ul class="tweets">
+      <li class="fail">
+        <em><i>✗</i></em>
+        <p>Ran in 5° and 3° weather and in blizzards. Got sick, but slayed. Proud of myself even tho I failed.</p?>
+      </li>
+      <li tweet-id="831006099495067648"></li>
+      <li tweet-id="830574389162696708"></li>
+      <li tweet-id="829479988743147524"></li>
+      <li tweet-id="829132689970130944"></li>
+      <li tweet-id="828773395139424260"></li>
     </ul>
   </section>
 
