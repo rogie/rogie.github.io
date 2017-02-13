@@ -6,7 +6,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.svg"/>
   
-  <link rel='stylesheet' href='../assets/93c44f934f67e1bc550eff19a681e077.css'>
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='../assets/css/rog.ie.css'>
 
   <title>Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev</title>
   <meta content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" name="description"\>
@@ -22,18 +45,22 @@
   <meta name="referrer" content="always">
 
   <script src="//platform.twitter.com/widgets.js"></script>
-  <script src='../assets/7b2e5f9e4f235f74c1506f6fe74a793e.js'></script>
+  <script src='../assets/Jubilee.js/jubilee.js'></script>
+<script src='../assets/js/inview.rogie.js'></script>
+<script src='../assets/js/view.rogie.js'></script>
+<script src='../assets/js/svg-button.rogie.js'></script>
+<script src='../assets/js/rog.ie.js'></script>
+<script src='../assets/js/tweets.rogie.js'></script>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rog.ie" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="http://rog.ie/../assets/img/rogie-preview.png" />
   <meta name="twitter:site" content="@rogie" />
   <meta name="twitter:creator" content="@rogie" />
   <meta name="twitter:url" property="og:url" content="http://rog.ie" />
   <meta name="twitter:image:width" content="1000" />
   <meta name="twitter:image:height" content="1000" />
-  <meta name="twitter:image" property="og:image" content="http://rog.ie/../assets/img/rogie-preview.png" />
+  <meta name="twitter:image" property="og:image" content="http://rog.ie/assets/img/rogie-preview.png" />
   <meta name="twitter:title" property="og:title" content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" />
   <meta name="twitter:description" property="og:description" content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" />
 
