@@ -159,24 +159,13 @@ nav {
   text-align: center;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
   -ms-flex-align: center;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
+      align-items: center;
   -ms-flex-pack: center;
+      justify-content: center;
+  perspective: 600px;
   mix-blend-mode: hard-light; }
   nav .contact-me {
     position: fixed;
@@ -237,50 +226,39 @@ nav .identity {
   margin: 0;
   padding: 0;
   margin: 0;
-  perspective: 600px;
-  will-change: transform; }
+  transform: translateY(10px); }
   nav .identity > a {
     width: 300px;
-    height: 216px;
+    height: 180px;
     font-size: 0;
     color: transparent;
     color: transparent;
-    margin: 0 auto;
-    padding: 0;
     display: block;
     position: relative;
-    z-index: 1;
     cursor: pointer;
-    will-change: transform;
     animation: 1.25s band ease-in-out; }
     nav .identity > a i {
-      content: '';
       display: block;
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      transition: all 0.1s ease-in-out; }
+      transition: all .1s ease-in-out; }
     nav .identity > a i.shadow {
       background: url(../img/rog.ie.svg) center center no-repeat;
-      background-size: 270px 194px;
+      background-size: 250px 150px;
       -webkit-filter: url(#logo-shadow);
-      filter: url(#logo-shadow);
+              filter: url(#logo-shadow);
       opacity: 0.8;
-      will-change: transform;
       transform: translateZ(-40px) translateY(10px); }
       html[data-useragent*='Edge'] nav .identity > a i.shadow {
         opacity: 0.6;
         -webkit-filter: blur(14px);
                 filter: blur(14px); }
-    nav .identity > a i.graphic {
-      z-index: 1;
-      background-size: 270px 194px;
-      will-change: transform; }
-      nav .identity > a i.graphic svg {
-        width: 100%;
-        height: 100%; }
+    nav .identity > a i.graphic > svg {
+      width: 100%;
+      height: 100%; }
     nav .identity > a:active i.shadow {
       opacity: 0.6;
       transform: translateZ(-40px) translateY(20px) !important; }
@@ -297,7 +275,7 @@ nav .identity {
     display: block;
     transform: translate(-50%, -50%);
     -webkit-filter: url(#jubilee-shadow);
-    filter: url(#jubilee-shadow); }
+            filter: url(#jubilee-shadow); }
 
 .jubilee.celebrate .particle {
   opacity: 0; }
@@ -422,9 +400,7 @@ main {
 
 header {
   min-height: 100%;
-  min-height: 80vh;
-  position: relative;
-  z-index: 100; }
+  min-height: 80vh; }
   header > svg {
     fill: black;
     fill: url(#grad-header);

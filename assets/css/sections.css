@@ -55,9 +55,7 @@ main {
 
 header {
   min-height: 100%;
-  min-height: 80vh;
-  position: relative;
-  z-index: 100; }
+  min-height: 80vh; }
   header > svg {
     fill: black;
     fill: url(#grad-header);

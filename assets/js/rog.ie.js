@@ -67,11 +67,13 @@ function init(){
   )
 
   //SVG buttons
-  new SVGButton(
-    document.body.querySelectorAll('.btn'),
-    '0 0 28 10',
-    'M 0.108245 3.33245C 0.312457 1.80982 1.64228 0.811825 3.16355 0.597672C 7.40919 0 11.427 0 14 0L 14 0 16.573 9.0267e-34 20.5908 -1.11022e-16 24.8365 0.597672C 26.3577 0.811825 27.6875 1.80983 27.8918 3.33246C 28.0361 4.40858 28.0361 5.59142 27.8918 6.66753C 27.6875 8.19017 26.3577 9.18817 24.8364 9.40233C 20.5908 10 16.573 10 14 10L 14 10C 11.427 10 7.40919 10 3.16354 9.40233C 1.64228 9.18817 0.312457 8.19018 0.108245 6.66755C -0.0360816 5.59143 -0.0360816 4.40857 0.108245 3.33245Z'
-  );
+  if('SVGButton' in window){
+    new SVGButton(
+      document.body.querySelectorAll('.btn'),
+      '0 0 28 10',
+      'M 0.108245 3.33245C 0.312457 1.80982 1.64228 0.811825 3.16355 0.597672C 7.40919 0 11.427 0 14 0L 14 0 16.573 9.0267e-34 20.5908 -1.11022e-16 24.8365 0.597672C 26.3577 0.811825 27.6875 1.80983 27.8918 3.33246C 28.0361 4.40858 28.0361 5.59142 27.8918 6.66753C 27.6875 8.19017 26.3577 9.18817 24.8364 9.40233C 20.5908 10 16.573 10 14 10L 14 10C 11.427 10 7.40919 10 3.16354 9.40233C 1.64228 9.18817 0.312457 8.19018 0.108245 6.66755C -0.0360816 5.59143 -0.0360816 4.40857 0.108245 3.33245Z'
+    );
+  }
 
   styleLetters();
 
@@ -89,10 +91,10 @@ function init(){
       _HTML.classList.remove('nav-docking');
     }
 
-    _NAV.style.bottom = navBottom + 'px';
-    _TAGLINE.style.opacity = (1-navBottom/dockPosition*2);
-    _TAGLINE.style.marginTop = -_TAGLINE.clientHeight*navBottom/dockPosition + 'px';
-    _IDENTITY.style.transform = 'scale(' + (minScale + (1-minScale)*(1-navBottom/dockPosition)) + ')';
+    _NAV.style.bottom = navBottom.toFixed(2) + 'px';
+    _TAGLINE.style.opacity = (1-navBottom/dockPosition*2).toFixed(2);
+    _TAGLINE.style.marginTop = -(_TAGLINE.clientHeight*navBottom/dockPosition).toFixed(2) + 'px';
+    _IDENTITY.style.transform = 'scale(' + (minScale + (1-minScale)*(1-navBottom/dockPosition)).toFixed(2) + ')';
   }
 
   if( !_HTML.classList.contains('nav-docked') ){
