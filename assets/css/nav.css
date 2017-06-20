@@ -143,7 +143,8 @@ nav .identity {
     opacity: 0;
     display: none; }
 .nav-docked header {
-  min-height: 180px; }
+  min-height: 180px;
+  z-index: 100; }
 .nav-docked main > svg {
   display: none; }
 
