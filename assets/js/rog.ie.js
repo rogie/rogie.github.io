@@ -97,8 +97,17 @@ function init(){
     _IDENTITY.style.transform = 'scale(' + (minScale + (1-minScale)*(1-navBottom/dockPosition)).toFixed(2) + ')';
   }
 
+  function animateLines(){
+    if(window.scrollY > window.innerHeight/2){
+      _HTML.classList.remove('animate');
+    } else {
+      _HTML.classList.add('animate');
+    }
+  }
+
   if( !_HTML.classList.contains('nav-docked') ){
     window.addEventListener('scroll',dockLogo);
+    window.addEventListener('scroll',animateLines);
     window.addEventListener('resize',dockLogo);
     dockLogo();
   }

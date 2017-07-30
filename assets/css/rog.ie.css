@@ -165,8 +165,7 @@ nav {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  perspective: 600px;
-  mix-blend-mode: hard-light; }
+  perspective: 600px; }
   nav .contact-me {
     position: fixed;
     right: 20px;
@@ -409,15 +408,18 @@ header {
     width: 100%;
     top: -5px; }
     header > svg path {
-      d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z");
-      animation: 30s top-wave linear infinite alternate; }
+      d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z"); }
+      .animate header > svg path {
+        animation: 30s top-wave linear infinite alternate; }
   header ~ main > svg path {
-    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
-    animation: 30s bottom-wave linear infinite alternate; }
+    d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
+    .animate header ~ main > svg path {
+      animation: 30s bottom-wave linear infinite alternate; }
 
 footer > svg path {
-  d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
-  animation: 30s bottom-wave linear infinite alternate; }
+  d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z"); }
+  .animate footer > svg path {
+    animation: 30s bottom-wave linear infinite alternate; }
 @keyframes top-wave {
   from {
     d: path("M 27 10C 21 8 14 3 0 3L 0 0L 54 0L 54 14C 40 14 33 12 27 10Z"); }

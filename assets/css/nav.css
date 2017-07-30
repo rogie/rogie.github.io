@@ -14,8 +14,7 @@ nav {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  perspective: 600px;
-  mix-blend-mode: hard-light; }
+  perspective: 600px; }
   nav .contact-me {
     position: fixed;
     right: 20px;
