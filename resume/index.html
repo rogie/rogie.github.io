@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+
+  <title>Rogie King —  Designer/Dev/Illustrator</title>
+
+</head>
+
+<body id="alt">
+  <header id="contact">
+    <figure>
+      <a href="#alt" class="avatar">
+        <img src="assets/headshot.jpg" alt="The human head of Rogie King" />
+      </a>
+      <a href="" class="avatar">
+        <img src="assets/rogie-wink-avatar.png" />
+      </a>
+      <figcaption>
+        <h2 class="mbq">Rogie King</h2>
+        <p class="m0">Designer/Dev/Illustrator</p>
+      </figcaption>
+      <a href="#contact" class="btn cta"></a>
+    </figure>
+    <nav class="contact">
+      <a href="mailto:hi@rog.ie">hi@rogie.com</a>
+      <a href="http://twitter.com/rogie">twitter/@rogie</a>
+      <a href="http://instagram.com/rogie">instagram/@rogie</a>
+      <a href="http://dribbble.com/rogie">dribbble/@rogie</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section>
+      <h2 class="small-caps subtle">Objective</h2>
+      <hr />
+      <p>
+        With over 15 years of making rad web shit, pushing the
+        envelope of traditional HTML tech as hard as I can, I'm looking
+        to find a team to join forces with.
+      </p>
+      <p>
+        I'm looking for a group of folks where my skills fit well — 
+        where we can build something helpful for the community in arts and design.
+      </p>
+      <p>
+        I've got a swath of skills ranging from <abbr title="Bow-chicka-bow-wow!">intimate</abbr> knowledge of HTML,
+        JavaScript, to cutting edge CSS/SVG/Canvas and animation.
+      </p>
+    </section>
+    <section>
+      <h2 class="small-caps subtle">Skills</h2>
+      <hr />
+      <dl>
+        <dt>Web/Mobile Design</dt>
+        <dd>Sketch / Figma / Photoshop</dd>
+        <dt>HTML5</dt>
+        <dd>Canvas / SVG</dd>
+        <dt>CSS3</dt>
+        <dd>SCSS / Less / Animation</dd>
+        <dt>JavaScript</dt>
+        <dd>React / Vue</dd>
+        <dt><a href="http://instagram.com/rogie">Art/Illustration</a></dt>
+        <dd>Digital Painting/Vector</dd>
+        <dt>Icon Design</dt>
+        <dd>Icon Font/SVG Icons</dd>
+      </dl>
+    </section>
+    <section>
+      <h2 class="small-caps subtle">Education/History</h2>
+      <hr />
+      <dl>
+        <dt><h2 class="mb0">Yala</h2>Co-founder/Designer/Front-end Developer </dt>
+        <dd>2017-2018</dd>
+        <dt><h2 class="mb0">NeonMob</h2>Co-founder/Designer/Front-end Developer</dt>
+        <dd>2011-2016</dd>
+        <dt><h2 class="mb0">Super Team Deluxe</h2>Co-founder/Designer/Dev/Artist</dt>
+        <dd>2016-Present</dd>
+        <dt><h2 class="mb0">Komodo Media</h2>Owner/Designer/Developer</dt>
+        <dd>2004-2011</dd>
+        <dd><span class="subtle">|</span></dd>
+        <dt><h2 class="mb0">Double BA in Computer Science/Math</h2>Carroll College &times; Magna Cum Laude</dt>
+        <dd>1998-2003</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2 class="small-caps subtle">Projects/Portfolio</h2>
+      <hr />
+
+      <h2><a href="https://cpj.org/">CPJ.org</a></h2>
+      <p>All front-end development built on bootstrap.</p>
+
+      <h2><a href="http://superteamdeluxe.com">Super Team Deluxe</a></h2>
+      <p>Shopify store, custom templates and JavaScript. Art, packaging, products.</p>
+
+      <h2><a href="https://yala.social">Yala</a></h2>
+      <p>Cofounded social post building web software and bot. Vue.js/CSS3/HTML/Design</p>
+
+      <h2><a href="http://finegoodsmarket.com">Fine Goods Market</a></h2>
+      <p>Cutting edge CSS3/transforms and design (for the time).</p>
+
+      <h2><a href="http://thesidecar.club">The Sidecar</a></h2>
+      <p>A co-working space I founded and designed.</p>
+
+      <h2><a href="http://www.finegoodsmarket.com/view">View.js</a></h2>
+      <p>A simple, lightweight photo viewer for the web.</p>
+
+      <h2 title="Not yet available"><a href="https://superteamdeluxe.com/pages/bfgs-a-super-team-deluxe-video-game-show">Jubilee.js</a></h2>
+      <p>A tiny JavaScript for fun and celebrations!</p>
+
+      <h2><del>Dug.js</del></h2>
+      <p>A tiny JavaScript to embed and template JSONP content feeds!</p>
+
+
+    </section>
+  </main>
+
+  <a href="#" class="esc"></a>
+</body>
+
+</html>
