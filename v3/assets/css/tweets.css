@@ -1,0 +1,33 @@
+.tweets {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 200px;
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-x: repeat(100%);
+  -webkit-scroll-snap-points-x: repeat(100vw); }
+  .tweets > li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    width: 280px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 30px 40px -10px rgba(0, 0, 0, 0.2); }
+    .tweets > li .twitter-tweet {
+      margin: -2px !important;
+      padding: 0;
+      width: 282px !important;
+      max-width: 282px !important;
+      display: inline-block !important; }

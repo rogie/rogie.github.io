@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 0;
+  height: 0;
+  overflow: auto;
+  opacity: 0;
+  display: none\9;
+  background: rgba(0, 0, 0, 0.8);
+  transform: translate3d(0, 100%, 0);
+  white-space: nowrap;
+  text-align: center;
+  padding: 20px; }
+  .modal:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+  .modal:target {
+    display: block;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transform: translate(0, 0); }
+  .modal .dialog {
+    background: white;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: middle; }

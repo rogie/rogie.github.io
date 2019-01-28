@@ -1,0 +1,316 @@
+.portfolio {
+  padding: 0;
+  position: relative;
+  margin: 0 auto;
+  padding: 80px 0; }
+  .portfolio .body-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 70vw; }
+  .portfolio > svg {
+    top: 0; }
+  .portfolio:nth-child(2n) > svg {
+    fill: url(#grad-pink); }
+    .portfolio:nth-child(2n) > svg path {
+      d: path("M 27 4.125C 21 6.125 14 11 0 11L 0 13.9962L 54 14L 54 0C 40 0 33 2.125 27 4.125Z"); }
+  .portfolio:nth-child(3n) > svg {
+    fill: url(#grad-orange); }
+  .portfolio .frame.mobile {
+    position: absolute;
+    left: 17vw;
+    top: 120px;
+    z-index: 10;
+    margin-left: 0;
+    font-size: 260px;
+    opacity: 1; }
+  .portfolio .frame.web {
+    position: absolute;
+    left: 17vw;
+    top: 120px;
+    z-index: 10;
+    opacity: 1;
+    font-size: 40vw; }
+  .portfolio .view {
+    padding: 40px 0; }
+    .portfolio .view > *.previous, .portfolio .view > *.next {
+      cursor: pointer; }
+      .portfolio .view > *.previous:hover figure, .portfolio .view > *.next:hover figure {
+        transform: translateY(-2%); }
+      .portfolio .view > *.previous:focus figure, .portfolio .view > *.previous:active figure, .portfolio .view > *.next:focus figure, .portfolio .view > *.next:active figure {
+        transform: translateY(2%); }
+      .portfolio .view > *.previous:focus img, .portfolio .view > *.previous:active img, .portfolio .view > *.next:focus img, .portfolio .view > *.next:active img {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 10px 10px -12px rgba(0, 0, 0, 0.1); }
+      .portfolio .view > *.previous img, .portfolio .view > *.next img {
+        border-radius: 10px;
+        margin: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 30px 40px -10px rgba(0, 0, 0, 0.2); }
+    .portfolio .view > *.previous figure {
+      perspective-origin: 100% 50%; }
+    .portfolio .view > *.previous img {
+      transform: rotateY(20deg) scale(0.85) translateX(-50%);
+      transform-origin: 0% 50%; }
+    .portfolio .view > *.next figure {
+      perspective-origin: 0 50%; }
+    .portfolio .view > *.next img {
+      transform: rotateY(-20deg) scale(0.85) translateX(50%);
+      transform-origin: 0 50%; }
+    .portfolio .view > * figure, .portfolio .view > * img, .portfolio .view > * figcaption {
+      will-change: transform, opacity;
+      transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
+    .portfolio .view > * figcaption {
+      opacity: 0; }
+    .portfolio .view > * figure {
+      perspective: 900px; }
+      .portfolio .view > * figure img {
+        border-radius: 10px;
+        margin: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 30px 40px -10px rgba(0, 0, 0, 0.2); }
+    .portfolio .view > *.current figure {
+      padding: 0 2vw; }
+      .portfolio .view > *.current figure img {
+        transform: rotateY(0); }
+      .portfolio .view > *.current figure figcaption {
+        opacity: 1; }
+
+.portfolio:nth-child(2n) .portfolio--header {
+  color: #00CAFF; }
+
+.portfolio:nth-child(3n) .portfolio--header {
+  color: #6122FF; }
+
+.portfolio--header {
+  position: absolute;
+  left: -40px;
+  top: 40px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-size: inherit;
+  color: #FF43AD;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  z-index: 2;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: 0% 0%; }
+
+.portfolio .view figure {
+  width: 70vw;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  box-lines: single;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  box-align: start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start; }
+  .portfolio .view figure img {
+    -moz-flex-grow: 0;
+    flex-grow: 0;
+    -ms-flex-positive: 0; }
+  .portfolio .view figure figcaption {
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1; }
+    .portfolio .view figure figcaption h2 {
+      margin: 0 0 1em 0; }
+  .portfolio .view figure img + figcaption {
+    padding-left: 3vw; }
+.portfolio.other .view figure img {
+  width: 30vw;
+  min-width: 30vw; }
+.portfolio.other .view > .current figure img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 30px 40px -10px rgba(0, 0, 0, 0.2); }
+  .portfolio.other .view > .current figure img.alpha {
+    box-shadow: none;
+    -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3)); }
+.portfolio.other .view > .next img {
+  transform: rotateY(-20deg) scale(0.85) translateX(20%); }
+.portfolio.other .view > .previous img {
+  transform: rotateY(20deg) scale(0.85) translateX(-70%); }
+.portfolio.mobile .view figure img {
+  width: 260px;
+  min-width: 260px;
+  margin-left: 13px; }
+.portfolio.mobile .view > .current figure img {
+  box-shadow: none;
+  border-radius: 0px; }
+.portfolio.web figure img {
+  width: 40vw;
+  min-width: 40vw; }
+.portfolio.web .view > .current figure img {
+  box-shadow: none;
+  border-radius: 0px; }
+.portfolio.web .view > .next img {
+  transform: rotateY(-20deg) scale(0.85) translateX(10%); }
+.portfolio.web .view > .previous img {
+  transform: rotateY(20deg) scale(0.85) translateX(-90%); }
+
+.frame.web,
+.frame.mobile {
+  font-size: 320px;
+  width: 1em;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, 0.05), 0 0.15em 0.25em 0 rgba(0, 0, 0, 0.2);
+  box-sizing: content-box;
+  pointer-events: none; }
+  .frame.web > :before, .frame.web > :after,
+  .frame.mobile > :before,
+  .frame.mobile > :after {
+    position: absolute;
+    content: '';
+    display: block;
+    z-index: 1; }
+
+.frame.web {
+  font-size: 600px;
+  border-radius: .025em .025em 0 0;
+  border: 0 solid white;
+  border-top-width: .06em;
+  margin: -.06em 0 0 0;
+  box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, 0.05), 0 0.05em 0.1em 0.0125em rgba(0, 0, 0, 0.3);
+  position: relative; }
+  .frame.web:before {
+    box-shadow: inset 0 3px 3px -3px rgba(0, 0, 0, 0.2); }
+  .frame.web > :nth-child(1):after {
+    left: 12%;
+    right: 0.015em;
+    height: .03em;
+    top: -0.045em;
+    border-radius: .015em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
+  .frame.web > :nth-child(1):before, .frame.web > :nth-child(2):before, .frame.web > :nth-child(2):after {
+    left: .02em;
+    height: .02em;
+    width: .02em;
+    top: -0.04em;
+    border-radius: .01em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
+  .frame.web > :nth-child(2):before {
+    margin-left: 0.03em; }
+  .frame.web > :nth-child(2):after {
+    margin-left: 0.06em; }
+  .frame.web:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .frame.web > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.frame.mobile {
+  border: 1px solid white;
+  border-width: .2em;
+  border-left-width: .05em;
+  border-right-width: .05em;
+  border-radius: .1em;
+  margin: -.2em -.05em;
+  box-shadow: 0 0.005em 0.01em 0 rgba(0, 0, 0, 0.05), 0 0.15em 0.25em 0 rgba(0, 0, 0, 0.2);
+  position: relative; }
+  .frame.mobile:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 177.77778%; }
+  .frame.mobile > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .frame.mobile > :nth-child(2):before {
+    width: .12em;
+    height: .12em;
+    position: absolute;
+    bottom: -0.16em;
+    left: 50%;
+    border-radius: .06em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+    transform: translate3d(-50%, 0, 0); }
+  .frame.mobile > :nth-child(2):after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .frame.mobile > :nth-child(3):before {
+    left: 42%;
+    right: 42%;
+    height: .02em;
+    top: -0.11em;
+    border-radius: .01em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
+  .frame.mobile > :nth-child(3):after {
+    left: 34%;
+    width: .04em;
+    height: .04em;
+    top: -0.12em;
+    border-radius: .02em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05)); }
+
+@media screen and (max-width: 900px) {
+  .portfolio {
+    margin: -80px auto; }
+    .portfolio .portfolio--header {
+      transform: rotate(0);
+      display: block;
+      top: -20px;
+      left: 0;
+      right: 0;
+      text-align: center; }
+    .portfolio .frame {
+      font-size: 70vw !important;
+      left: 15vw !important; }
+      .portfolio .frame.mobile {
+        font-size: 50vw !important;
+        left: 25vw !important;
+        margin: -.2em -.05em; }
+    .portfolio .view > .current figure {
+      padding: 0; }
+    .portfolio .view figure {
+      text-align: center;
+      display: block; }
+      .portfolio .view figure img {
+        width: 70vw !important;
+        min-width: 70vw !important;
+        margin-bottom: 20px; }
+      .portfolio .view figure figcaption {
+        padding: 20px 0;
+        text-align: left; }
+    .portfolio.other .view > .previous img {
+      transform: rotateY(20deg) scale(0.85) translateX(-90%);
+      transform-origin: 0% 50%; }
+    .portfolio.other .view > .next img {
+      transform: rotateY(-20deg) scale(0.85) translateX(10%);
+      transform-origin: 0% 50%; }
+    .portfolio.mobile .view figure img {
+      width: 50vw !important;
+      min-width: 50vw !important;
+      margin-bottom: 80px;
+      margin-left: 0; }
+    .portfolio.mobile .view > .previous img {
+      transform: rotateY(20deg) scale(0.85) translateX(-100%);
+      transform-origin: 0% 50%; }
+    .portfolio.mobile .view > .next img {
+      transform: rotateY(-20deg) scale(0.85) translateX(-10%);
+      transform-origin: 0% 50%; } }

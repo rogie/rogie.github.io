@@ -1,0 +1,66 @@
+.portfolio--sample.jetwash {
+  background: black url(stars.png) repeat; }
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  transition: 0.3s color ease-in; }
+  .menu-item:before, .menu-item:after {
+    content: '';
+    height: 1px;
+    display: block;
+    background: linear-gradient(to right, transparent, white, transparent);
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+    transform: translateX(-50%) scale(1, 1); }
+  .menu-item:before {
+    top: 0;
+    display: none; }
+  .menu-item:after,
+  .menu-item .jubilee.jetwash {
+    transform: translateX(-50%) scale(0, 1);
+    transition: 0.2s all ease-in-out; }
+  .menu-item .jubilee.jetwash {
+    display: none;
+    transform: translateX(-50%) scale(0, 0);
+    transform-origin: 50% 0; }
+  .menu-item:hover:after,
+  .menu-item:hover .jubilee.jetwash {
+    display: block;
+    transform: translateX(-50%) scale(1, 1); }
+  .menu-item > * {
+    position: relative;
+    color: white;
+    z-index: 1; }
+    .menu-item > *:after {
+      display: none; }
+  .menu-item .jubilee.jetwash {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+    bottom: auto !important;
+    left: 50% !important;
+    top: 100% !important;
+    right: auto !important; }
+    .menu-item .jubilee.jetwash .particle {
+      margin-left: 50%;
+      margin-top: -5px;
+      width: 2px;
+      height: 2px;
+      border-radius: 1px; }
+@keyframes jw {
+  0% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

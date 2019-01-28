@@ -1,0 +1,104 @@
+/* Dynamic Masthead colors */
+.masthead.starfield {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d; }
+  .masthead.starfield .space-backdrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, transparent, rgba(50, 0, 96, 0.6)); }
+  .masthead.starfield.black {
+    background-color: #000100; }
+    .masthead.starfield.black .space-backdrop {
+      background-image: linear-gradient(to bottom, transparent, rgba(0, 1, 0, 0.6)); }
+  .masthead.starfield .jubilee.space-gas {
+    position: absolute;
+    perspective: none;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 100; }
+    .masthead.starfield .jubilee.space-gas .particle {
+      background: purple;
+      color: purple;
+      width: 2px;
+      height: 2px;
+      border-radius: 100%; }
+  .masthead.starfield .jubilee.starfield {
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    z-index: 100;
+    perspective: 300px;
+    perspective-origin: 50% 50%; }
+    .masthead.starfield .jubilee.starfield .particle {
+      opacity: 0; }
+      .masthead.starfield .jubilee.starfield .particle.play {
+        animation-name: stars-enter; }
+      .masthead.starfield .jubilee.starfield .particle.twinkle {
+        opacity: 0;
+        animation: stars-twinkle linear infinite alternate; }
+  .masthead.starfield .page-header {
+    margin: 4rem 0;
+    position: relative;
+    z-index: 200; }
+
+.particle.star > i:before, .particle.star > i:after, .particle.star:before, .particle.star:after {
+  content: '';
+  display: block;
+  position: absolute;
+  opacity: 0.5; }
+.particle.star > i:after, .particle.star:after {
+  width: 600%;
+  height: 10%;
+  left: 50%;
+  top: 50%;
+  margin-top: -5%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
+  transform: translateX(-50%); }
+.particle.star > i:before, .particle.star:before {
+  height: 600%;
+  width: 10%;
+  left: 50%;
+  top: 50%;
+  margin-left: -5%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), currentColor, rgba(255, 255, 255, 0));
+  transform: translateY(-50%); }
+.particle.star > i {
+  transform: rotate(45deg); }
+  .particle.star > i:after {
+    width: 400%; }
+  .particle.star > i:before {
+    height: 400%; }
+
+.jubilee.starfield .particle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: 0 0 60px 10px currentColor;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: scale(0.1);
+  transition: all 0.3s linear, opacity 0.3s cubic-bezier(0, 4, 0.84, 1); }
+@keyframes space-travel {
+  0% {
+    transform: translate3d(-50%, -50%, -100px); }
+  100% {
+    transform: translate3d(-50%, -50%, 100px); } }
+@keyframes stars-enter {
+  0% {
+    opacity: 0; }
+  10%,90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes stars-twinkle {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

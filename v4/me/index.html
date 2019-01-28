@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.svg"/>
+  <title>Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev</title>
+  <meta content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" name="description"\>
+  <meta content="Rogie King" name="author"\>
+
+  <link rel="stylesheet" href="https://use.typekit.net/ovr7vvn.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="../assets/img/favicon.svg" color="#FFFFFF">
+  <link rel="manifest" href="../assets/img/manifest.json">
+  <link rel="mask-icon" href="../assets/img/safari-pinned-tab.svg" color="#000000">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="referrer" content="always">
+
+  <!--script src="//platform.twitter.com/widgets.js"></script-->
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='../assets/css/rog.ie.css'>
+  <script src='../assets/js/rogie.js'></script>
+<script src='../assets/js/rogie.hoverfx.js'></script>
+<script src='../assets/js/rogie.zoom.js'></script>
+<script src='../assets/js/tmpl.js'></script>
+<script src='../assets/js/palette.js'></script>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rog.ie" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rogie" />
+  <meta name="twitter:creator" content="@rogie" />
+  <meta name="twitter:url" property="og:url" content="http://rog.ie" />
+  <meta name="twitter:image:width" content="1000" />
+  <meta name="twitter:image:height" content="1000" />
+  <meta name="twitter:image" property="og:image" content="http://rog.ie/assets/img/rogie-preview.png" />
+  <meta name="twitter:title" property="og:title" content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" />
+  <meta name="twitter:description" property="og:description" content="Rog.ie — Surprising and Delightful Design, Illustration &amp; Dev" />
+
+  <!--
+
+    Welcome, fellow denizen of the mortal realms of code. It's been awhile since we've talked like
+    this, I know. It wasn't you — it was me. You see, things got hard there for a bit and the light
+    inside was just down to a dim flicker...but not so anymore.
+
+    I mean, this is strange right? Talking this way? But, hey...wan't to grab a drink?
+    I'd love to sit on the back porch and talk life with you...scream and laugh aloud with a
+    fire roaring, whiskey in our veins, and passion in our hearts about the things we love.
+    Really bond, ya know? It's amazing how rad that human connection can be. Human to human,
+    sharing stories of failure, triumph and all of our awesome little nerdy oddities.
+
+    Perhaps the ship would veer into musical taste territory and we'd wax poetic about how
+    we're supposed to have these amazing tastes in music, but really we just love a good
+    EDM beat, or maybe we love cartoon soundtracks? Or maybe about how we've always
+    loved techno, trance and dubstep.
+
+    No matter the topic, we'd walk away friends, and stronger for the conversation we'd had,
+    no matter how different we were. Perhaps we grew up in lives and culture bubbles so
+    polar-opposite, but we found, through friendship how to change and how to love and see
+    ourselves in the one across from us, face glowing from the warmth of the fire,
+    whiskey and solidarity.
+
+    Well, that sure got emo.
+
+    Oh, you're still here? Well, here are some interesting things that make me:
+
+    Cry:
+    https://www.youtube.com/watch?v=EboJrjl_ELI
+    https://open.spotify.com/track/3AGawd3ZkLbYQlxe4nZIEK
+    https://open.spotify.com/track/2TTpZrsNdlOBoHKNGdpSeq
+
+    Dance:
+    https://open.spotify.com/track/5PJKbLCiIkQgir60Sd8DQ5
+    https://soundcloud.com/dj_tigerlily/mundian-to-bach-ke-tigerlily-bootleg
+    https://soundcloud.com/dj_tigerlily/team-tiger-podcast-003-ft-jaysounds
+
+    Party:
+    https://www.blantonsbourbon.com/
+    https://soundcloud.com/ben_oneil12/bearly-legal-continuous-mix
+    https://open.spotify.com/user/1239043557/playlist/7qGMntSb6g6Nx2WmslDpCO
+    https://open.spotify.com/user/1239043557/playlist/1pqVBQ6YsDATRzAAchGHQv
+
+  -->
+</head>
+<body>
+  <script>
+    (function(){
+      var b = document.documentElement;
+      b.setAttribute('data-useragent',  navigator.userAgent);
+      b.setAttribute('data-platform', navigator.platform );
+      b.classList.add( !!('ontouchstart' in window)?'touch':'click' );
+      b.addEventListener('mousemove', function (e) { b.removeEventListener('mousemove', arguments.callee, false); b.classList.add('mouse'); }, false);
+    })();
+  </script>
+  <div style="width:0;height:0;overflow:hidden;">
+    <svg>
+      <radialGradient id="btn-grad" cx="26.0831593%" cy="109.928601%" fx="26.0831593%" fy="109.928601%" r="134.809646%" id="radialGradient-1">
+          <stop stop-color="#F9ED32" offset="0%"></stop>
+          <stop stop-color="#EE2A7B" stop-opacity="0.864168128" offset="31.6812313%"></stop>
+          <stop stop-color="#002AFF" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient id="grad-green" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#3EFF58;stop-opacity:0.5" />
+        <stop offset="100%" style="stop-color:#3EFF58;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-green" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#3EFF58;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#3EFF58;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-blue" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:0.7" />
+        <stop offset="100%" style="stop-color:#00CAFF;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-blue" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#00CAFF;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-pink" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FF43AD;stop-opacity:0.5" />
+        <stop offset="100%" style="stop-color:#FF43AD;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-pink" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FF43AD;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#FF43AD;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-orange" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FFB948;stop-opacity:0.4" />
+        <stop offset="100%" style="stop-color:#FFB948;stop-opacity:0" />
+      </radialGradient>
+      <linearGradient id="grad-header" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#FFB948;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#FF43AD;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#A732FF;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="grad-footer" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#A732FF;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6122FF;stop-opacity:1" />
+      </linearGradient>
+      <filter id="logo-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="5" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="6" />
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.5"/>
+        </feComponentTransfer>
+      </filter>
+      <filter id="zoom-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="30" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      </filter>
+      <filter id="jubilee-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="20" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      </filter>
+      <filter id="blend-difference">
+        <feBlend mode="screen" in="SourceGraphic"/>
+      </filter>
+      <filter id="gritty-shadow"
+        	filterUnits="userSpaceOnUse" x="-100%" y="-100%" width="200vw" height="200vw">
+          <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="5" seed="1" stitchTiles="noStitch" result="img"/>
+          <feDisplacementMap in="SourceGraphic" in2="img" xChannelSelector="R" yChannelSelector="G" scale="200">
+          </feDisplacementMap>
+      </filter>
+      <filter id="subtle-grit"
+        	filterUnits="userSpaceOnUse" x="-100%" y="-100%" width="200vw" height="200vw">
+          <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="5" seed="1" stitchTiles="noStitch" result="img"/>
+          <feDisplacementMap in="SourceGraphic" in2="img" xChannelSelector="R" yChannelSelector="G" scale="1.5">
+          </feDisplacementMap>
+      </filter>
+
+      <filter id="color-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20"></feOffset>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="15"></feGaussianBlur>
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.4"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+
+    </svg>
+  </div>
+
+  <nav id="nav" class="">
+  <span class="identity">
+    <i class="logo-text">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="150" viewBox="0 0 250 150"><defs><radialGradient id="radial-gradient" cx="51.54" cy="135.67" r="267.16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb948"/><stop offset="0.32" stop-color="#ee2a7b"/><stop offset="1" stop-color="#002aff"/></radialGradient></defs><title>rog.ie</title><path d="M102.1,78c0,24.91,31.49,24.83,31.49-4.47,0-6.15-4.75-16.64-14.85-16.64C109.3,56.87,102.1,66.24,102.1,78Zm22.7-.91c0,14.37-13.24,13.34-13.24,1.35C111.56,65.36,124.8,65.59,124.8,77.07ZM107.39,99.52l.58.76c-13.8,9.81-29.59,3.24-38.8-8.06a152.72,152.72,0,0,0,5.34,29.1s-3.82,2.22-7.58,4.71c-4.26-13.71-7.36-24.79-9.55-36.87-3.89,1.6-7.8,3.06-11.66,4.35-.44-2.15-.87-4.15-1.28-6q6.24-2.35,11.85-5c-1.8-12.13-2.8-25.81-3.2-44.33a145.06,145.06,0,0,1,17.8-7.84A347.84,347.84,0,0,0,68.32,76.2c38.91-23,45.93-53.9,12.82-53.9-20.77,0-56.64,16.12-77,30.22C4.19,52.52,2,41.8,0,29.23c9.17-4.74,42.5-20.3,75-20.3,27.68,0,39.58,11.4,39.58,24.67,0,19.93-20.46,37.57-44.49,49.74,6.54,9.21,17.49,11.66,28.17,5A19.61,19.61,0,0,0,107.39,99.52ZM166.58,87.1c2.78-36.22,2.72-40,3.9-50.53,0,0-7.28,1-13.16,2.39.15,2.61.27,5.24.36,7.91a11.69,11.69,0,0,0-5.88-1.51c-20.09,0-19.88,36.58-2.12,36.58a11.48,11.48,0,0,0,7.69-3q-.24,5.2-.6,10.8c-28.11,8.73-44.27,25-44.27,37.12,0,8.57,4.67,14.23,15.18,14.23,16.29,0,31.24-17.33,35.52-35.58a68.78,68.78,0,0,0-9.58,1.58c-8.92,22.5-17.68,28-26.58,28-4.55,0-7.63-2.32-7.63-7,0-13.85,25.05-29.48,58.46-29.48,27.18,0,46.57,6.62,46.57,6.62,3-14.16,4-19.77,4-19.77C223.38,84.5,194.16,80.89,166.58,87.1ZM153.25,73.79c-9.57,0-8.8-17.93-.28-17.93a6.31,6.31,0,0,1,4.89,2.28c0,4.38-.07,8.91-.22,13.68A5.72,5.72,0,0,1,153.25,73.79Zm23.21-47.84a7.64,7.64,0,1,1,15.21,1.21,7.64,7.64,0,1,1-15.21-1.21ZM190.3,54.72A38,38,0,0,0,195.53,57c0,9.08,5.81,16.26,14,16.26,5.66,0,11.14-4.11,14-7.6l-2.81-3.54s-3.8,4.13-7.8,4.13c-3.57,0-7-2-7.67-7.12,10.33.82,20.34-4.68,20.34-14.59,0-5.66-4.33-9.8-10.36-9.8-9,0-16.84,8.46-19.05,17.39A38.94,38.94,0,0,1,192,50.39C191.68,51.13,190.3,54.72,190.3,54.72Zm27.38-9c0,3.67-3.81,8.34-12.26,8C207.43,41.77,217.68,38.82,217.68,45.7ZM174.22,57.94a69.47,69.47,0,0,1,2.24-18.22l.39-.07a17.13,17.13,0,0,0,12.25-.52c-2.94,7.92-4.53,15.47-4.53,21.43,0,7.18,4.09,9,8.24,3.41a17.13,17.13,0,0,0,2,4.64c-2.5,3.62-5.82,5.87-9.76,5.87C178.56,74.47,174.22,67.79,174.22,57.94Z"/></svg>
+    </i>
+    <i class="logo-mark">
+      <img src="../assets/img/avatar.svg" />
+    </i>
+  </span>
+  <a href="/art/" title="My Art"><span class="fun-letters">Art</span></a>
+  <!--a href="#notes" class="fun-letters">Notes</a-->
+  <!--a href="#sandbox" class="fun-letters">Sandbox</a-->
+  <a href="/me/" title="About Me"><span class="fun-letters">Me</span></a>
+  <a href="http://twitter.com/rogie" title="Contact Me">
+    <span>
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M94.5504 35.6739C88.8867 34.3025 81.0388 38.2455 76.0354 48.8998C71.921 45.814 66.7525 44.6965 61.6666 45.4711C60.7904 40.6646 57.5585 26.0482 49.9138 21.2988C39.0626 14.5557 33.8942 26.5815 40.7516 31.2166C46.1232 34.8422 50.3519 39.763 52.9425 48.8427C51.5075 49.7824 50.1551 50.9062 48.9106 52.2142C48.6503 52.4872 48.3963 52.773 48.1487 53.0523C45.6724 50.1506 38.4658 40.8297 26.9098 39.4011C16.8079 38.1566 15.411 52.2206 27.4876 53.3698C36.5356 54.2333 41.2976 58.5383 43.5326 61.4653C42.8151 63.9035 42.5421 66.4116 42.7136 68.8624C35.3038 66.2211 27.659 65.8147 22.5985 68.6656C18.0904 71.2054 17.3158 80.0438 28.4591 77.7897C39.6214 75.5357 45.1581 78.5009 47.8756 80.5518C48.0217 80.7041 48.1677 80.8565 48.3201 81.0026C53.4949 85.9361 60.9174 87.1933 67.6986 84.9837C69.7812 90.7299 75.5909 90.1013 81.7435 83.9487C88.5374 77.1548 88.1184 69.7641 82.8357 68.1957C83.1658 66.6274 83.3182 65.0401 83.2928 63.4718L83.3055 63.4845C83.115 57.3065 84.8929 50.8364 93.9027 47.6871C102.913 44.5377 100.906 37.2105 94.5504 35.6739Z" fill="white"/>
+<path d="M71.8513 54.1953C70.6894 55.4462 69.6417 56.8811 68.9179 58.3859C68.7592 58.7733 68.5623 59.1415 68.429 59.5352C68.3083 59.9289 68.1433 60.3098 68.048 60.7098C67.9718 61.1162 67.8575 61.5099 67.775 61.9099L67.6544 63.129C67.6163 63.5353 67.6544 63.948 67.648 64.3608C67.6544 64.5639 67.6353 64.7735 67.6671 64.9767L67.7623 65.5925C67.8321 66.0053 67.8321 66.4243 67.9464 66.8307C68.0607 67.2371 68.1623 67.6434 68.2576 68.0625C68.3274 68.4815 68.5115 68.8752 68.6576 69.2816L69.0893 70.5134C69.4385 71.3134 69.8322 72.1071 70.156 72.9579L70.1814 73.0277C70.3084 73.3516 70.1433 73.7198 69.8195 73.8405C69.5592 73.9421 69.2798 73.8595 69.1084 73.6563C68.5052 72.9325 67.9337 72.1706 67.3813 71.3896L66.6892 70.1197C66.467 69.6943 66.2257 69.2689 66.0797 68.799C65.3241 66.9894 65.0193 64.9703 65.1146 62.9575C65.2416 60.9384 65.94 58.9701 67.0067 57.3065C67.267 56.8875 67.5718 56.5002 67.8702 56.1065C68.2004 55.7382 68.5115 55.37 68.8671 55.0334C69.5782 54.354 70.3211 53.7699 71.2164 53.2873C71.4831 53.1413 71.8196 53.2429 71.9656 53.5096C72.0799 53.7255 72.0418 53.9794 71.8831 54.1509L71.8513 54.1953Z" fill="black"/>
+<g opacity="0.5">
+<path opacity="0.5" d="M2.57891 83.8028C2.7186 83.9615 2.90908 84.2028 3.09956 84.406C3.27735 84.6219 3.46783 84.8314 3.66466 85.0409C4.03928 85.4663 4.45199 85.8727 4.84566 86.2727C5.66474 87.0664 6.49651 87.841 7.37909 88.5522C8.26166 89.2633 9.15693 89.9554 10.103 90.5713C10.5856 90.8697 11.0364 91.2062 11.5189 91.4919L12.992 92.3237C13.4745 92.6158 14.0015 92.8317 14.5032 93.092L15.2651 93.4666L16.0524 93.7904L17.6271 94.4571C18.1731 94.6286 18.7128 94.8191 19.2525 95.0159L20.0653 95.308L20.897 95.5365L22.5733 96.0191C23.6971 96.3302 24.8591 96.5334 26.0147 96.8763L26.1671 96.9207C26.9036 97.1429 27.3163 97.9176 27.1004 98.6478C26.929 99.2319 26.402 99.6129 25.8242 99.6383C24.5543 99.6891 23.2654 99.7145 21.9828 99.6319L20.0589 99.4097C19.7351 99.3716 19.4176 99.3335 19.0938 99.2764L18.1414 99.0605C17.5064 98.9208 16.8715 98.7748 16.2429 98.6097L14.3889 97.9811C14.0777 97.8731 13.773 97.7652 13.4682 97.6446L12.5729 97.2318C11.9824 96.9461 11.3729 96.6985 10.7951 96.3747C8.48389 95.1175 6.35048 93.5174 4.51549 91.638C3.58212 90.711 2.76304 89.676 2.00111 88.6093C1.64554 88.0506 1.27728 87.5108 0.966153 86.9204C0.635983 86.3362 0.375656 85.7647 0.0962805 85.06C-0.183095 84.3488 0.166124 83.5488 0.877261 83.2694C1.43601 83.0535 2.04556 83.2186 2.42017 83.6377L2.57891 83.8028Z" fill="white"/>
+<path opacity="0.5" d="M8.19173 78.0438C9.53147 79.193 11.0236 80.3803 12.503 81.428C14.0015 82.4757 15.538 83.4725 17.1508 84.3107C18.7445 85.1805 20.3954 85.9552 22.097 86.5964C23.7923 87.2949 25.5638 87.7774 27.367 88.3679L27.4432 88.3933C28.0718 88.6029 28.4147 89.2823 28.2115 89.9109C28.0464 90.4061 27.5893 90.7299 27.094 90.7363C25.0622 90.7744 22.9923 90.5839 21.0112 90.0378C20.0017 89.822 19.0429 89.441 18.0651 89.0981C17.5762 88.9267 17.1254 88.6791 16.6492 88.4759C16.1793 88.2664 15.7095 88.0441 15.265 87.7901C14.357 87.3012 13.4872 86.7425 12.6363 86.171C11.8173 85.5488 10.9855 84.9456 10.2363 84.2408C8.70604 82.8503 7.36631 81.3455 6.2869 79.466C5.95673 78.8946 6.15356 78.158 6.73136 77.8279C7.18217 77.5675 7.73457 77.6374 8.10284 77.9549L8.19173 78.0438Z" fill="white"/>
+</g>
+<g opacity="0.5">
+<path opacity="0.5" d="M80.0998 22.8418C80.0045 22.6386 79.9093 22.3465 79.7886 22.0926C79.687 21.8259 79.5728 21.5592 79.4458 21.2989C79.2172 20.7719 78.9569 20.2449 78.7029 19.7242C78.1695 18.6893 77.6108 17.6797 76.9885 16.7019C76.3663 15.7304 75.725 14.7716 75.0075 13.8764C74.6392 13.4319 74.3091 12.9621 73.9344 12.5303L72.7789 11.2541C72.4042 10.8159 71.9661 10.435 71.5661 10.0223L70.9502 9.41272L70.2899 8.84762L68.9819 7.69838C68.512 7.35551 68.0485 6.99994 67.5914 6.63802L66.8993 6.09832L66.1691 5.60941L64.7087 4.59985C63.7182 3.93951 62.6705 3.36806 61.661 2.66327L61.5276 2.56803C60.8864 2.11722 60.734 1.23465 61.1848 0.599705C61.5403 0.0917498 62.1689 -0.105083 62.734 0.0536531C63.9785 0.415571 65.2294 0.802887 66.4485 1.29814L68.2327 2.13627C68.5311 2.27596 68.8295 2.41564 69.1216 2.57438L69.9724 3.08868C70.5375 3.43155 71.1089 3.77442 71.6613 4.14269L73.2551 5.34908C73.5217 5.55227 73.7821 5.75545 74.036 5.97133L74.7662 6.65707C75.2424 7.12058 75.7567 7.55869 76.2075 8.05394C78.0362 10.0159 79.5855 12.2446 80.7537 14.6574C81.3569 15.8511 81.8141 17.1209 82.2078 18.3972C82.3665 19.0512 82.557 19.6925 82.6649 20.3592C82.7284 20.6893 82.7792 21.0258 82.8173 21.3624C82.8554 21.7116 82.8872 22.0227 82.8999 22.4354C82.9316 23.21 82.3284 23.8704 81.5474 23.9021C80.9633 23.9275 80.4426 23.591 80.214 23.0894L80.0998 22.8418Z" fill="white"/>
+<path opacity="0.5" d="M72.8174 26.6006C72.3603 25.8577 71.8587 25.0196 71.3444 24.245C70.83 23.4577 70.2903 22.6957 69.7443 21.9401C68.6331 20.4417 67.4712 18.9876 66.1823 17.6606C64.9251 16.3018 63.579 15.0319 62.1377 13.8573C60.7217 12.6382 59.1725 11.6032 57.6169 10.4477L57.5534 10.3969C57.0137 9.99049 56.8994 9.22856 57.2994 8.68251C57.6169 8.2571 58.1629 8.09201 58.6455 8.2444C60.6202 8.86029 62.5567 9.71112 64.3028 10.8794C65.2108 11.4128 66.0108 12.0922 66.849 12.7334C67.268 13.0573 67.6236 13.4382 68.0172 13.7938C68.4046 14.1494 68.7855 14.5113 69.1348 14.905C69.8522 15.6732 70.5126 16.486 71.1539 17.3177C71.7507 18.1813 72.3539 19.0384 72.8492 19.9591C73.8778 21.7941 74.6905 23.6799 75.1286 25.845C75.262 26.5054 74.8365 27.1467 74.1762 27.28C73.6619 27.3816 73.1603 27.1467 72.9 26.7276L72.8174 26.6006Z" fill="white"/>
+</g>
+<path d="M75.8021 81.6124C75.8973 81.3838 75.8148 81.1171 75.5989 80.9838C75.4782 80.9139 75.3386 80.9012 75.2116 80.933C75.1481 80.952 75.0782 80.9774 75.0211 81.0219L75.0084 81.0346C74.2084 81.6568 73.402 82.26 72.5385 82.7807C71.694 83.3204 70.7987 83.7712 69.9034 84.1902C69.1986 84.5141 68.4685 84.7871 67.7383 85.0284C68.3415 86.6729 69.2558 87.7904 70.3987 88.3999C70.9257 88.0126 71.44 87.6062 71.9226 87.1681C72.7797 86.4062 73.5417 85.5363 74.1957 84.6029C74.8687 83.6886 75.364 82.6473 75.8021 81.6124Z" fill="black"/>
+<path d="M83.0972 66.7991C83.0845 66.9007 83.0718 67.015 83.0527 67.1229C83.0718 66.9896 83.0908 66.8562 83.1099 66.7229C83.1035 66.7419 83.0972 66.761 83.0972 66.78V66.7991Z" fill="black"/>
+<path d="M84.3227 69.1358C84.3545 69.0659 84.3799 68.9961 84.4116 68.9262C83.9545 68.6215 83.4338 68.3802 82.856 68.2087C82.856 68.2024 82.856 68.1897 82.8624 68.1833C82.8306 68.3294 82.7989 68.4754 82.7608 68.6151C82.6084 69.231 82.4306 69.8469 82.2211 70.4501C81.802 71.6628 81.2687 72.8375 80.6274 73.9677V73.974C80.5448 74.1137 80.5766 74.2915 80.7099 74.3994C80.8559 74.5137 81.0655 74.4947 81.1798 74.3487C82.0242 73.3073 82.7862 72.1835 83.4338 70.9834C83.7576 70.3866 84.0497 69.7707 84.3227 69.1358Z" fill="black"/>
+</svg>
+    </span>
+  </a>
+</nav>
+<main id="me">
+  <article>
+    <h1 class="text-center with-logo-type">
+      <div class="fun-letters small">About</div>
+      <div class="logo-type">Rogie</div>
+    </h1>
+    <p>When he was a little youngun’, he wanted to make art for Disney so bad.</p>
+    <p>But his parents didn’t agree. They thought he should be an accountant. Well, that was a REALLY bad idea because accounting SUCKS (not for all ppl, but for rogie, yes).</p>
+    <p>Failing accounting led him to programming and programming definitely DIDN’T SUCK. It was fun!</p>
+    <p>But programming wasn’t fun without the interfaces— the buttons and knobs to make the programs work! So, he taught himself how to DESIGN.</p>
+    <p>He loved designing and programming. But ART. Oh art. He loved it. So, recently, he’s been making <a href="/art/">art</a> and it’s just so wonderful. </p>
+  </article>
+
+  <hr />
+
+  <article>
+    <h1 class="fun-letters text-center">Movies</h1>
+    <p class="text-center">
+      My dad, Roger, loved movies. I love movies even more, but as of recent, I REALLY love horror movies.
+      I update this list every time I watch a movie and I rate it too. No, I'm not a snob. I love shitty movies too!
+    </p>
+  </article>
+  <div id="movies" class="full-width"></div>
+
+  <hr />
+
+  <article>
+    <h1 class="fun-letters text-center">♫ Tunes ♪</h1>
+    <p class="text-center">
+      I like the night life. I like to boogie.
+    </p>
+  </article>
+  <div id="music" class="full-width"></div>
+
+
+  <script type="text/html" id="music_tmpl">
+    <% var shown = 0; %>
+    <ul class="playlist-music">
+      <% track.forEach(function(t,i){ %>
+        <% if(t.image[3]['#text'] && shown++ <= 10){ %>
+          <li>
+            <figure class="compact-disc">
+              <a href="<%= t.url %>" alt="<%= t.name %> from <%=t.album['#text']%>">
+                <img alt="<%= t.name %> from <%=t.album['#text']%>" src="<%= t.image[3]['#text'] %>"></li>
+              </a>
+            </figure>
+        <% } %>
+      <% }); %>
+    </ul>
+  </script>
+  <script type="text/html" id="movies_tmpl">
+    <ul class="playlist-movies">
+      <% movies.forEach(function(movie,i){ %>
+        <li>
+          <a href="<%= movie.link %>" target="_new">
+            <figure class="betamax">
+              <div>
+                <div><img src="<%= movie.cover %>" alt="<%= movie.title %>"></div>
+              </div>
+              <figcaption>
+                <img src="<%= movie.cover %>" alt="<%= movie.title %>">
+                <span class="title"><%= movie.title %></span>
+                <span class="rating <%= movie.rating %>"><%= movie.ratingHTML %></span>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </script>
+  <script>
+    fetch('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=komodomedia&api_key=efa7c333d3786cbaaa3a03d70268bae4&format=json')
+      .then(function(res){
+        res.text().then(function(json) {
+          var data = JSON.parse(json);
+          var music = document.getElementById("music");
+          music.innerHTML = tmpl("music_tmpl", data.recenttracks );
+        });
+      })
+      fetch('https://jsonp.afeld.me/?url=https://letterboxd.com/rogieking/rss/')
+        .then(function(res){
+          res.text().then(function(htmlTxt) {
+            var domParser = new DOMParser();
+            var doc = domParser.parseFromString(htmlTxt, 'text/html');
+            var movies = document.getElementById("movies");
+            var data = [];
+            doc.querySelectorAll('item').forEach(function(movie){
+              if(movie.querySelector('description img')){
+                var title = movie.querySelector('title').innerHTML;
+                var parts = title.split(' - ');
+                var link = movie.innerHTML.match(/<link>([^<]*)/ig)[0].replace("<link>","");
+                data.push({
+                  cover:  movie.querySelector('description img').src,
+                  title: parts[0].replace(/(, \d{4})/,''),
+                  rating: parts[1],
+                  link: link,
+                  ratingHTML: parts[1]? parts[1].replace(/(.)/ig,'<span class="$1">$1</span>') : ''
+                });
+              }
+            });
+
+            movies.innerHTML = tmpl("movies_tmpl", {movies: data} );
+          });
+      }).catch(function(){
+        console.error('Error in fetching the website');
+      });
+  </script>
+</main>
+
+  <footer>
+    <div class="body-content mobile">
+      <p class="connections">
+        <a href="http://twitter.com/rogie" title="Emo tweets, Miley, EDM and Disney in no order.">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>twitter</title><desc>Created with Sketch.</desc><path d="M22.726 52.64c18.871 0 29.191-15.634 29.191-29.191 0-.444-.009-.886-.029-1.326 2.003-1.448 3.744-3.255 5.118-5.313-1.838.817-3.816 1.367-5.892 1.615 2.118-1.27 3.744-3.279 4.512-5.675-1.982 1.175-4.177 2.029-6.515 2.49-1.872-1.994-4.538-3.241-7.489-3.241-5.666 0-10.26 4.595-10.26 10.258 0 .805.09 1.588.266 2.339-8.527-.429-16.088-4.512-21.148-10.719-.881 1.516-1.389 3.277-1.389 5.157 0 3.559 1.811 6.702 4.566 8.54-1.683-.052-3.264-.514-4.646-1.283l-.002.131c0 4.969 3.536 9.117 8.231 10.057-.862.235-1.769.361-2.705.361-.66 0-1.303-.065-1.928-.185 1.306 4.076 5.094 7.043 9.584 7.126-3.511 2.752-7.935 4.392-12.742 4.392-.827 0-1.644-.047-2.447-.142 4.541 2.91 9.932 4.609 15.727 4.609" fill="#fff"/></svg>
+        </a>
+        <a href="http://instagram.com/rogie" title="Am I an artist yet?">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>instagram</title><desc>Created with Sketch.</desc><path d="M48.345 18.655c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3m-16.345 21.678c-4.602 0-8.333-3.731-8.333-8.333s3.731-8.333 8.333-8.333 8.333 3.731 8.333 8.333-3.731 8.333-8.333 8.333m0-21.171c-7.09 0-12.838 5.748-12.838 12.838 0 7.09 5.748 12.838 12.838 12.838 7.09 0 12.838-5.748 12.838-12.838 0-7.09-5.748-12.838-12.838-12.838m20.35 22.94c-.111 2.437-.519 3.761-.861 4.642-.454 1.167-.995 2-1.87 2.875-.875.875-1.708 1.417-2.875 1.87-.881.342-2.205.75-4.642.861-2.636.12-3.426.146-10.102.146s-7.466-.025-10.102-.146c-2.437-.111-3.761-.519-4.642-.861-1.167-.453-2-.995-2.875-1.87-.875-.875-1.417-1.708-1.87-2.875-.342-.881-.75-2.205-.861-4.642-.12-2.636-.146-3.427-.146-10.102 0-6.675.026-7.466.146-10.102.111-2.437.518-3.761.861-4.642.454-1.167.995-2 1.87-2.875.875-.875 1.708-1.417 2.875-1.87.881-.342 2.205-.75 4.642-.861 2.636-.12 3.427-.146 10.102-.146 6.675 0 7.466.026 10.102.146 2.437.111 3.761.518 4.642.861 1.167.454 2 .995 2.875 1.87.875.875 1.417 1.708 1.87 2.875.342.881.75 2.205.861 4.642.12 2.636.146 3.427.146 10.102 0 6.675-.025 7.466-.146 10.102m4.5-20.41c-.121-2.661-.544-4.478-1.162-6.068-.639-1.644-1.494-3.038-2.884-4.428-1.39-1.39-2.784-2.245-4.428-2.884-1.59-.618-3.407-1.041-6.068-1.162-2.667-.122-3.518-.15-10.307-.15-6.79 0-7.641.029-10.308.15-2.661.121-4.478.544-6.068 1.162-1.644.639-3.038 1.494-4.428 2.884-1.39 1.39-2.245 2.784-2.884 4.428-.618 1.59-1.041 3.408-1.162 6.068-.122 2.667-.15 3.518-.15 10.308s.029 7.641.15 10.307c.121 2.661.544 4.478 1.162 6.069.639 1.644 1.494 3.038 2.884 4.428 1.39 1.39 2.784 2.245 4.428 2.884 1.59.618 3.408 1.041 6.068 1.162 2.667.122 3.518.15 10.308.15s7.641-.029 10.307-.15c2.661-.121 4.478-.544 6.068-1.162 1.644-.639 3.038-1.494 4.428-2.884 1.39-1.39 2.245-2.784 2.884-4.428.618-1.59 1.041-3.408 1.162-6.069.122-2.667.15-3.518.15-10.307 0-6.79-.029-7.641-.15-10.308" fill="#fff"/></svg>
+        </a>
+        <a href="http://superteamdeluxe.com" title="The most impactful lapel pin company to grace the internet?">
+          <svg width="50" height="39" viewBox="0 0 50 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M43.1191 0.960938C47.3662 0.960938 49.334 3.08301 49.334 6.0127C49.334 7.44043 48.8223 8.72949 47.4033 9.87793C47.2661 9.98926 47.1641 10.123 47.1216 10.2822C47.0908 10.3975 47.0918 10.5254 47.1333 10.667C47.1743 10.8066 47.4004 11.5049 47.6567 12.2959C48.0186 13.4121 48.439 14.709 48.481 14.876C48.5171 15.0176 48.5122 15.1367 48.4531 15.2295C48.3936 15.3242 48.2788 15.3926 48.0952 15.4316C48.0952 15.4316 47.6973 15.4922 46.9902 15.4922C46.2832 15.4922 45.959 15.4316 45.959 15.4316C45.585 15.3652 45.4922 15.2402 45.4282 15.0869L44.186 12.3369C43.9971 11.9189 43.5381 12.0264 43.5122 12.4551C43.4263 13.8574 43.2803 15.0107 43.2803 15.0107C43.2485 15.2158 43.1641 15.3164 43.0234 15.373C42.957 15.4004 42.8784 15.418 42.7871 15.4326C42.7871 15.4326 42.4209 15.4971 41.8291 15.4971C41.2373 15.4971 40.8691 15.4326 40.8691 15.4326C40.5132 15.3867 40.3979 15.2988 40.3662 14.9727C40.3662 14.9727 40.335 13.9258 40.3105 12.4258C40.292 11.3066 40.2769 9.93555 40.2803 8.55859C40.2881 5.33887 40.3823 2.09375 40.3823 2.09375C40.3979 1.47949 40.7241 1.17285 41.27 1.08203C41.7803 0.99707 42.4429 0.960938 43.1191 0.960938ZM44.396 17.4004C45.2891 17.4004 46.3301 17.4883 46.3301 17.4883C46.7793 17.5322 47.0083 17.8145 46.9731 18.1914C46.9731 18.1914 46.9531 19.002 46.8706 20.4072C46.8086 21.4639 46.7114 22.8574 46.561 24.4951C46.21 28.3086 45.8501 31.377 45.8501 31.377C45.8291 31.6133 45.6729 31.7539 45.3931 31.7939C45.3931 31.7939 45.0513 31.8467 44.4209 31.8467C43.791 31.8467 43.2803 31.7939 43.2803 31.7939C42.9663 31.7646 42.832 31.6006 42.8213 31.3545L42.6431 27.29C42.623 26.8389 42.1079 26.6904 41.8779 27.0781C41.8779 27.0781 40.7622 28.9834 40.4663 29.3242C40.207 29.6221 39.9629 29.6221 39.7383 29.3125C39.5132 29.0039 38.4062 27.0459 38.4062 27.0459C38.186 26.6484 37.6582 26.7871 37.6333 27.2412L37.4009 31.3613C37.3911 31.5312 37.3208 31.6631 37.1753 31.7354C37.1118 31.7666 37.0347 31.7871 36.9419 31.7949C36.9419 31.7949 36.771 31.8174 36.4644 31.832C36.2944 31.8408 36.083 31.8477 35.8359 31.8477C35.144 31.8477 34.8442 31.7949 34.8442 31.7949C34.5669 31.7588 34.396 31.6016 34.3853 31.3564C34.3853 31.3564 34.3291 30.3701 34.2568 28.8955C34.1987 27.7109 34.1309 26.2119 34.0732 24.6553C33.9438 21.1592 33.9873 18.1895 33.9873 18.1895C33.9873 17.7334 34.2173 17.5166 34.623 17.4893C34.623 17.4893 35.4819 17.4482 36.0869 17.4482C36.6909 17.4482 37.9321 17.4873 37.9321 17.4873C38.3149 17.5059 38.4253 17.6836 38.5371 17.8633L38.5493 17.8828L39.2261 19.4326L39.855 21.0566C40.0522 21.418 40.3232 21.418 40.5239 21.0566C40.5239 21.0566 40.8589 20.1143 41.1533 19.4004C41.4473 18.6855 41.8369 17.8662 41.8369 17.8662L41.8608 17.8213C41.9507 17.6523 42.0166 17.5283 42.29 17.4883C42.29 17.4883 43.5029 17.4004 44.396 17.4004ZM42.2969 34.1826C42.3721 34.2598 42.4062 34.3545 42.4019 34.4736C42.3843 35.002 41.5703 35.1104 40.8521 35.2051C40.2227 35.2881 39.6831 35.3594 39.6719 35.6797C39.6641 35.8916 39.8892 35.9434 40.1069 35.9922C40.269 36.0283 40.4248 36.0635 40.5029 36.1553C40.5376 36.1963 40.5566 36.248 40.5542 36.3164C40.5391 36.7207 39.9722 36.7402 39.4229 36.7578C38.9292 36.7744 38.4629 36.79 38.4521 37.1006C38.4453 37.3174 38.7183 37.3584 39.0083 37.4014C39.3418 37.4512 39.6841 37.5029 39.6729 37.8027C39.6631 38.0986 39.2979 38.4521 37.6201 38.4521C37.1582 38.4521 36.8252 38.3506 36.6333 38.1523C36.4731 37.9863 36.4453 37.7852 36.4502 37.6455C36.4619 37.3174 36.7832 36.6416 37.2319 36.0049L37.3921 35.7764C38.252 34.5469 38.7261 33.8701 40.3062 33.8701C41.3188 33.8701 42.0459 33.9229 42.2969 34.1826ZM35.7876 36.0283C35.3833 36.3301 35.0649 36.5684 35.0669 36.7363C35.0679 36.8389 35.126 36.9873 35.1929 37.1572C35.2832 37.3838 35.3843 37.6416 35.3872 37.8789C35.3892 38.0322 35.3379 38.1836 35.248 38.2959C35.1362 38.4355 34.9663 38.5107 34.7559 38.5137H34.7451C34.3281 38.5137 34.1719 38.207 34.0342 37.9346C33.938 37.7441 33.854 37.5801 33.6963 37.5801C33.5361 37.582 33.2876 37.7549 32.999 37.9551C32.6079 38.2266 32.1279 38.5605 31.7373 38.5664C31.5493 38.5703 31.4033 38.5186 31.3062 38.4199C31.2461 38.3584 31.2065 38.2773 31.1895 38.1797C31.1812 38.1338 31.1782 38.085 31.1802 38.0332C31.1812 37.6641 31.6431 37.2656 32.0522 36.9131L32.0581 36.9082C32.4023 36.6104 32.7002 36.3525 32.6973 36.1436C32.6953 36.0078 32.623 35.7969 32.5396 35.5527C32.4409 35.2646 32.3311 34.9443 32.3281 34.71C32.3252 34.5127 32.3901 34.3291 32.5112 34.1914C32.645 34.0381 32.8359 33.9561 33.063 33.9531H33.0811C33.7085 33.9531 33.8535 34.3809 33.9702 34.7266C34.0405 34.9355 34.0996 35.1113 34.2549 35.1113C34.373 35.1094 34.561 34.9531 34.8213 34.7363C35.2432 34.3838 35.8169 33.9062 36.3569 33.8994H36.373C36.8101 33.8994 37.0742 34.1377 37.0791 34.54C37.0825 34.8398 36.8433 35.1455 36.5293 35.4346C36.3003 35.6445 36.0312 35.8457 35.7876 36.0283ZM31.3242 34.9785C31.3242 35.4746 31.0459 36.3838 30.5161 37.1621C29.7051 38.3535 28.7842 38.6035 28.1543 38.6035C26.9648 38.6035 25.7651 37.5615 25.7651 35.2334C25.7651 34.8545 25.8398 34.5596 25.9849 34.3545C26.147 34.126 26.397 34.0088 26.729 34.0088C27.3379 34.0088 27.6743 34.3613 27.6743 35L27.646 35.4756C27.625 35.7188 27.5991 36.0215 27.5991 36.459C27.5991 36.8174 27.6758 37.0762 27.8276 37.2354C27.9473 37.3604 28.1133 37.4229 28.3262 37.4229C28.686 37.4229 28.9614 37.1904 29.1436 36.7393C29.271 36.4248 29.353 36.0049 29.3872 35.4834C29.4541 34.4609 29.7671 34.0254 30.4341 34.0254C30.9751 34.0254 31.3242 34.4004 31.3242 34.9785ZM26.5269 29.4561C25.9912 29.5078 25.793 29.7656 25.6431 30.2178L25.2583 31.4355C25.2061 31.6455 25.062 31.7461 24.8013 31.7939C24.8013 31.7939 24.2363 31.8818 23.5161 31.8818C22.7959 31.8818 22.4961 31.7939 22.4961 31.7939C22.1343 31.6836 21.9819 31.5303 22.0332 31.2422C22.0332 31.2422 22.5962 27.1436 23.1421 24.0693C23.688 20.9951 24.3369 18.2617 24.3369 18.2617C24.416 17.8145 24.8052 17.4883 25.2603 17.4883C25.2603 17.4883 25.7227 17.4521 26.3506 17.4258C26.6958 17.4111 27.0908 17.4004 27.4863 17.4004C28.6011 17.4004 29.791 17.4883 29.791 17.4883C30.248 17.4883 30.6382 17.8174 30.7148 18.2666C30.7148 18.2666 31.248 20.7197 31.8599 24.0654C32.4722 27.4102 32.939 31.2451 32.939 31.2451C32.9893 31.5322 32.8071 31.7451 32.4761 31.7939C32.4761 31.7939 32.3696 31.8174 32.1226 31.8369C31.9429 31.8516 31.689 31.8643 31.3472 31.8643C30.5361 31.8643 30.168 31.7939 30.168 31.7939C29.9082 31.7451 29.7622 31.6455 29.7109 31.4355L29.3252 30.2178C29.1621 29.7852 28.9429 29.5283 28.4409 29.4561C28.4409 29.4561 28.3237 29.4404 28.1113 29.4277C27.9458 29.417 27.7227 29.4072 27.4521 29.4072C26.9141 29.4072 26.5269 29.4561 26.5269 29.4561ZM24.3501 37.0898C24.8389 37.1338 25.394 37.1846 25.4551 37.5967C25.4761 37.7432 25.438 37.875 25.3413 37.9873C25.0542 38.3203 24.3101 38.4375 23.709 38.4375H23.6699C23.2964 38.4375 22.936 38.4375 22.6318 38.3633C22.354 38.2959 22.1221 38.166 21.9712 37.918C21.5269 37.1875 21.1929 35.834 21.1929 34.7676C21.1929 34.1865 21.6152 33.7959 22.2432 33.7959C22.5513 33.7959 22.792 33.8662 22.9644 34.0059C23.1797 34.1797 23.2881 34.4619 23.2881 34.8506V34.8672C23.2881 35.1387 23.2881 35.4824 23.3081 35.8135C23.3374 36.3066 23.4111 36.7715 23.5952 36.918C23.7412 37.0352 24.0371 37.0615 24.3501 37.0898ZM21.2051 25.5537C21.1763 26.1094 21.1279 26.3887 21.1279 26.3887C21.0391 26.9004 20.8203 27.042 20.4062 27.0762L18.041 27.125C17.5703 27.1338 17.2109 27.4316 17.1792 27.8896L17.167 28.0576C17.1309 28.5654 17.4673 28.9326 18.124 28.9531C18.8389 28.9746 19.9692 28.9951 19.9692 28.9951C20.2515 28.9951 20.4194 29.0781 20.5225 29.2217C20.6201 29.3564 20.6606 29.5449 20.6851 29.7686C20.6851 29.7686 20.7148 29.9707 20.6841 30.4277C20.6533 30.8857 20.5923 31.1221 20.5923 31.1221C20.4692 31.5596 20.2593 31.749 19.7671 31.7959C19.7671 31.7959 18.7349 31.9014 17.248 31.9014C15.7612 31.9014 14.6841 31.7959 14.6841 31.7959C14.271 31.7275 13.9971 31.542 13.9912 31.1045C13.9912 31.1045 13.9619 30.2129 13.9331 28.8311C13.9092 27.6904 13.8857 26.2158 13.8799 24.6328C13.8672 21.1309 13.9438 18.2988 13.9438 18.2988C13.939 17.8701 14.2539 17.5293 14.6831 17.4893C14.6831 17.4893 15.9419 17.4014 17.7793 17.4014C19.6162 17.4014 21.1001 17.4893 21.1001 17.4893C21.5151 17.4893 21.8081 17.791 21.8232 18.252C21.8232 18.252 21.8301 18.3525 21.8291 18.5967C21.8281 18.7969 21.8223 19.0938 21.8032 19.5117C21.7651 20.3604 21.6929 20.6543 21.6929 20.6543C21.5889 21.1328 21.3491 21.3193 20.8589 21.3389C20.8589 21.3389 18.958 21.3652 18.4492 21.3945C17.9092 21.4268 17.6992 21.667 17.627 22.165C17.627 22.165 17.562 22.626 17.5669 23.1914C17.5723 23.7324 17.853 23.9326 18.3901 23.9648C18.3901 23.9648 19.0347 23.9727 19.6309 23.9854C19.981 23.9932 20.3145 24.002 20.4902 24.0117C20.9648 24.0391 21.1919 24.3252 21.2129 24.7744C21.2129 24.7744 21.2197 24.8477 21.2202 25.0137C21.2207 25.1387 21.2173 25.3154 21.2051 25.5537ZM18.6938 37.0098C18.6938 37.2256 19.103 37.2539 19.583 37.2871C20.1982 37.3301 20.894 37.3789 20.917 37.8184C20.9219 37.9072 20.8853 37.9922 20.811 38.0703C20.5781 38.3154 19.9971 38.4619 19.2583 38.4619C18.5171 38.4619 18.0493 38.3896 17.6973 38.0098C17.0791 37.3418 16.3613 35.8447 16.3262 34.8408C16.3198 34.668 16.3467 34.5205 16.4067 34.3955C16.4399 34.3262 16.4839 34.2637 16.5381 34.207C16.8013 33.9346 17.3032 33.8125 18.1641 33.8125C19.3579 33.8125 20.3662 34.1631 20.3662 34.5771C20.3662 35.0352 19.7031 35.0938 19.1172 35.1455C18.6309 35.1895 18.2119 35.2266 18.2119 35.4785C18.2119 35.7129 18.5742 35.7539 18.9941 35.7998C19.4756 35.8525 20.021 35.9131 20.0581 36.2891C20.0889 36.5977 19.6982 36.6543 19.3213 36.708C18.9946 36.7559 18.6938 36.7998 18.6938 37.0098ZM12.0312 33.71C14.6592 33.71 15.897 35.207 15.9351 36.5986C15.9502 37.123 15.7803 37.585 15.4429 37.9336C15.2344 38.1504 14.9688 38.3115 14.6748 38.4043C14.4902 38.4629 14.2944 38.4941 14.0942 38.4961H14.0703C13.3203 38.4961 12.7881 38.1445 11.7241 36.9551C11.1812 36.3477 10.5469 35.2783 10.542 34.8057C10.5391 34.4697 10.6201 34.2227 10.79 34.0508C11.0171 33.8223 11.4229 33.71 12.0312 33.71ZM12.144 21.3389H10.8003C10.5488 21.3379 10.3218 21.4355 10.1538 21.5947C9.98486 21.7549 9.87598 21.9785 9.86426 22.2285L9.44727 31.2207C9.43213 31.5508 9.19531 31.7666 8.83008 31.8096C8.83008 31.8096 8.66455 31.8301 8.44824 31.8457C8.31641 31.8555 8.16602 31.8633 8.02295 31.8633C7.64502 31.8633 7.21729 31.8096 7.21729 31.8096C6.79932 31.751 6.61328 31.5479 6.6001 31.2158L6.25293 22.2363C6.24268 21.9688 6.12012 21.7305 5.93115 21.5664C5.76709 21.4238 5.55273 21.3379 5.31885 21.3379H4.0293C3.73389 21.3379 3.52295 21.2207 3.45312 20.8682C3.45312 20.8682 3.40137 20.625 3.35498 20.2256C3.33008 20.0098 3.30713 19.748 3.29492 19.4551C3.26904 18.8262 3.2959 18.0674 3.2959 18.0674C3.31689 17.71 3.58008 17.4883 3.92285 17.4883C3.92285 17.4883 5.68506 17.374 8.0542 17.374C10.583 17.374 12.2212 17.4883 12.2212 17.4883C12.3789 17.4883 12.5254 17.5361 12.6343 17.6328C12.7417 17.7285 12.813 17.8711 12.8232 18.0615C12.8232 18.0615 12.8452 18.2422 12.8501 18.5908C12.853 18.8232 12.8481 19.1299 12.8242 19.5078C12.7642 20.4531 12.6953 20.8643 12.6953 20.8643C12.6382 21.1963 12.4102 21.3389 12.144 21.3389ZM8.14697 12.0771C8.14697 13.9062 6.66797 15.5547 4.30029 15.5547C2.98389 15.5547 2.04199 15.1172 1.65527 14.9004C1.53418 14.832 1.48096 14.751 1.45508 14.5654C1.45508 14.5654 1.36133 13.9746 1.34326 13.2549C1.3252 12.5352 1.38818 11.8809 1.38818 11.8809C1.39893 11.8047 1.47412 11.7656 1.5293 11.8154C1.80322 12.0596 2.43115 12.541 3.14307 12.541C3.78711 12.541 4.31689 12.083 4.31689 11.334C4.31689 10.5303 3.61475 9.75879 2.82568 8.8916C1.81543 7.78125 0.663086 6.51562 0.663086 4.82617C0.663086 2.50879 2.50586 0.667969 5.42188 0.667969C6.5 0.667969 7.45117 0.857422 7.9209 1.09277C8.16309 1.21484 8.29932 1.44238 8.32422 1.72363C8.32422 1.72363 8.33496 1.93359 8.34424 2.24316C8.35254 2.52832 8.35938 2.89746 8.35596 3.26367C8.3501 4.02734 8.28711 4.67188 8.28711 4.67188C8.25 4.97461 8.04297 5.04297 7.84521 4.93359C7.60107 4.7998 7.34717 4.72656 7.03613 4.72656C6.30225 4.72656 5.74023 5.20605 5.74023 6.01367C5.74023 6.28516 5.84961 6.60059 6.02197 6.9541C6.18408 7.28711 6.40186 7.65234 6.63623 8.04688C6.9834 8.62988 7.36719 9.27441 7.66113 9.96289C7.94629 10.6318 8.14697 11.3418 8.14697 12.0771ZM20.001 1.61621C20.4253 10.6621 19.5024 15.6748 14.8071 15.6758C9.87793 15.6748 9.18799 10.6621 9.61328 1.61621C9.62598 1.33594 9.8501 1.13379 10.127 1.09668C10.54 1.04199 10.9243 0.993164 11.5991 0.993164C12.0811 0.993164 12.644 1.03613 13.1699 1.09961C13.4673 1.13574 13.7002 1.36523 13.688 1.66406C13.6353 2.96973 13.5962 6.35449 13.5962 8.46191C13.5962 11.3398 13.9062 12.6318 14.8071 12.6318C15.708 12.6318 16.0181 11.3398 16.0181 8.46191C16.0181 6.35449 15.978 2.96973 15.9263 1.66406C15.9141 1.36621 16.1479 1.14453 16.4438 1.09961C16.8096 1.04395 17.1895 1.00977 17.5483 0.993164C17.7095 0.986328 17.8662 0.983398 18.0151 0.983398C18.5669 0.983398 19.0181 1.02637 19.4873 1.09668C19.7632 1.13965 19.9883 1.33691 20.001 1.61621ZM21.3911 7.89941C21.311 5.33398 21.2871 1.78711 21.2871 1.78711C21.2749 1.40234 21.562 1.0918 21.9429 1.02344C22.4541 0.929688 23.1201 0.875977 24 0.875977C27.8481 0.875977 30.3911 2.4668 30.3911 5.69824C30.3911 7.56543 29.5352 10.0039 25.6353 10.7891C25.3369 10.8486 25.0991 11.0889 25.0781 11.3926C24.978 12.8057 24.7148 14.9688 24.7148 14.9688C24.6963 15.2314 24.5151 15.3721 24.2148 15.4336C24.2148 15.4336 24.0981 15.457 23.8931 15.4795C23.7129 15.499 23.4639 15.5176 23.165 15.5176C22.5259 15.5176 22.2012 15.4336 22.2012 15.4336C22.0698 15.4053 21.9648 15.3652 21.8853 15.3096C21.7666 15.2275 21.7051 15.1104 21.7002 14.9482C21.7002 14.9482 21.4712 10.4629 21.3911 7.89941ZM31.5801 14.8984C31.5801 14.8984 31.5029 12.1758 31.5029 8.56055C31.5039 5.74121 31.5723 1.91699 31.5723 1.91699C31.5962 1.44238 31.8652 1.17285 32.3101 1.12793C32.3101 1.12793 33.5171 0.988281 35.377 0.988281C37.418 0.988281 38.6719 1.12793 38.6719 1.12793C39.0522 1.18262 39.105 1.36426 39.1333 1.61426C39.1333 1.61426 39.207 2.10059 39.1343 3.03418C39.0713 3.83496 38.9751 4.54199 38.9751 4.54199C38.9375 4.73438 38.8584 4.84961 38.7402 4.91309C38.6533 4.95898 38.5449 4.97754 38.416 4.97754L35.8291 5.00781C35.4609 5.00781 35.1763 5.21191 35.106 5.62988C35.106 5.62988 35.0869 5.7334 35.0684 5.9043C35.0571 6.00488 35.0459 6.12891 35.0391 6.26855L35.02 6.83398C35.02 7.21484 35.1279 7.55176 35.7622 7.57324L38.1089 7.65137C38.48 7.68359 38.6152 7.83496 38.6289 8.16602C38.6289 8.16602 38.6211 8.65332 38.5742 9.23242C38.5269 9.80957 38.4722 10.1719 38.4722 10.1719C38.4189 10.5479 38.2461 10.707 37.8223 10.7363C37.479 10.7598 36.9688 10.7617 36.1279 10.7646L35.4819 10.7666C34.8892 10.7695 34.7622 11.0439 34.7012 11.3789L34.6709 11.6211L34.666 11.8672C34.6768 12.1094 34.7393 12.3291 34.8936 12.4707C35.0039 12.5713 35.1611 12.6318 35.3799 12.6318H37.7231C37.8906 12.6318 38.021 12.6924 38.1025 12.8154C38.1577 12.8994 38.1904 13.0127 38.1973 13.1553C38.1973 13.1553 38.2021 13.542 38.1479 14.0811C38.0942 14.6201 38.0122 15.0039 38.0122 15.0039C37.9551 15.2842 37.8501 15.3965 37.5381 15.4326C37.5381 15.4326 37.1187 15.4688 36.5269 15.5029C35.9839 15.5352 35.2959 15.5654 34.6533 15.5654C33.3101 15.5654 32.1133 15.4326 32.1133 15.4326C31.7319 15.3809 31.6162 15.2148 31.5801 14.8984ZM26.665 25.0244C26.5107 25.209 26.418 25.4463 26.418 25.7061C26.418 26.2939 26.894 26.7695 27.4819 26.7695C28.0703 26.7695 28.5459 26.2939 28.5459 25.7061C28.5459 25.1182 28.0703 24.6416 27.4819 24.6416C27.1538 24.6416 26.8604 24.79 26.665 25.0244ZM26.127 7.51953C26.731 7.51953 27.2202 7.03125 27.2202 6.42676C27.2202 5.82324 26.73 5.33398 26.127 5.33398C25.8535 5.33398 25.6035 5.43457 25.4121 5.60059C25.1807 5.80078 25.0342 6.09668 25.0342 6.42676C25.0342 7.03125 25.5244 7.51953 26.127 7.51953ZM43.981 6.4707C43.981 5.86719 44.4639 5.37793 45.0601 5.37793C45.6558 5.37793 46.1392 5.86719 46.1392 6.4707C46.1392 6.77148 46.0195 7.04297 45.8262 7.24023C45.6309 7.44043 45.3594 7.56348 45.0601 7.56348C44.4639 7.56348 43.981 7.0752 43.981 6.4707ZM13.2334 35.3701H13.2251C13.0205 35.3721 12.9043 35.5117 12.9072 35.7549C12.9092 36.0059 13.0391 36.3398 13.2383 36.6064C13.3711 36.7842 13.6465 37.0801 14.0073 37.0801C14.2451 37.0781 14.3765 36.918 14.373 36.6426C14.3682 36.127 13.8872 35.3701 13.2334 35.3701Z" fill="white"/>
+</svg>
+
+        </a>
+        <a href="http://dribbble.com/rogie" title="Rockin' the Cederhold since '09">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>dribbble</title><desc>Created with Sketch.</desc><path d="M43.929 49.734c-.219-1.299-1.355-7.55-4.148-15.225 6.691-1.071 12.57.682 13.3.913-.952 5.941-4.362 11.073-9.152 14.312m-25.037-.856c2.248-4.596 8.339-10.473 16.892-13.383 2.998 7.79 4.237 14.32 4.555 16.193-6.837 2.912-15.097 2.141-21.447-2.811m-8.235-17.498c.934.019 11.281.152 21.944-3.039.611 1.196 1.195 2.411 1.731 3.624-7.73 2.175-14.743 8.432-18.198 14.345-3.656-4.058-5.648-9.355-5.478-14.93m12.264-18.673c.563.772 4.379 6.06 7.916 12.35-6.362 1.69-13.525 2.602-19.74 2.602 1.384-6.626 5.85-12.134 11.823-14.951m23.232 3.352c-.384.547-3.598 4.867-11.191 7.713-3.499-6.429-7.377-11.71-7.967-12.501 6.726-1.621 13.871.096 19.158 4.787m2.374 2.469c2.974 3.634 4.775 8.262 4.822 13.302-.704-.149-7.763-1.581-14.868-.688-.586-1.431-1.136-2.678-1.877-4.195 7.895-3.224 11.473-7.811 11.923-8.42m-16.528-11.529c-13.784 0-24.998 11.215-24.998 25s11.214 25 24.998 25 24.998-11.215 24.998-25-11.214-25-24.998-25" fill="#fff"/></svg>
+        </a>
+        <a href="http://medium.com/@rogie" title="Dribbblisation. Skeuomorphism. Gradients. Hover states.">
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="M40.2 45.785l13.72 6.86c1.51.755 2.734.226 2.734-1.18v-32.198c0-.09-.034-.175-.093-.24l-.012.191-16.349 26.566z" id="Combined-Shape" opacity=".4"/><path d="M29.442 28.303l9.957-16.181c.441-.716 1.416-.994 2.168-.618l14.907 7.453c.097.049.131.169.075.261l-16.349 26.566-8.227-4.113 8.227 4.113-10.758-17.482z" opacity=".6"/><path d="M9.57 11.96c-1.253-.627-1.678-.163-.943 1.03l15.119 24.568 16.454 8.227-16.418-26.68-.096-.088-14.115-7.058" opacity=".8"/><path d="M23.746 51.466c0 1.401-1.025 2.034-2.278 1.408l-12.809-6.405c-.752-.376-1.367-1.371-1.367-2.212v-31.398c0-1.121.82-1.628 1.823-1.126l14.543 7.271c.054.027.089.083.089.143v32.319"/></g></svg>
+
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  </body>
+  <script>
+    Rogie.init();
+  </script>
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4d9b563d588f4f6e7500000f');
+      t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+      t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+</html>

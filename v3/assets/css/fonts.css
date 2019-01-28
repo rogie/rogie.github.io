@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Regular.eot);
+  src: url(../fonts/GT/GT-Haptik-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Regular.woff) format("woff"), url(../fonts/GT/GT-Haptik-Regular.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Regular.svg#Haptik") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Regular-Rotalic.eot);
+  src: url(../fonts/GT/GT-Haptik-Regular-Rotalic.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Regular-Rotalic.woff) format("woff"), url(../fonts/GT/GT-Haptik-Regular-Rotalic.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Regular-Rotalic.svg#Haptik") format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Regular-Oblique.eot);
+  src: url(../fonts/GT/GT-Haptik-Regular-Oblique.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Regular-Oblique.woff) format("woff"), url(../fonts/GT/GT-Haptik-Regular-Oblique.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Regular-Oblique.svg#Haptik") format("svg");
+  font-weight: 400;
+  font-style: oblique;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Light.eot);
+  src: url(../fonts/GT/GT-Haptik-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Light.woff) format("woff"), url(../fonts/GT/GT-Haptik-Light.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Light.svg#Haptik") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Light-Oblique.eot);
+  src: url(../fonts/GT/GT-Haptik-Light-Oblique.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Light-Oblique.woff) format("woff"), url(../fonts/GT/GT-Haptik-Light-Oblique.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Light-Oblique.svg#Haptik") format("svg");
+  font-weight: 200;
+  font-style: oblique;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'haptik';
+  src: url(../fonts/GT/GT-Haptik-Light-Rotalic.eot);
+  src: url(../fonts/GT/GT-Haptik-Light-Rotalic.eot?#iefix) format("embedded-opentype"), url(../fonts/GT/GT-Haptik-Light-Rotalic.woff) format("woff"), url(../fonts/GT/GT-Haptik-Light-Rotalic.ttf) format("truetype"), url("../fonts/GT/GT-Haptik-Light-Rotalic.svg#Haptik") format("svg");
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal; }

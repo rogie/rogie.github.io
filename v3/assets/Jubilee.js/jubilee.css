@@ -1,0 +1,113 @@
+@charset "UTF-8";
+.jubilee {
+  position: absolute;
+  perspective: 400px;
+  pointer-events: none; }
+
+.particle {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: opacity,transform,contents;
+  transition: all 0.3s linear;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite; }
+  .particle > i {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  .particle > svg {
+    width: 100%;
+    height: 100%; }
+    .particle > svg g, .particle > svg path {
+      fill: currentColor; }
+  .particle .noodle,
+  .particle .star {
+    background: transparent !important; }
+  .particle.note {
+    background: transparent !important; }
+    .particle.note:after {
+      content: '♫'; }
+  .particle.cross {
+    height: 13px;
+    width: 3px;
+    background: transparent !important; }
+    .particle.cross:after {
+      background: currentColor;
+      content: "";
+      height: 3px;
+      left: -5px;
+      position: absolute;
+      top: 5px;
+      width: 13px; }
+  .particle.pacman {
+    width: 0px;
+    height: 0px;
+    background: transparent !important;
+    border-right: 6px solid transparent;
+    border-top: 6px solid currentColor;
+    border-left: 6px solid currentColor;
+    border-bottom: 6px solid currentColor;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
+  .particle.egg {
+    display: block;
+    width: 7px;
+    height: 10px;
+    border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%; }
+  .particle.triangle {
+    width: 0;
+    height: 0;
+    background: transparent !important;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid currentColor; }
+  .particle.squiggle {
+    background: transparent !important;
+    border: 3px solid currentColor;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 !important; }
+    .particle.squiggle:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 7px;
+      top: 13px;
+      border: 3px solid currentColor;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-radius: 0 !important; }
+  .particle.circle {
+    border-radius: 100%; }
+  .particle.heart {
+    position: relative;
+    width: 10px;
+    height: 9px;
+    background: transparent !important; }
+    .particle.heart:before, .particle.heart:after {
+      position: absolute;
+      content: "";
+      left: 5px;
+      top: 0;
+      width: 5px;
+      height: 10px;
+      background: currentColor;
+      border-radius: 2.5px 2.5px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%; }
+    .particle.heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%; }

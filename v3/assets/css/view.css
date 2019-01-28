@@ -1,0 +1,35 @@
+.view {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0; }
+  .view > * {
+    list-style: none;
+    margin: 0;
+    width: auto;
+    position: relative;
+    overflow: visible;
+    vertical-align: top;
+    width: 0%;
+    opacity: 0;
+    font-size: 1rem;
+    white-space: normal;
+    display: none;
+    will-change: transform;
+    transition: all 0.333s cubic-bezier(0.68, 0, 0.265, 1); }
+  .view > .next, .view > .previous {
+    cursor: pointer;
+    display: inline-block; }
+  .view > .current {
+    opacity: 1;
+    z-index: 1;
+    display: inline-block;
+    transform: translateX(15vw); }
+  .view > .next {
+    opacity: 1;
+    transform: translateX(85vw); }
+  .view > .previous {
+    opacity: 1;
+    transform: translateX(0vw); }

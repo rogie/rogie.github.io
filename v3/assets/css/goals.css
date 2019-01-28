@@ -1,0 +1,305 @@
+html.goals {
+  background-color: #F0FEFF; }
+
+.goal-list {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 202, 255, 0.5), 0 30px 40px -10px rgba(97, 34, 255, 0.2);
+  display: none; }
+  .goal-list:target {
+    display: block; }
+  .goal-list ul {
+    margin: 0;
+    padding: 0; }
+  .goal-list li {
+    padding: .66em 0;
+    margin: 0;
+    border-top: 1px solid rgba(202, 190, 216, 0.5);
+    list-style: none; }
+    .goal-list li:first-child {
+      border: 0; }
+
+.goals-summary.goals-header {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 202, 255, 0.3), 0 30px 40px -10px rgba(97, 34, 255, 0.2);
+  text-align: center;
+  height: auto;
+  padding: 0;
+  background: black;
+  position: relative; }
+  .goals-summary.goals-header > a {
+    margin: 0;
+    width: 100%;
+    padding: 40px;
+    display: block; }
+    .goals-summary.goals-header > a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: block; }
+  .goals-summary.goals-header h3, .goals-summary.goals-header p {
+    margin: 0;
+    padding: 0; }
+  .goals-summary.goals-header svg {
+    width: 80%; }
+    .goals-summary.goals-header svg path {
+      fill: transparent;
+      stroke: white;
+      stroke: url(#grad-bright-pink);
+      stroke-width: 0.075;
+      animation: none !important; }
+  .goals-summary.goals-header svg + svg {
+    bottom: -200px;
+    margin-left: -20%; }
+    .goals-summary.goals-header svg + svg path {
+      stroke: url(#grad-bright-green); }
+  .goals-summary.goals-header svg + svg + svg {
+    top: -200px;
+    margin-right: -20%; }
+    .goals-summary.goals-header svg + svg + svg path {
+      stroke: url(#grad-bright-blue); }
+
+.goals header > svg {
+  height: 150px;
+  z-index: 10; }
+.goals.nav-docked header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+  .goals.nav-docked header nav {
+    position: absolute; }
+.goals.nav-docked .goals-header {
+  margin-top: 0; }
+.goals h2 {
+  text-align: center; }
+
+.goals-header {
+  background: black;
+  text-align: center;
+  margin-top: -180px;
+  padding-top: 180px;
+  position: relative;
+  z-index: auto;
+  overflow: hidden; }
+  .goals-header > div {
+    margin: 40px auto 200px auto;
+    width: 66.666%;
+    line-height: 1.2;
+    z-index: 10;
+    position: relative; }
+    .goals-header > div p {
+      color: #00CAFF;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      max-width: 30em;
+      letter-spacing: 0.0125rem;
+      text-shadow: 0 0 20px black,0 0 20px black; }
+    .goals-header > div h1 {
+      padding: 20px 0;
+      margin: 0;
+      background-color: #6122FF;
+      letter-spacing: 0.025em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -ms-background-clip: text;
+      -ms-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF); }
+  .goals-header .goal-heading {
+    display: block;
+    text-align: center;
+    transform: rotate(-90deg) translateX(-50%) translateY(-50%); }
+  .goals-header svg {
+    background: transparent;
+    bottom: -5px;
+    top: auto;
+    z-index: 2;
+    height: 150px; }
+    .goals-header svg path {
+      d: path("M 27 4C 21 2 14 0 0 0L 0 14L 54 14L 54 11C 40 11 33 6 27 4Z");
+      fill: #F0FEFF;
+      animation: 30s bottom-wave linear infinite alternate; }
+  .goals-header svg + svg {
+    height: 350px;
+    width: 102%;
+    bottom: -100px;
+    z-index: 1; }
+    .goals-header svg + svg path {
+      fill: transparent;
+      stroke: white;
+      stroke: url(#grad-bright-pink);
+      stroke-width: 0.075; }
+  .goals-header svg + svg + svg {
+    height: 350px;
+    width: 102%;
+    top: -100px;
+    bottom: auto;
+    z-index: 1;
+    transform: scaleY(-1); }
+    .goals-header svg + svg + svg path {
+      stroke: url(#grad-bright-blue); }
+
+.goal {
+  position: relative;
+  overflow: visible;
+  border-top: 1px solid rgba(202, 190, 216, 0.5); }
+  .goal-heading {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    z-index: 2;
+    text-align: right;
+    white-space: nowrap;
+    transform: rotate(-90deg) translateX(-50%) translateY(0%);
+    transform-origin: 0% 0%; }
+    .goal-heading .subdued {
+      margin-bottom: .5em; }
+  .goal .tweets {
+    padding: 40px 0;
+    padding-left: 5rem;
+    position: relative; }
+    .goal .tweets > li {
+      vertical-align: middle;
+      box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2);
+      transition: all .2s ease-in; }
+      .goal .tweets > li.n00b, .goal .tweets > li.victory, .goal .tweets > li.fail {
+        padding: 20px;
+        font-size: 1rem;
+        text-align: center;
+        overflow: visible;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        white-space: normal;
+        line-height: 1.2; }
+        .goal .tweets > li.n00b, .goal .tweets > li.n00b:hover, .goal .tweets > li.victory, .goal .tweets > li.victory:hover, .goal .tweets > li.fail, .goal .tweets > li.fail:hover {
+          box-shadow: none; }
+        .goal .tweets > li.n00b .jubilee, .goal .tweets > li.victory .jubilee, .goal .tweets > li.fail .jubilee {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 0;
+          width: 0; }
+        .goal .tweets > li.n00b em ~ *, .goal .tweets > li.victory em ~ *, .goal .tweets > li.fail em ~ * {
+          padding-top: 0;
+          margin-top: 0; }
+        .goal .tweets > li.n00b em, .goal .tweets > li.victory em, .goal .tweets > li.fail em {
+          display: block;
+          font-size: 3rem;
+          background-color: white;
+          color: white;
+          border-radius: 4rem;
+          width: 5rem;
+          height: 5rem;
+          line-height: 4.8rem;
+          text-align: center;
+          display: inline-block;
+          margin-bottom: 20px;
+          position: relative;
+          font-style: normal;
+          box-shadow: 0 2px 4px rgba(0, 202, 255, 0.2), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
+          .goal .tweets > li.n00b em > *, .goal .tweets > li.victory em > *, .goal .tweets > li.fail em > * {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            border-radius: 4rem;
+            display: block;
+            z-index: 1;
+            font-style: normal; }
+        .goal .tweets > li.n00b.victory em > *, .goal .tweets > li.victory.victory em > *, .goal .tweets > li.fail.victory em > * {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: linear-gradient(to bottom right, #3EFF58, #00CAFF); }
+        .goal .tweets > li.n00b.fail em > *, .goal .tweets > li.victory.fail em > *, .goal .tweets > li.fail.fail em > * {
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          -ms-background-clip: text;
+          -ms-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #6122FF); }
+        .goal .tweets > li.n00b.n00b em, .goal .tweets > li.victory.n00b em, .goal .tweets > li.fail.n00b em {
+          font-size: 1.8rem;
+          line-height: 5.4rem;
+          font-family: sans-serif;
+          color: #cabed8;
+          padding-left: .6em; }
+          .goal .tweets > li.n00b.n00b em:before, .goal .tweets > li.victory.n00b em:before, .goal .tweets > li.fail.n00b em:before {
+            content: '\2022\2022\2022';
+            white-space: nowrap;
+            display: block;
+            animation: ellipsis 900ms infinite alternate;
+            text-align: left;
+            display: block; }
+      .goal .tweets > li:hover {
+        box-shadow: 0 2px 4px rgba(0, 202, 255, 0.5), 0 30px 40px -10px rgba(97, 34, 255, 0.2); }
+
+@media screen and (max-width: 640px) {
+  .goals-header {
+    padding-top: 100px; }
+    .goals-header > div {
+      margin: 0 auto 120px auto; }
+    .goals-header svg {
+      height: 80px; }
+
+  .goals header > svg {
+    height: 80px; }
+
+  .goal .goal-heading {
+    position: static;
+    transform: none;
+    display: block;
+    text-align: center;
+    padding: 40px 0 0 0; }
+  .goal .tweets {
+    padding: 40px 0;
+    width: 100vw;
+    -webkit-scroll-snap-points-x: repeat(100vw); }
+    .goal .tweets > li {
+      width: 90vw;
+      margin: 10px 5vw; }
+      .goal .tweets > li .twitter-tweet {
+        width: 92vw !important;
+        margin: -1vw !important;
+        max-width: 92vw !important; } }
+@keyframes ellipsis {
+  from {
+    content: '\200a'; }
+  33% {
+    content: '\2022'; }
+  66% {
+    content: '\2022\2022'; }
+  to {
+    content: '\2022\2022\2022'; } }

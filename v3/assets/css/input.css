@@ -1,0 +1,56 @@
+.btn {
+  padding: 1em 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0;
+  position: relative;
+  background: none;
+  color: #6122FF;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "haptik", Futura, Trebuchet MS, Arial, sans-serif;
+  will-change: contents,transform;
+  transition: all 0.16s cubic-bezier(0.68, 0, 0.265, 1);
+  -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)); }
+  .btn > span {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, #FFB948, #FF43AD, #A732FF); }
+  .btn svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1; }
+    .btn svg polyline,
+    .btn svg line,
+    .btn svg path {
+      transition: all 0.1s ease-in;
+      fill: white; }
+  .btn:focus {
+    outline: none; }
+  .btn:hover {
+    transform: scaleY(1.05) translateY(-5%);
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1)); }
+    .btn:hover svg path {
+      d: path("M 0.00133062 4.87477C 0.0426975 2.92812 1.68703 1.45562 3.57025 0.961007C 5.68024 0.406833 8.80455 0 14 0L 14 4.89702e-34C 19.1954 1.62983e-17 22.3197 0.40683 24.4297 0.961001C 26.313 1.45562 27.9573 2.92814 27.9987 4.87481C 28.0004 4.95827 28.0004 5.04174 27.9987 5.1252C 27.9573 7.07187 26.313 8.54438 24.4297 9.039C 22.3197 9.59317 19.1954 10 14 10L 14 10C 8.80454 10 5.68024 9.59317 3.57025 9.03899C 1.68703 8.54438 0.0426977 7.07188 0.00133063 5.12523C -0.000443418 5.04174 -0.000443424 4.95826 0.00133062 4.87477Z"); }
+  .btn:active {
+    transform: scale(0.95) translateY(10%);
+    -webkit-filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1)); }
+    .btn:active svg path {
+      d: path("M 0.0813912 3.39608C 0.282314 1.46206 1.76656 -0.0501058 3.71016 0.00670887C 5.7424 0.0661146 8.75056 0.5 14 0.5L 14 0.5C 19.2494 0.5 22.2576 0.0661183 24.2898 0.00670975C 26.2334 -0.0501081 27.7177 1.46208 27.9186 3.39611C 28.0271 4.44069 28.0271 5.55932 27.9186 6.6039C 27.7177 8.53793 26.2334 10.0501 24.2898 9.99329C 22.2576 9.93388 19.2494 9.5 14 9.5L 14 9.5C 8.75056 9.5 5.7424 9.93389 3.71016 9.99329C 1.76656 10.0501 0.282314 8.53794 0.0813912 6.60392C -0.0271304 5.55933 -0.0271304 4.44067 0.0813912 3.39608Z"); }
