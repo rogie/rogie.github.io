@@ -489,8 +489,6 @@ main {
     max-width: 40rem;
     margin: 0 auto;
     line-height: 1.6; }
-    main article p {
-      text-align: justify; }
 
 small, .small {
   font-size: 0.8rem; }
