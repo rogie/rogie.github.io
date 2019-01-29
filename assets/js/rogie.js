@@ -266,7 +266,7 @@ var Rogie = {
       });
     };
 
-    nav.addEventListener("mouseover",function(e){
+    nav.addEventListener("mouseenter",function(e){
       if(!Rogie.Nav.isActive()){
         Rogie.Nav.open();
       }

@@ -737,8 +737,7 @@ nav {
 nav .menu {
   transform: scale(1) translateY(-50%) !important;
   opacity: 1 !important;
-  left: 12vmax !important;
-  pointer-events: none; }
+  left: 12vmax !important; }
 
 nav:target .menu,
 nav:hover .menu {
