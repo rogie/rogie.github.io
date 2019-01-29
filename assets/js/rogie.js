@@ -283,12 +283,13 @@ var Rogie = {
     //setup art galleries
     if(Rogie.hoverFx && Rogie.Zoom){
       if(Palette){
-        fragment.querySelectorAll(".art-thumb img[src^='../assets']")
+        /*fragment.querySelectorAll(".art-thumb img[src^='../assets']")
           .forEach(function(img){
             new Palette({image:img, load: function(p){
               img.parentNode.style.color = p.getDominantColors()[0].hex;
             }});
           });
+        */
       }
       fragment.querySelectorAll(".waterfall li")
         .forEach((o) => {
@@ -327,7 +328,7 @@ var Rogie = {
   initFragment: function(fragment){
     Rogie.funLetters(fragment);
     Rogie.initPageLinks(fragment);
-    Rogie.initArt(fragment);
+    //Rogie.initArt(fragment);
     Rogie.load(fragment.querySelectorAll('img'));
     //Rogie.lazyLoadImages(fragment);
   },
