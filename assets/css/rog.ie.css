@@ -565,9 +565,7 @@ html:after {
   pointer-events: none; }
 
 html.zoomed main {
-  opacity: 0.25; }
-
-html[data-useragent*="Chrome"].zoomed main {
+  opacity: 0.25;
   transform: scale(0.95);
   -webkit-filter: blur(20px);
           filter: blur(20px); }
