@@ -501,16 +501,29 @@ small, .small {
   background-size: contain;
   text-shadow: none;
   color: transparent;
-  width: 4em;
-  height: 2.28em;
-  vertical-align: -.5em;
-  margin-left: -0.75em;
+  width: 3em;
+  height: 1.71em;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-filter: drop-shadow(0 0.5em 0.5em rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0 0.5em 0.5em rgba(0, 0, 0, 0.25)); }
 
-.with-logo-type .fun-letters {
-  opacity: 0.6;
-  padding-left: 2.5em; }
+.with-logo-type {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3em;
+  padding-top: 0.25em; }
+  .with-logo-type .fun-letters {
+    opacity: 0.6;
+    padding-left: 2.5em;
+    position: absolute;
+    top: 0;
+    font-size: 0.35em;
+    right: 0;
+    white-space: nowrap; }
 
 .text-center {
   text-align: center; }
@@ -647,6 +660,10 @@ nav {
   transition: all 0.1s ease-in-out;
   padding: 6vmax;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   transform: translate(-6vmax, 6vmax) scale(1); }
   nav:target {
     transform: translate(calc(50vw - 50%), calc(-50vh + 50%)) scale(1);
@@ -660,22 +677,32 @@ nav {
       -webkit-filter: blur(25px);
               filter: blur(25px);
       pointer-events: none; }
-  nav .logo-text {
-    display: none; }
-  nav .logo-mark {
+  nav a.identity {
     width: 6vmax;
-    display: block;
-    overflow: visible;
+    height: 6vmax;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    z-index: 1;
     position: relative; }
-    nav .logo-mark img, nav .logo-mark svg {
+    nav a.identity > i {
       width: 100%;
       height: auto;
-      position: relative;
-      z-index: 1;
-      transition: all 50ms ease-in-out;
-      -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
-              filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75)); }
-  nav a {
+      display: block;
+      overflow: visible;
+      position: relative; }
+      nav a.identity > i img, nav a.identity > i svg {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        transition: all 50ms ease-in-out;
+        -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
+                filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75)); }
+  nav a, nav > span {
     color: white;
     font-weight: 900;
     font-size: 1.5vmax;
@@ -684,20 +711,21 @@ nav {
     will-change: transform;
     white-space: nowrap;
     font-weight: 400; }
-    nav a > span {
+    nav a > span, nav > span > span {
       position: relative;
       display: inline-block; }
-    nav a svg {
-      height: 2em;
+    nav a svg, nav > span svg {
+      height: 1.5em;
       width: auto;
       -webkit-filter: drop-shadow(0 0.2vmax 0.1vmax rgba(0, 0, 0, 0.35)) drop-shadow(0 0.35vmax 0.75vmax rgba(0, 0, 0, 0.75));
               filter: drop-shadow(0 0.2vmax 0.1vmax rgba(0, 0, 0, 0.35)) drop-shadow(0 0.35vmax 0.75vmax rgba(0, 0, 0, 0.75)); }
-    nav a:hover {
+    nav a:hover, nav > span:hover {
       color: white;
       opacity: 1; }
-      nav a:hover > span {
+      nav a:hover > span, nav > span:hover > span {
         animation: tadah 0.8s ease-in-out; }
-  nav a:not(.identity) {
+  nav a:not(.identity),
+  nav > span {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -706,19 +734,32 @@ nav {
     transition: all 0.1s ease-in-out;
     transform: translate(-50%, -50%); }
 
-nav:not(:hover):not(:target) .current-page {
+nav .menu {
   transform: scale(1) translateY(-50%) !important;
   opacity: 1 !important;
   left: 12vmax !important;
   pointer-events: none; }
 
+nav:target .menu,
+nav:hover .menu {
+  transform: scale(0) translateY(-50%) !important;
+  left: 0 !important; }
+
+nav:target a[href="#👀"] {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  right: 50%; }
+
 @media screen and (max-width: 960px) {
-  nav .logo-mark {
-    width: 9vmax; }
-  nav a {
+  nav a.identity {
+    width: 9vmax;
+    height: 9vmax; }
+  nav a, nav > span {
     font-size: 3vmax; }
 
-  nav:not(:hover):not(:target) .current-page {
+  nav .menu {
     left: 15vmax !important; } }
 @font-face {
   font-family: 'Cooper';
@@ -841,11 +882,12 @@ nav:not(:hover):not(:target) .current-page {
       padding: 0.5vmax; } }
 .playlist-movies, .playlist-music {
   list-style: none;
-  padding: 8rem;
-  margin: -6rem -8rem;
+  padding: 8rem 0;
+  margin: -6rem 0;
   overflow: hidden;
   overflow-x: auto;
   overflow-y: none;
+  width: 100%;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -853,8 +895,8 @@ nav:not(:hover):not(:target) .current-page {
       flex-wrap: nowrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -webkit-mask: linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%);
-          mask: linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%); }
+  -webkit-mask: linear-gradient(to right, white 0%, white 80%, transparent 100%);
+          mask: linear-gradient(to right, white 0%, white 80%, transparent 100%); }
   .playlist-movies::-webkit-scrollbar, .playlist-music::-webkit-scrollbar {
     display: none; }
   .playlist-movies > li, .playlist-music > li {
@@ -1036,11 +1078,11 @@ nav:not(:hover):not(:target) .current-page {
 
 @media screen and (max-width: 960px) {
   .playlist-movies > li, .playlist-music > li {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
     padding: 2vmax; }
 
   #movies .playlist-movies, #movies .playlist-music,
   #music .playlist-movies,
   #music .playlist-music {
-    padding-left: 8rem; } }
+    padding-left: 0; } }

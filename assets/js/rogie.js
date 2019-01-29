@@ -216,7 +216,7 @@ var Rogie = {
 
   Nav: function(){
     var nav = document.querySelector('nav');
-    var items = nav.querySelectorAll('a:not(.identity)');
+    var items = nav.querySelectorAll('a:not([href^="#"])');
     var dist = 8;
     var time = 30;
 
@@ -235,16 +235,17 @@ var Rogie = {
 
     this.Nav.open = function(){
       var active = this.isActive();
+
       items.forEach(function(item,i){
         var end = {
-          x: Math.cos(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * dist,
-          y: Math.sin(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * dist,
+          x: Math.cos(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * nav.clientWidth/2,
+          y: Math.sin(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * nav.clientWidth/2,
           r: 0,
           s: 1
         };
         item.style.transitionDuration = time;
         item.style.transitionDelay = (i+1)*time + "ms";
-        item.style.transform = "scale(" + end.s + ") translate(calc(-50% + " + end.x + "vmax),calc(-50% + " + end.y + "vmax)) rotate(" + end.r + "deg)";
+        item.style.transform = "scale(" + end.s + ") translate(calc(-50% + " + end.x + "px),calc(-50% + " + end.y + "px)) rotate(" + end.r + "deg)";
         setTimeout(function(){
           item.style.transitionDelay = "0ms";
         },(i+1)*time);
@@ -291,6 +292,7 @@ var Rogie = {
           });
         */
       }
+
       fragment.querySelectorAll(".waterfall li")
         .forEach((o) => {
           var link = o.querySelector('a');
@@ -314,6 +316,7 @@ var Rogie = {
           o.addEventListener('click',(e) => {
             e.preventDefault();
             var img = o.querySelector('img');
+
             Rogie.Zoom({
               element: img,
               duration: 200,
