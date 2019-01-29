@@ -335,9 +335,9 @@ var Rogie = {
   init: function(){
     Rogie.Nav();
     Rogie.initFragment(document);
-    if(document.location.pathname == "/"){
+    /*if(document.location.pathname == "/"){
       document.location.hash = '#nav';
-    }
+    }*/
     window.addEventListener('touchstart', function() {
       Rogie.touchDevice = true;
       window.removeEventListener('touchstart', arguments.callee, false);

@@ -1,0 +1,65 @@
+Font Software End User License Agreement (Web)
+v.2017.05.02.1
+
+
+
+Please read this document carefully and we recommend that you print a copy for further reference.
+
+The terms of this End User License Agreement (Agreement) will apply between Rui Abreu - Typography, Unipessoal LDA (R-Typography) and you if you purchase a license or licenses to use R-Typography’s font software, including the design of the fonts embodied therein (Fonts).
+
+When you purchase a Font, you are purchasing the right to use that Font under a particular set of conditions. These conditions range from, for example, how many computers the Font can be installed on to whether it can be embedded in digital documents. It is important to read and understand this Agreement because it defines your rights, the acceptable uses of our Fonts, and the rights R-Typography reserves. 
+
+The license granted is not exclusive to you and may not be transferred by you.
+
+You agree that R-Typography owns all rights, including (without limitation) intellectual property rights, and title in and to the Fonts and all trademarks, registered and unregistered which are used in or in relation to the Fonts.
+
+This Agreement becomes effective when you click on the area marked “I agree with the EULA”.
+
+
+
+LICENSE
+
+Subject to payment of the price in full, R-Typography grants you a limited, non-exclusive, perpetual, license to use the Font you have purchased as mobile app fonts, for use in apps for iOS, Android, Windows Phone and other mobile device operating systems.
+
+The Font Software will be transmitted for your use in the TrueType (“TTF”) format and/or such other formats as R-Typography may determine or otherwise agree, at its discretion.
+
+The Font is licensed only for use in the number of apps indicated in your invoice. 
+
+
+
+RESTRICTIONS
+	You agree not to copy the Font or create derivative works based upon the design of the Font.
+
+You may not alter the Font or the designs embodied therein in any manner whatsoever. Reformatting the Font into other formats or for use in other operating systems is expressly prohibited. Altering or amending the embedding bits characteristics of the Font is expressly prohibited. The Font may not be used to create or distribute any electronic document in which the Font, or any part thereof, is embedded in a format that permits editing, alterations, enhancements, or modifications or extraction of the Font by the recipient. You hereby agree not to transmit any electronic document to any party that intends to “hack,” edit, alter, enhance, or otherwise modify or remove the Font.
+
+You agree not to modify, adapt, translate, reverse engineer, decompile, disassemble, alter, or otherwise attempt to discover the source code of the Font, unless permitted by applicable law. 
+
+You agree not to rent, sell, transfer, lease, sublicense, give, lend, or further distribute the Font. 
+
+
+
+INTELLECTUAL PROPERTY
+
+The design of the Font, and any trademarks associated therewith are the exclusive property of R-Typography and are protected by the copyright and other intellectual property laws of Portugal, the European Union, the laws of other nations, and by other international treaties. You agree to treat the Font as you would any other copyrighted material, such as a film or book.
+
+
+
+WARRANTY
+
+R-Typography warrants that the Font will be free from defects in materials and workmanship under normal use for ninety (90) days following delivery of the Font. R-Typography hereby EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. R-TYPOGRAPHY DOES NOT WARRANT THAT THE OPERATION OF THE FONT WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT THE FONT IS WITHOUT DEFECTS. 
+
+
+
+EXCLUSIONS AND LIMITATION OF LIABILITY
+
+UNDER NO CIRCUMSTANCES SHALL R-TYPOGRAPHY BE LIABLE TO YOU OR ANY OTHER PARTY, WHETHER IN CONTRACT OR TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, FOR ANY SPECIAL, CONSEQUENTIAL, OR INCIDENTAL DAMAGES, INCLUDING LOST PROFITS, SAVINGS OR BUSINESS INTERRUPTION AS A RESULT OF THE USE OF THE FONT EVEN IF NOTIFIED IN ADVANCE OF SUCH POSSIBILITY. You hereby agree that your entire, exclusive, and cumulative liability and remedy shall be limited to the cost of the Font or replacement thereof, at R-Typography’s discretion.
+
+
+
+MISCELLANEOUS
+
+You expressly agree that this Agreement shall be governed by the laws of Portugal, as they apply to contracts without respect to its conflict of laws provisions or the conflict of laws provisions of any other jurisdiction. You expressly submit to the jurisdiction of the courts in Lisbon, Portugal. You hereby expressly agree that the application of the United Nations Convention of Contracts for the International Sale of Goods is expressly excluded.
+
+The Agreement shall automatically terminate in the event you or any authorized user breaches the terms set forth herein. 
+
+You agree to be responsible for compliance with all laws, foreign and domestic relating to the control of exports or the transfer of technology. If you are purchasing this license for government use, or under a government contract, you agree to familiarize yourself with and follow any applicable rules and regulations relating to the purchase of a license to use software and the actual use thereof.
