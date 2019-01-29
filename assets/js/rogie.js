@@ -182,7 +182,7 @@ var Rogie = {
   },
 
   initPageLinks: function(fragment){
-    var selector = '[href^="/"]';
+    var selector = '[href$="/"]';
     var currentPageClass = 'current-page';
 
     syncPageClasses();
@@ -328,7 +328,7 @@ var Rogie = {
   initFragment: function(fragment){
     Rogie.funLetters(fragment);
     Rogie.initPageLinks(fragment);
-    //Rogie.initArt(fragment);
+    Rogie.initArt(fragment);
     Rogie.load(fragment.querySelectorAll('img'));
     //Rogie.lazyLoadImages(fragment);
   },
