@@ -260,6 +260,7 @@
     </h1>
     <p></p>
   </article>
+
   <ul class="waterfall">
     <li class="art-thumb">
       <a href="/assets/art/a_new_hope.jpeg" title="A New Hope">
@@ -378,6 +379,39 @@
     </li>
 
   </ul>
+
+  <hr />
+
+  <article class="text-center">
+    <h1 class="fun-letters">My Insta</h1>
+    <p>Follow my art in progress on <a href="http://www.instagram.com/rogie/">Instagram</a>.</p>
+  </article>
+  <script type="text/html" id="insta_tmpl">
+    <% var shown = 0; %>
+    <ul class="waterfall">
+      <% data.forEach(function(gram,i){ %>
+        <li class="art-thumb">
+          <a href="<%= gram.link %>">
+            <img alt="<%= gram.caption %>" width="<%= gram.images.standard_resolution.width %>" height="<%= gram.images.standard_resolution.height %>" src="<%= gram.images.standard_resolution.url %>"></li>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </script>
+  <div id="instagram-feed"></div>
+  <script>
+    fetch('https://api.instagram.com/v1/users/1988548/media/recent?access_token=1988548.1677ed0.4f38c51401b6481691c825fa3c06e393&count=24')
+      .then(function(res){
+        res.text().then(function(json) {
+          var data = JSON.parse(json);
+          var grams = document.getElementById("instagram-feed");
+          grams.innerHTML = tmpl("insta_tmpl", data );
+          Rogie.initArt(grams);
+        });
+      }).catch(function(){
+        console.error('Error in fetching the website');
+      });
+  </script>
 </main>
 
 

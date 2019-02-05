@@ -182,7 +182,7 @@ var Rogie = {
   },
 
   initPageLinks: function(fragment){
-    var selector = '[href$="/"]';
+    var selector = '[href^="/"][href$="/"]';
     var currentPageClass = 'current-page';
 
     syncPageClasses();
@@ -209,6 +209,7 @@ var Rogie = {
     window.addEventListener('popstate', syncPageClasses);
 
     [].forEach.call(fragment.querySelectorAll(selector),function(link){
+      console.log(link)
       link.removeEventListener('click',linkedPageLoad);
       link.addEventListener('click',linkedPageLoad);
     });
