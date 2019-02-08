@@ -406,7 +406,7 @@
           var data = JSON.parse(json);
           var grams = document.getElementById("instagram-feed");
           grams.innerHTML = tmpl("insta_tmpl", data );
-          //Rogie.initArt(grams);
+          Rogie.initArt(grams);
         });
       }).catch(function(){
         console.error('Error in fetching the website');
