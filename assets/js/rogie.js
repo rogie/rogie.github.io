@@ -209,7 +209,6 @@ var Rogie = {
     window.addEventListener('popstate', syncPageClasses);
 
     [].forEach.call(fragment.querySelectorAll(selector),function(link){
-      console.log(link)
       link.removeEventListener('click',linkedPageLoad);
       link.addEventListener('click',linkedPageLoad);
     });
@@ -294,7 +293,7 @@ var Rogie = {
         */
       }
 
-      fragment.querySelectorAll(".waterfall li")
+      fragment.querySelectorAll(".art-thumb")
         .forEach((o) => {
           var link = o.querySelector('a');
           var shine = document.createElement('div');
@@ -316,8 +315,8 @@ var Rogie = {
             });
           o.addEventListener('click',(e) => {
             e.preventDefault();
-            var img = o.querySelector('img');
 
+            var img = o.querySelector('img');
             Rogie.Zoom({
               element: img,
               duration: 200,

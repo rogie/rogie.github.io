@@ -775,7 +775,87 @@ nav:target a[href="#👀"] {
   /* IE9*/
   src: url("../fonts/Azo Sans Uber W01 Regular/Azo Sans Uber W01 Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Azo Sans Uber W01 Regular/Azo Sans Uber W01 Regular.woff2") format("woff2"), url("../fonts/Azo Sans Uber W01 Regular/Azo Sans Uber W01 Regular.woff") format("woff"), url("../fonts/Azo Sans Uber W01 Regular/Azo Sans Uber W01 Regular.ttf") format("truetype"), url("../fonts/Azo Sans Uber W01 Regular/Azo Sans Uber W01 Regular.svg") format("svg");
   /* iOS 4.1- */ }
-.waterfall {
+.art-list {
+  position: relative;
+  z-index: 1; }
+
+.art-thumb {
+  width: 100%;
+  vertical-align: top;
+  overflow: visible;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: translateZ(0);
+  display: block;
+  -webkit-filter: none;
+          filter: none;
+  cursor: zoom-in; }
+  .art-thumb a {
+    margin-bottom: 1vmax;
+    display: block;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transform: translateZ(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.075);
+    border-radius: 1vmin;
+    transition: all .2s ease-out;
+    outline: none !important;
+    cursor: zoom-in; }
+    .art-thumb a img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .2s ease-out;
+      border-radius: 1vmin; }
+    .art-thumb a[title]:after {
+      border-radius: 2rem;
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      text-align: center;
+      bottom: 1rem;
+      padding: 0.25rem 1rem;
+      transform: translateY(20%);
+      opacity: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      transition: all 0.1s ease-in-out;
+      text-shadow: 0 0.05em 0.15em rgba(0, 0, 0, 0.25);
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-family: "AzoSansUber", Trebuchet MS, Arial, sans-serif; }
+    .art-thumb a[title]:hover:after {
+      transform: translateY(0);
+      opacity: 1; }
+    .art-thumb a:hover .shine {
+      opacity: 0.35; }
+    .art-thumb a:hover > a {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+    .art-thumb a .shine {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 1vmin;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+      background-size: 100% 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity .2s ease-out; }
+
+.masonry {
   list-style: none;
   padding: 0;
   margin: 4rem auto;
@@ -787,96 +867,25 @@ nav:target a[href="#👀"] {
   -moz-column-fill: balance;
        column-fill: balance;
   text-align: center;
-  overflow: visible; }
-  .waterfall > * {
+  overflow: visible;
+  display: block;
+  position: relative; }
+  .masonry-brick {
+    display: inline-block;
     page-break-inside: avoid;
-         break-inside: avoid; }
-  .waterfall .art-thumb {
-    width: 100%;
-    vertical-align: top;
-    overflow: visible;
-    perspective: 500px;
-    perspective-origin: 50% 50%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    transform: translateZ(0);
-    display: block;
-    -webkit-filter: none;
-            filter: none;
-    cursor: zoom-in; }
-    .waterfall .art-thumb a {
-      margin-bottom: 1vmax;
-      display: block;
-      position: relative;
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      transform: translateZ(0);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.075);
-      border-radius: 1vmin;
-      transition: all .2s ease-out;
-      outline: none !important;
-      cursor: zoom-in; }
-      .waterfall .art-thumb a[title]:after {
-        border-radius: 2rem;
-        position: absolute;
-        left: 1rem;
-        right: 1rem;
-        text-align: center;
-        bottom: 1rem;
-        padding: 0.25rem 1rem;
-        transform: translateY(20%);
-        opacity: 0;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-            align-items: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-        transition: all 0.1s ease-in-out;
-        text-shadow: 0 0.05em 0.15em rgba(0, 0, 0, 0.25);
-        color: white;
-        font-weight: bold;
-        font-size: 1.2rem;
-        font-family: "AzoSansUber", Trebuchet MS, Arial, sans-serif; }
-      .waterfall .art-thumb a[title]:hover:after {
-        transform: translateY(0);
-        opacity: 1; }
-      .waterfall .art-thumb a:hover .shine {
-        opacity: 0.35; }
-      .waterfall .art-thumb a:hover > a {
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
-      .waterfall .art-thumb a .shine {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 1vmin;
-        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-        background-size: 100% 100%;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 1;
-        transition: opacity .2s ease-out; }
-      .waterfall .art-thumb a img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform .2s ease-out;
-        border-radius: 1vmin; }
+         break-inside: avoid;
+    width: 100%; }
 
 .zoom__image {
   border-radius: 1vmin; }
 
 @media screen and (max-width: 640px) {
-  .waterfall {
+  .masonry {
     max-width: 100%;
     padding: 0.5vmax;
     -moz-column-count: 2;
          column-count: 2; }
-    .waterfall > * {
+    .masonry-brick {
       padding: 0.5vmax; } }
 .playlist-movies, .playlist-music {
   list-style: none;
