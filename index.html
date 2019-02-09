@@ -51,6 +51,7 @@
 <script src='assets/js/rogie.zoom.js'></script>
 <script src='assets/js/tmpl.js'></script>
 <script src='assets/js/palette.js'></script>
+<script src='assets/js/night-mode.js'></script>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rog.ie" />
@@ -198,11 +199,11 @@
       </filter>
 
       <filter id="color-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
-        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20"></feOffset>
-        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="15"></feGaussianBlur>
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="10"></feOffset>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="20"></feGaussianBlur>
         <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
         <feComponentTransfer>
-          <feFuncA type="linear" slope="0.4"></feFuncA>
+          <feFuncA type="linear" slope="1"></feFuncA>
         </feComponentTransfer>
         <feMerge>
           <feMergeNode></feMergeNode>
@@ -417,6 +418,11 @@
 
   <footer>
   </footer>
+
+  <span class="switch night-mode">
+    <input type="checkbox" id="light-mode" />
+    <label></label>
+  </span>
 
   </body>
   <script>

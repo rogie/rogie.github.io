@@ -303,7 +303,7 @@ var Rogie = {
             o,(object,data) => {
               link.style.transition = 'none';
               shine.style.transition = 'none';
-              link.style.boxShadow = `${(data.xPercent-50)/50 * 10}px ${(data.yPercent-50)/50 * 10}px 40px rgba(0,0,0,0.15)`;
+              //link.style.boxShadow = `${(data.xPercent-50)/50 * 10}px ${(data.yPercent-50)/50 * 10}px 40px rgba(0,0,0,0.15)`;
               link.style.transform = "rotateY(" + -(data.xPercent - 50)/10 + "deg) rotateX(" + (data.yPercent - 50)/10 + "deg)";
               shine.style.display = 'block';
               shine.style.backgroundImage = `radial-gradient(circle at ${100-data.xPercent}% ${100-data.yPercent}%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))`;
@@ -336,9 +336,29 @@ var Rogie = {
     //Rogie.lazyLoadImages(fragment);
   },
 
+  initNightMode: function(){
+    var lightMode = document.getElementById('light-mode')
+    NightMode(lightMode)
+    function nightModeChanged(){
+       if(lightMode.checked){
+          setTimeout(function(){
+            document.documentElement.classList.add("light-ui")
+          },100);
+       }else{
+          setTimeout(function(){
+            document.documentElement.classList.remove("light-ui")
+          },100);
+       }
+    }
+
+    lightMode.addEventListener('change',nightModeChanged)
+    nightModeChanged()
+  },
+
   init: function(){
     Rogie.Nav();
     Rogie.initFragment(document);
+    Rogie.initNightMode();
     /*if(document.location.pathname == "/"){
       document.location.hash = '#nav';
     }*/
