@@ -858,7 +858,7 @@ nav:target a[href="#👀"] {
 .masonry {
   list-style: none;
   padding: 0;
-  margin: 4rem auto;
+  margin: 2vmax auto;
   max-width: 100%;
   -moz-column-count: 4;
        column-count: 4;
