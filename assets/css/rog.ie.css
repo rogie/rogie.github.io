@@ -789,6 +789,73 @@ nav:target a[href="#👀"] {
   position: relative;
   z-index: 1; }
 
+.art-stack {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: calc(13.333vw - 32px);
+  overflow: hidden;
+  background: white;
+  border-radius: 1vmin;
+  position: relative;
+  counter-reset: art-thumb-count;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+  .art-stack:after {
+    content: counter(art-thumb-count);
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    color: white;
+    background: rgba(15, 15, 15, 0.5);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 1.6em;
+    pointer-events: none; }
+  .art-stack > *:first-child {
+    z-index: 0;
+    position: static;
+    overflow: visible; }
+    .art-stack > *:first-child > img {
+      opacity: 1; }
+  .art-stack:hover > *:first-child,
+  .art-stack:hover > * {
+    position: relative !important;
+    z-index: 1 !important; }
+    .art-stack:hover > *:first-child > img,
+    .art-stack:hover > * > img {
+      opacity: 0; }
+    .art-stack:hover > *:first-child:hover,
+    .art-stack:hover > *:hover {
+      position: static !important;
+      z-index: 0 !important;
+      overflow: visible !important; }
+      .art-stack:hover > *:first-child:hover > img,
+      .art-stack:hover > *:hover > img {
+        opacity: 1 !important; }
+  .art-stack > * {
+    -ms-flex: 1 !important;
+        flex: 1 !important;
+    width: 0 !important;
+    border-radius: 0 !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    counter-increment: art-thumb-count; }
+    .art-stack > * > img {
+      min-width: 100%;
+      height: auto !important;
+      max-width: 100%;
+      width: auto !important;
+      border-radius: 1vmin !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%); }
+
 .art-thumb {
   width: 100%;
   vertical-align: top;
@@ -802,7 +869,7 @@ nav:target a[href="#👀"] {
   -webkit-filter: none;
           filter: none;
   cursor: zoom-in; }
-  .art-thumb a {
+  .art-thumb > * {
     margin-bottom: 1vmax;
     display: block;
     position: relative;
@@ -814,13 +881,13 @@ nav:target a[href="#👀"] {
     transition: all .2s ease-out;
     outline: none !important;
     cursor: zoom-in; }
-    .art-thumb a img {
+    .art-thumb > * img {
       width: 100%;
       height: auto;
       display: block;
       transition: transform .2s ease-out;
       border-radius: 1vmin; }
-    .art-thumb a[title]:after {
+    .art-thumb > *[title]:after {
       border-radius: 2rem;
       position: absolute;
       left: 1rem;
@@ -842,14 +909,14 @@ nav:target a[href="#👀"] {
       font-weight: bold;
       font-size: 1.2rem;
       font-family: "AzoSansUber", Trebuchet MS, Arial, sans-serif; }
-    .art-thumb a[title]:hover:after {
+    .art-thumb > *[title]:hover:after {
       transform: translateY(0);
       opacity: 1; }
-    .art-thumb a:hover .shine {
+    .art-thumb > *:hover .shine {
       opacity: 0.35; }
-    .art-thumb a:hover > a {
+    .art-thumb > *:hover > a {
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
-    .art-thumb a .shine {
+    .art-thumb > * .shine {
       position: absolute;
       left: 0;
       top: 0;
