@@ -422,7 +422,7 @@ html {
   background: #050505;
   color: rgba(255, 255, 255, 0.7);
   font-size: 18px;
-  font-family: "Cooper", Georgia, Times, Times New Roman, serif;
+  font-family: "Gooper", Georgia, Times, Times New Roman, serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -775,6 +775,84 @@ nav:target a[href="#👀"] {
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'Gooper';
+  font-weight: 900;
+  src: url(../fonts/gooper/Gooper-Black.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-Black.woff2) format("woff2"), url(../fonts/gooper/Gooper-Black.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-weight: 700;
+  src: url(../fonts/gooper/Gooper-Bold.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-Bold.woff2) format("woff2"), url(../fonts/gooper/Gooper-Bold.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-weight: 400;
+  src: url(../fonts/gooper/Gooper-Regular.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-Regular.woff2) format("woff2"), url(../fonts/gooper/Gooper-Regular.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-weight: 600;
+  src: url(../fonts/gooper/Gooper-SemiBold.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-SemiBold.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-SemiBold.woff2) format("woff2"), url(../fonts/gooper/Gooper-SemiBold.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-weight: 100;
+  src: url(../fonts/gooper/Gooper-Thin.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-Thin.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-Thin.woff2) format("woff2"), url(../fonts/gooper/Gooper-Thin.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-weight: 300;
+  src: url(../fonts/gooper/Gooper-Light.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-Light.woff2) format("woff2"), url(../fonts/gooper/Gooper-Light.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 900;
+  src: url(../fonts/gooper/Gooper-BlackItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-BlackItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-BlackItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-BlackItalic.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/gooper/Gooper-BoldItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-BoldItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-BoldItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-BoldItalic.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/gooper/Gooper-RegularItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-RegularItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-RegularItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-RegularItalic.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 600;
+  src: url(../fonts/gooper/Gooper-SemiBoldItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-SemiBoldItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-SemiBoldItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-SemiBoldItalic.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 100;
+  src: url(../fonts/gooper/Gooper-ThinItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-ThinItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-ThinItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-ThinItalic.woff) format("woff"); }
+@font-face {
+  font-family: 'Gooper';
+  font-style: italic;
+  font-weight: 300;
+  src: url(../fonts/gooper/Gooper-LightItalic.eot);
+  /* IE9 */
+  src: url(../fonts/gooper/Gooper-LightItalic.eot?#iefix) format("embedded-opentype"), url(../fonts/gooper/Gooper-LightItalic.woff2) format("woff2"), url(../fonts/gooper/Gooper-LightItalic.woff) format("woff"); }
+@font-face {
   font-family: "AzoSansReg";
   src: url("../fonts/Azo Sans - Web/Azo Sans Regular.eot");
   /* IE9*/
@@ -799,8 +877,7 @@ nav:target a[href="#👀"] {
   background: white;
   border-radius: 1vmin;
   position: relative;
-  counter-reset: art-thumb-count;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+  counter-reset: art-thumb-count; }
   .art-stack:after {
     content: counter(art-thumb-count);
     position: absolute;
