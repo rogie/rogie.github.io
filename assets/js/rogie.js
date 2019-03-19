@@ -115,6 +115,7 @@ var Rogie = {
   },
 
   load: function(assets, onLoaded = () => {}){
+    if(!assets.length) return;
     Rogie.loading();
     var numLoaded = 0;
     function assetLoaded(){
@@ -235,11 +236,18 @@ var Rogie = {
 
     this.Nav.open = function(){
       var active = this.isActive();
+      var radius = active? nav.scrollWidth/2: nav.scrollWidth/2.5;
+      var startDegrees = 0;
+      var endDegrees   = active? 360: 180;
+      var startRadians = startDegrees*Math.PI/180,
+          endRadians   = endDegrees*Math.PI/180,
+          stepRadians  = (endRadians-startRadians)/(active? items.length: items.length - 1);
 
       items.forEach(function(item,i){
+        var a = i*stepRadians+startRadians;
         var end = {
-          x: Math.cos(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * nav.clientWidth/2,
-          y: Math.sin(-0.5 * Math.PI + 2*(1/items.length/(active? 1 : Math.PI))*i*Math.PI) * nav.clientWidth/2,
+          x: Math.cos(a)*radius,
+          y: Math.sin(a)*radius,
           r: 0,
           s: 1
         };
@@ -358,8 +366,8 @@ var Rogie = {
   init: function(){
     Rogie.Nav();
     Rogie.initFragment(document);
-    Rogie.initNightMode();
-    /*if(document.location.pathname == "/"){
+    /*Rogie.initNightMode();
+    if(document.location.pathname == "/"){
       document.location.hash = '#nav';
     }*/
     window.addEventListener('touchstart', function() {

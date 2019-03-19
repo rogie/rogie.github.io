@@ -464,8 +464,7 @@ body:before {
   z-index: 1; }
 
 main {
-  padding: 1vmax 20vw;
-  padding-bottom: 10vh;
+  padding: 6rem 20vw;
   transition: all 0.2s ease-in-out;
   will-change: transform;
   max-width: 100vw;
@@ -569,7 +568,7 @@ iframe {
 
 html > img.zoomed {
   border-radius: 1vmin;
-  box-shadow: 0 40px 100px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 40px 100px 20px rgba(0, 0, 0, 0.4); }
 
 html[data-useragent*="Chrome"] > img.zoomed {
   -webkit-filter: url(#zoom-shadow);
@@ -587,10 +586,15 @@ html:after {
   pointer-events: none; }
 
 html.zoomed main {
-  opacity: 0.25;
+  opacity: 0.5;
   transform: scale(0.95);
-  -webkit-filter: blur(20px);
-          filter: blur(20px); }
+  -webkit-filter: blur(10px);
+          filter: blur(10px); }
+html.zoomed nav {
+  opacity: 0.5;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  pointer-events: none; }
 
 html.zoomed:after {
   pointer-events: all; }
@@ -657,21 +661,34 @@ img {
     padding: 1vmax 2vmax; } }
 nav {
   position: fixed;
-  left: 1vmax;
-  bottom: 1vmax;
+  left: 50%;
+  top: 0;
   font-family: "AzoSansUber", Trebuchet MS, Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 0.05em;
   will-change: transform;
   transform-origin: 0 bottom;
   transition: all 0.1s ease-in-out;
-  padding: 6vmax;
+  padding: 1rem;
   z-index: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  transform: translate(-6vmax, 6vmax) scale(1); }
+  transform: translate(-50%, 0) scale(1); }
+  nav:before {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  nav:hover:before {
+    left: -12rem;
+    bottom: -12rem;
+    right: -12rem;
+    display: block; }
   nav:target {
     transform: translate(calc(50vw - 50%), calc(-50vh + 50%)) scale(1);
     left: 0;
@@ -695,6 +712,10 @@ nav {
         justify-content: center;
     z-index: 1;
     position: relative; }
+    nav a.identity .logo-type {
+      width: auto;
+      height: auto;
+      overflow: visible; }
     nav a.identity > i {
       width: 100%;
       height: auto;
@@ -710,7 +731,7 @@ nav {
         -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75));
                 filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75)); }
   nav a, nav > span {
-    color: white;
+    color: #222 !important;
     font-weight: 900;
     font-size: 1.5vmax;
     transition: all 50ms ease-in-out;
@@ -722,12 +743,8 @@ nav {
       position: relative;
       display: inline-block; }
     nav a svg, nav > span svg {
-      height: 1.5em;
-      width: auto;
-      -webkit-filter: drop-shadow(0 0.2vmax 0.1vmax rgba(0, 0, 0, 0.35)) drop-shadow(0 0.35vmax 0.75vmax rgba(0, 0, 0, 0.75));
-              filter: drop-shadow(0 0.2vmax 0.1vmax rgba(0, 0, 0, 0.35)) drop-shadow(0 0.35vmax 0.75vmax rgba(0, 0, 0, 0.75)); }
-      nav a svg path, nav > span svg path {
-        fill: currentColor; }
+      height: 1.66em;
+      width: auto; }
     html.mouse nav a:hover, html.mouse nav > span:hover {
       color: white;
       opacity: 1; }
@@ -743,11 +760,6 @@ nav {
     transition: all 0.1s ease-in-out;
     transform: translate(-50%, -50%); }
 
-nav .menu {
-  transform: scale(1) translateY(-50%) !important;
-  opacity: 1 !important;
-  left: 12vmax !important; }
-
 nav:target .menu,
 html.mouse nav:hover .menu {
   transform: scale(0) translateY(-50%) !important;
@@ -758,7 +770,14 @@ nav:target a[href="#👀"] {
   width: 100vw;
   height: 100vh;
   left: 50%;
-  right: 50%; }
+  right: 50%;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+nav:target a.identity {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 960px) {
   nav a.identity {
@@ -1031,6 +1050,10 @@ nav:target a[href="#👀"] {
     width: 100%;
     padding: 0 0 1vmax 0;
     margin: 0; }
+    .masonry-brick--full {
+      -moz-column-span: all;
+           column-span: all;
+      display: block; }
 
 .zoom__image {
   border-radius: 1vmin; }
@@ -1063,8 +1086,8 @@ nav:target a[href="#👀"] {
   .playlist-movies::-webkit-scrollbar, .playlist-music::-webkit-scrollbar {
     display: none; }
   .playlist-movies > li, .playlist-music > li {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
     padding: 1vmax;
     -ms-flex-positive: 0;
         flex-grow: 0;
@@ -1083,7 +1106,7 @@ nav:target a[href="#👀"] {
   border-radius: 100%;
   display: inline-block;
   border: 0.125vmin solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2vmax 4vmax -1vmax rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1vmax 2vmax -0.5vmax rgba(0, 0, 0, 0.35);
   position: relative;
   transition: all 0.2s ease-in-out;
   transform-style: preserve-3d; }
@@ -1133,7 +1156,7 @@ nav:target a[href="#👀"] {
     .betamax:hover > div > div:after {
       opacity: 0; }
   .betamax > div {
-    box-shadow: 0 1.5vmax 4vmax -1vmax black; }
+    box-shadow: 0 1vmax 3vmax -0.5vmax rgba(0, 0, 0, 0.65); }
     .betamax > div:after {
       content: '';
       background: url(/assets/img/betamax-tape.png) 0 100% no-repeat;
@@ -1163,7 +1186,7 @@ nav:target a[href="#👀"] {
         opacity: 1;
         transition: all 0.2s ease-in-out;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0%, transparent 2%, transparent 100%), linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 0.5%, transparent 100%);
-        box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), inset 1vw 0 1vw 0 rgba(0, 0, 0, 0.2), inset 0 0 30px 0 rgba(0, 0, 0, 0.3); }
+        box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), inset 1vw 0 1vw 0 rgba(0, 0, 0, 0.1), inset 0 0 30px 0 rgba(0, 0, 0, 0.1); }
       .betamax > div > div img {
         display: block;
         width: 100%;
@@ -1347,33 +1370,51 @@ nav:target a[href="#👀"] {
   .light-ui a {
     color: #000; }
   .light-ui hr {
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.25), transparent); }
+    background: rgba(0, 0, 0, 0.05); }
   .light-ui body:before {
     display: none; }
-  .light-ui nav a, .light-ui nav > span {
-    color: #222; }
   .light-ui nav a.identity > i img, .light-ui nav a.identity > i svg {
     -webkit-filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
             filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25)); }
+  .light-ui nav svg path {
+    fill: black; }
+  .light-ui nav svg.hi {
+    overflow: visible; }
+    .light-ui nav svg.hi path.hand {
+      stroke: black;
+      stroke-width: 3px;
+      fill: white; }
+  .light-ui nav:hover ~ main {
+    opacity: 0.5;
+    -webkit-filter: blur(10px);
+            filter: blur(10px); }
   .light-ui h1, .light-ui h2, .light-ui h3, .light-ui h4, .light-ui h5 {
     color: #222; }
   .light-ui .fun-letters > * {
-    text-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.15); }
+    text-shadow: 0 0.2em 0.5em rgba(255, 255, 255, 0.75); }
   .light-ui .logo-type {
-    -webkit-filter: invert(1) drop-shadow(0 0.5em 0.5em rgba(0, 0, 0, 0.25));
-            filter: invert(1) drop-shadow(0 0.5em 0.5em rgba(0, 0, 0, 0.25)); }
+    -webkit-filter: invert(1) drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.25));
+            filter: invert(1) drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.25)); }
   .light-ui .art-thumb a {
-    -webkit-filter: url(#color-shadow) brightness(0.95);
-            filter: url(#color-shadow) brightness(0.95);
-    box-shadow: 0 0.25em 0.5em -0.25rem rgba(0, 0, 0, 0.05); }
+    -webkit-filter: none;
+            filter: none;
+    box-shadow: none;
+    transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1); }
+    .light-ui .art-thumb a img {
+      -webkit-filter: brightness(97%);
+              filter: brightness(97%);
+      transition: all 0.2s cubic-bezier(0.68, 0, 0.265, 1); }
+    .light-ui .art-thumb a:hover {
+      box-shadow: 0 2rem 4rem -0.5rem rgba(0, 0, 0, 0.25); }
+      .light-ui .art-thumb a:hover img {
+        -webkit-filter: brightness(100%);
+                filter: brightness(100%); }
 
 html.mouse.light-ui nav a:hover, html.mouse.light-ui nav > span:hover {
   color: #333; }
 
 html.light-ui[data-useragent*="Chrome"] > img.zoomed {
-  -webkit-filter: url(#zoom-shadow);
-          filter: url(#zoom-shadow);
-  box-shadow: 0 1em 2em -0.25rem rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 1em 3em -0.25rem rgba(0, 0, 0, 0.15); }
 
 @keyframes sun {
   from {
