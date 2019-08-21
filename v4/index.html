@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="light-ui ">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg"/>
+  <title>Art of Rogie King — Whimsical, vintage and retro inspired characters and vibes</title>
+  <meta content="Art of Rogie King — Whimsical, vintage and retro inspired characters and vibes" name="description"\>
+  <meta content="Rogie King" name="author"\>
+
+  <link rel="stylesheet" href="https://use.typekit.net/ovr7vvn.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="assets/img/favicon.svg" color="#FFFFFF">
+  <link rel="manifest" href="assets/img/manifest.json">
+  <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#000000">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="referrer" content="always">
+
+  <!--script src="//platform.twitter.com/widgets.js"></script-->
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/rog.ie.css'>
+  <script src='assets/js/rogie.js'></script>
+<script src='assets/js/rogie.hoverfx.js'></script>
+<script src='assets/js/rogie.zoom.js'></script>
+<script src='assets/js/tmpl.js'></script>
+<script src='assets/js/palette.js'></script>
+<script src='assets/js/night-mode.js'></script>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rog.ie" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@rogie" />
+  <meta name="twitter:creator" content="@rogie" />
+  <meta name="twitter:url" property="og:url" content="http://rog.ie" />
+  <meta name="twitter:image:width" content="1000" />
+  <meta name="twitter:image:height" content="1000" />
+  <meta name="twitter:image" property="og:image" content="http://rog.ie/assets/img/rogie-preview.png" />
+  <meta name="twitter:title" property="og:title" content="Art of Rogie King — Whimsical, vintage and retro inspired characters and vibes" />
+  <meta name="twitter:description" property="og:description" content="Art of Rogie King — Whimsical, vintage and retro inspired characters and vibes" />
+
+  <!--
+
+    Welcome, fellow denizen of the mortal realms of code. It's been awhile since we've talked like
+    this, I know. It wasn't you — it was me. You see, things got hard there for a bit and the light
+    inside was just down to a dim flicker...but not so anymore.
+
+    I mean, this is strange right? Talking this way? But, hey...wan't to grab a drink?
+    I'd love to sit on the back porch and talk life with you...scream and laugh aloud with a
+    fire roaring, whiskey in our veins, and passion in our hearts about the things we love.
+    Really bond, ya know? It's amazing how rad that human connection can be. Human to human,
+    sharing stories of failure, triumph and all of our awesome little nerdy oddities.
+
+    Perhaps the ship would veer into musical taste territory and we'd wax poetic about how
+    we're supposed to have these amazing tastes in music, but really we just love a good
+    EDM beat, or maybe we love cartoon soundtracks? Or maybe about how we've always
+    loved techno, trance and dubstep.
+
+    No matter the topic, we'd walk away friends, and stronger for the conversation we'd had,
+    no matter how different we were. Perhaps we grew up in lives and culture bubbles so
+    polar-opposite, but we found, through friendship how to change and how to love and see
+    ourselves in the one across from us, face glowing from the warmth of the fire,
+    whiskey and solidarity.
+
+    Well, that sure got emo.
+
+    Oh, you're still here? Well, here are some interesting things that make me:
+
+    Cry:
+    https://www.youtube.com/watch?v=EboJrjl_ELI
+    https://open.spotify.com/track/3AGawd3ZkLbYQlxe4nZIEK
+    https://open.spotify.com/track/2TTpZrsNdlOBoHKNGdpSeq
+
+    Dance:
+    https://open.spotify.com/track/5PJKbLCiIkQgir60Sd8DQ5
+    https://soundcloud.com/dj_tigerlily/mundian-to-bach-ke-tigerlily-bootleg
+    https://soundcloud.com/dj_tigerlily/team-tiger-podcast-003-ft-jaysounds
+
+    Party:
+    https://www.blantonsbourbon.com/
+    https://soundcloud.com/ben_oneil12/bearly-legal-continuous-mix
+    https://open.spotify.com/user/1239043557/playlist/7qGMntSb6g6Nx2WmslDpCO
+    https://open.spotify.com/user/1239043557/playlist/1pqVBQ6YsDATRzAAchGHQv
+
+  -->
+</head>
+<body>
+  <script>
+    (function(){
+      var b = document.documentElement;
+      b.setAttribute('data-useragent',  navigator.userAgent);
+      b.setAttribute('data-platform', navigator.platform );
+      b.classList.add( !!('ontouchstart' in window)?'touch':'click' );
+      b.addEventListener('mousemove', function (e) { b.removeEventListener('mousemove', arguments.callee, false); b.classList.add('mouse'); }, false);
+    })();
+  </script>
+  <div style="width:0;height:0;overflow:hidden;">
+    <svg>
+      <radialGradient id="btn-grad" cx="26.0831593%" cy="109.928601%" fx="26.0831593%" fy="109.928601%" r="134.809646%" id="radialGradient-1">
+          <stop stop-color="#F9ED32" offset="0%"></stop>
+          <stop stop-color="#EE2A7B" stop-opacity="0.864168128" offset="31.6812313%"></stop>
+          <stop stop-color="#002AFF" offset="100%"></stop>
+      </radialGradient>
+      <radialGradient id="grad-green" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#3EFF58;stop-opacity:0.5" />
+        <stop offset="100%" style="stop-color:#3EFF58;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-green" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#3EFF58;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#3EFF58;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-blue" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:0.7" />
+        <stop offset="100%" style="stop-color:#00CAFF;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-blue" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#00CAFF;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-pink" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FF43AD;stop-opacity:0.5" />
+        <stop offset="100%" style="stop-color:#FF43AD;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-bright-pink" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FF43AD;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#FF43AD;stop-opacity:0" />
+      </radialGradient>
+      <radialGradient id="grad-orange" cx="0.5" cy="0" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" style="stop-color:#FFB948;stop-opacity:0.4" />
+        <stop offset="100%" style="stop-color:#FFB948;stop-opacity:0" />
+      </radialGradient>
+      <linearGradient id="grad-header" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#FFB948;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#FF43AD;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#A732FF;stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="grad-footer" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#00CAFF;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#A732FF;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6122FF;stop-opacity:1" />
+      </linearGradient>
+      <filter id="logo-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="5" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="6" />
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="0.5"/>
+        </feComponentTransfer>
+      </filter>
+      <filter id="zoom-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="30" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      </filter>
+      <filter id="jubilee-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="20" />
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="20" />
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      </filter>
+      <filter id="blend-difference">
+        <feBlend mode="screen" in="SourceGraphic"/>
+      </filter>
+      <filter id="gritty-shadow"
+        	filterUnits="userSpaceOnUse" x="-100%" y="-100%" width="200vw" height="200vw">
+          <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="5" seed="1" stitchTiles="noStitch" result="img"/>
+          <feDisplacementMap in="SourceGraphic" in2="img" xChannelSelector="R" yChannelSelector="G" scale="200">
+          </feDisplacementMap>
+      </filter>
+      <filter id="subtle-grit"
+        	filterUnits="userSpaceOnUse" x="-100%" y="-100%" width="200vw" height="200vw">
+          <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="5" seed="1" stitchTiles="noStitch" result="img"/>
+          <feDisplacementMap in="SourceGraphic" in2="img" xChannelSelector="R" yChannelSelector="G" scale="1.5">
+          </feDisplacementMap>
+      </filter>
+
+      <filter id="color-shadow" x="-150%" y="-150%" width="300%" height="300%" color-interpolation-filters="sRGB">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="10"></feOffset>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="20"></feGaussianBlur>
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+        <feComponentTransfer>
+          <feFuncA type="linear" slope="1"></feFuncA>
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+
+    </svg>
+  </div>
+
+  <nav id="menu" class="">
+  <a class="identity" href="#menu">
+    <h1>
+      <span class="logo-type">Rogie</span>
+    </h1>
+  </a>
+  <a href="#👀" title="Close Menu"></a>
+  <a href="/" title="My Art"><span class="fun-letters">Art</span></a>
+  <a href="/me/" title="About Me"><span class="fun-letters">About</span></a>
+  <a href="http://twitter.com/rogie" target="_twitter" title="Emo tweets, Miley, EDM and Disney in no order.">
+    <span><svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>twitter</title><desc>Created with Sketch.</desc><path d="M22.726 52.64c18.871 0 29.191-15.634 29.191-29.191 0-.444-.009-.886-.029-1.326 2.003-1.448 3.744-3.255 5.118-5.313-1.838.817-3.816 1.367-5.892 1.615 2.118-1.27 3.744-3.279 4.512-5.675-1.982 1.175-4.177 2.029-6.515 2.49-1.872-1.994-4.538-3.241-7.489-3.241-5.666 0-10.26 4.595-10.26 10.258 0 .805.09 1.588.266 2.339-8.527-.429-16.088-4.512-21.148-10.719-.881 1.516-1.389 3.277-1.389 5.157 0 3.559 1.811 6.702 4.566 8.54-1.683-.052-3.264-.514-4.646-1.283l-.002.131c0 4.969 3.536 9.117 8.231 10.057-.862.235-1.769.361-2.705.361-.66 0-1.303-.065-1.928-.185 1.306 4.076 5.094 7.043 9.584 7.126-3.511 2.752-7.935 4.392-12.742 4.392-.827 0-1.644-.047-2.447-.142 4.541 2.91 9.932 4.609 15.727 4.609" fill="#fff"/></svg></span>
+  </a>
+  <a href="http://instagram.com/rogie" target="_instagram" title="Am I an artist yet?">
+    <span><svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>instagram</title><desc>Created with Sketch.</desc><path d="M48.345 18.655c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3m-16.345 21.678c-4.602 0-8.333-3.731-8.333-8.333s3.731-8.333 8.333-8.333 8.333 3.731 8.333 8.333-3.731 8.333-8.333 8.333m0-21.171c-7.09 0-12.838 5.748-12.838 12.838 0 7.09 5.748 12.838 12.838 12.838 7.09 0 12.838-5.748 12.838-12.838 0-7.09-5.748-12.838-12.838-12.838m20.35 22.94c-.111 2.437-.519 3.761-.861 4.642-.454 1.167-.995 2-1.87 2.875-.875.875-1.708 1.417-2.875 1.87-.881.342-2.205.75-4.642.861-2.636.12-3.426.146-10.102.146s-7.466-.025-10.102-.146c-2.437-.111-3.761-.519-4.642-.861-1.167-.453-2-.995-2.875-1.87-.875-.875-1.417-1.708-1.87-2.875-.342-.881-.75-2.205-.861-4.642-.12-2.636-.146-3.427-.146-10.102 0-6.675.026-7.466.146-10.102.111-2.437.518-3.761.861-4.642.454-1.167.995-2 1.87-2.875.875-.875 1.708-1.417 2.875-1.87.881-.342 2.205-.75 4.642-.861 2.636-.12 3.427-.146 10.102-.146 6.675 0 7.466.026 10.102.146 2.437.111 3.761.518 4.642.861 1.167.454 2 .995 2.875 1.87.875.875 1.417 1.708 1.87 2.875.342.881.75 2.205.861 4.642.12 2.636.146 3.427.146 10.102 0 6.675-.025 7.466-.146 10.102m4.5-20.41c-.121-2.661-.544-4.478-1.162-6.068-.639-1.644-1.494-3.038-2.884-4.428-1.39-1.39-2.784-2.245-4.428-2.884-1.59-.618-3.407-1.041-6.068-1.162-2.667-.122-3.518-.15-10.307-.15-6.79 0-7.641.029-10.308.15-2.661.121-4.478.544-6.068 1.162-1.644.639-3.038 1.494-4.428 2.884-1.39 1.39-2.245 2.784-2.884 4.428-.618 1.59-1.041 3.408-1.162 6.068-.122 2.667-.15 3.518-.15 10.308s.029 7.641.15 10.307c.121 2.661.544 4.478 1.162 6.069.639 1.644 1.494 3.038 2.884 4.428 1.39 1.39 2.784 2.245 4.428 2.884 1.59.618 3.408 1.041 6.068 1.162 2.667.122 3.518.15 10.308.15s7.641-.029 10.307-.15c2.661-.121 4.478-.544 6.068-1.162 1.644-.639 3.038-1.494 4.428-2.884 1.39-1.39 2.245-2.784 2.884-4.428.618-1.59 1.041-3.408 1.162-6.069.122-2.667.15-3.518.15-10.307 0-6.79-.029-7.641-.15-10.308" fill="#fff"/></svg></span>
+  </a>
+  <a href="http://dribbble.com/rogie" target="_dribbble" title="Rockin' the Cederhold since '09">
+    <span><svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title>dribbble</title><desc>Created with Sketch.</desc><path d="M43.929 49.734c-.219-1.299-1.355-7.55-4.148-15.225 6.691-1.071 12.57.682 13.3.913-.952 5.941-4.362 11.073-9.152 14.312m-25.037-.856c2.248-4.596 8.339-10.473 16.892-13.383 2.998 7.79 4.237 14.32 4.555 16.193-6.837 2.912-15.097 2.141-21.447-2.811m-8.235-17.498c.934.019 11.281.152 21.944-3.039.611 1.196 1.195 2.411 1.731 3.624-7.73 2.175-14.743 8.432-18.198 14.345-3.656-4.058-5.648-9.355-5.478-14.93m12.264-18.673c.563.772 4.379 6.06 7.916 12.35-6.362 1.69-13.525 2.602-19.74 2.602 1.384-6.626 5.85-12.134 11.823-14.951m23.232 3.352c-.384.547-3.598 4.867-11.191 7.713-3.499-6.429-7.377-11.71-7.967-12.501 6.726-1.621 13.871.096 19.158 4.787m2.374 2.469c2.974 3.634 4.775 8.262 4.822 13.302-.704-.149-7.763-1.581-14.868-.688-.586-1.431-1.136-2.678-1.877-4.195 7.895-3.224 11.473-7.811 11.923-8.42m-16.528-11.529c-13.784 0-24.998 11.215-24.998 25s11.214 25 24.998 25 24.998-11.215 24.998-25-11.214-25-24.998-25" fill="#fff"/></svg></span>
+  </a>
+  <a href="mailto:hi@rog.ie" title="Email Me">
+    <span><svg class="hi" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M94.5504 35.6739C88.8867 34.3025 81.0388 38.2455 76.0354 48.8998C71.921 45.814 66.7525 44.6965 61.6666 45.4711C60.7904 40.6646 57.5585 26.0482 49.9138 21.2988C39.0626 14.5557 33.8942 26.5815 40.7516 31.2166C46.1232 34.8422 50.3519 39.763 52.9425 48.8427C51.5075 49.7824 50.1551 50.9062 48.9106 52.2142C48.6503 52.4872 48.3963 52.773 48.1487 53.0523C45.6724 50.1506 38.4658 40.8297 26.9098 39.4011C16.8079 38.1566 15.411 52.2206 27.4876 53.3698C36.5356 54.2333 41.2976 58.5383 43.5326 61.4653C42.8151 63.9035 42.5421 66.4116 42.7136 68.8624C35.3038 66.2211 27.659 65.8147 22.5985 68.6656C18.0904 71.2054 17.3158 80.0438 28.4591 77.7897C39.6214 75.5357 45.1581 78.5009 47.8756 80.5518C48.0217 80.7041 48.1677 80.8565 48.3201 81.0026C53.4949 85.9361 60.9174 87.1933 67.6986 84.9837C69.7812 90.7299 75.5909 90.1013 81.7435 83.9487C88.5374 77.1548 88.1184 69.7641 82.8357 68.1957C83.1658 66.6274 83.3182 65.0401 83.2928 63.4718L83.3055 63.4845C83.115 57.3065 84.8929 50.8364 93.9027 47.6871C102.913 44.5377 100.906 37.2105 94.5504 35.6739Z" fill="white" class="hand"/>
+<path d="M71.8513 54.1953C70.6894 55.4462 69.6417 56.8811 68.9179 58.3859C68.7592 58.7733 68.5623 59.1415 68.429 59.5352C68.3083 59.9289 68.1433 60.3098 68.048 60.7098C67.9718 61.1162 67.8575 61.5099 67.775 61.9099L67.6544 63.129C67.6163 63.5353 67.6544 63.948 67.648 64.3608C67.6544 64.5639 67.6353 64.7735 67.6671 64.9767L67.7623 65.5925C67.8321 66.0053 67.8321 66.4243 67.9464 66.8307C68.0607 67.2371 68.1623 67.6434 68.2576 68.0625C68.3274 68.4815 68.5115 68.8752 68.6576 69.2816L69.0893 70.5134C69.4385 71.3134 69.8322 72.1071 70.156 72.9579L70.1814 73.0277C70.3084 73.3516 70.1433 73.7198 69.8195 73.8405C69.5592 73.9421 69.2798 73.8595 69.1084 73.6563C68.5052 72.9325 67.9337 72.1706 67.3813 71.3896L66.6892 70.1197C66.467 69.6943 66.2257 69.2689 66.0797 68.799C65.3241 66.9894 65.0193 64.9703 65.1146 62.9575C65.2416 60.9384 65.94 58.9701 67.0067 57.3065C67.267 56.8875 67.5718 56.5002 67.8702 56.1065C68.2004 55.7382 68.5115 55.37 68.8671 55.0334C69.5782 54.354 70.3211 53.7699 71.2164 53.2873C71.4831 53.1413 71.8196 53.2429 71.9656 53.5096C72.0799 53.7255 72.0418 53.9794 71.8831 54.1509L71.8513 54.1953Z" fill="black"/>
+<g opacity="0.5">
+<path opacity="0.5" d="M2.57891 83.8028C2.7186 83.9615 2.90908 84.2028 3.09956 84.406C3.27735 84.6219 3.46783 84.8314 3.66466 85.0409C4.03928 85.4663 4.45199 85.8727 4.84566 86.2727C5.66474 87.0664 6.49651 87.841 7.37909 88.5522C8.26166 89.2633 9.15693 89.9554 10.103 90.5713C10.5856 90.8697 11.0364 91.2062 11.5189 91.4919L12.992 92.3237C13.4745 92.6158 14.0015 92.8317 14.5032 93.092L15.2651 93.4666L16.0524 93.7904L17.6271 94.4571C18.1731 94.6286 18.7128 94.8191 19.2525 95.0159L20.0653 95.308L20.897 95.5365L22.5733 96.0191C23.6971 96.3302 24.8591 96.5334 26.0147 96.8763L26.1671 96.9207C26.9036 97.1429 27.3163 97.9176 27.1004 98.6478C26.929 99.2319 26.402 99.6129 25.8242 99.6383C24.5543 99.6891 23.2654 99.7145 21.9828 99.6319L20.0589 99.4097C19.7351 99.3716 19.4176 99.3335 19.0938 99.2764L18.1414 99.0605C17.5064 98.9208 16.8715 98.7748 16.2429 98.6097L14.3889 97.9811C14.0777 97.8731 13.773 97.7652 13.4682 97.6446L12.5729 97.2318C11.9824 96.9461 11.3729 96.6985 10.7951 96.3747C8.48389 95.1175 6.35048 93.5174 4.51549 91.638C3.58212 90.711 2.76304 89.676 2.00111 88.6093C1.64554 88.0506 1.27728 87.5108 0.966153 86.9204C0.635983 86.3362 0.375656 85.7647 0.0962805 85.06C-0.183095 84.3488 0.166124 83.5488 0.877261 83.2694C1.43601 83.0535 2.04556 83.2186 2.42017 83.6377L2.57891 83.8028Z" fill="white"/>
+<path opacity="0.5" d="M8.19173 78.0438C9.53147 79.193 11.0236 80.3803 12.503 81.428C14.0015 82.4757 15.538 83.4725 17.1508 84.3107C18.7445 85.1805 20.3954 85.9552 22.097 86.5964C23.7923 87.2949 25.5638 87.7774 27.367 88.3679L27.4432 88.3933C28.0718 88.6029 28.4147 89.2823 28.2115 89.9109C28.0464 90.4061 27.5893 90.7299 27.094 90.7363C25.0622 90.7744 22.9923 90.5839 21.0112 90.0378C20.0017 89.822 19.0429 89.441 18.0651 89.0981C17.5762 88.9267 17.1254 88.6791 16.6492 88.4759C16.1793 88.2664 15.7095 88.0441 15.265 87.7901C14.357 87.3012 13.4872 86.7425 12.6363 86.171C11.8173 85.5488 10.9855 84.9456 10.2363 84.2408C8.70604 82.8503 7.36631 81.3455 6.2869 79.466C5.95673 78.8946 6.15356 78.158 6.73136 77.8279C7.18217 77.5675 7.73457 77.6374 8.10284 77.9549L8.19173 78.0438Z" fill="white"/>
+</g>
+<g opacity="0.5">
+<path opacity="0.5" d="M80.0998 22.8418C80.0045 22.6386 79.9093 22.3465 79.7886 22.0926C79.687 21.8259 79.5728 21.5592 79.4458 21.2989C79.2172 20.7719 78.9569 20.2449 78.7029 19.7242C78.1695 18.6893 77.6108 17.6797 76.9885 16.7019C76.3663 15.7304 75.725 14.7716 75.0075 13.8764C74.6392 13.4319 74.3091 12.9621 73.9344 12.5303L72.7789 11.2541C72.4042 10.8159 71.9661 10.435 71.5661 10.0223L70.9502 9.41272L70.2899 8.84762L68.9819 7.69838C68.512 7.35551 68.0485 6.99994 67.5914 6.63802L66.8993 6.09832L66.1691 5.60941L64.7087 4.59985C63.7182 3.93951 62.6705 3.36806 61.661 2.66327L61.5276 2.56803C60.8864 2.11722 60.734 1.23465 61.1848 0.599705C61.5403 0.0917498 62.1689 -0.105083 62.734 0.0536531C63.9785 0.415571 65.2294 0.802887 66.4485 1.29814L68.2327 2.13627C68.5311 2.27596 68.8295 2.41564 69.1216 2.57438L69.9724 3.08868C70.5375 3.43155 71.1089 3.77442 71.6613 4.14269L73.2551 5.34908C73.5217 5.55227 73.7821 5.75545 74.036 5.97133L74.7662 6.65707C75.2424 7.12058 75.7567 7.55869 76.2075 8.05394C78.0362 10.0159 79.5855 12.2446 80.7537 14.6574C81.3569 15.8511 81.8141 17.1209 82.2078 18.3972C82.3665 19.0512 82.557 19.6925 82.6649 20.3592C82.7284 20.6893 82.7792 21.0258 82.8173 21.3624C82.8554 21.7116 82.8872 22.0227 82.8999 22.4354C82.9316 23.21 82.3284 23.8704 81.5474 23.9021C80.9633 23.9275 80.4426 23.591 80.214 23.0894L80.0998 22.8418Z" fill="white"/>
+<path opacity="0.5" d="M72.8174 26.6006C72.3603 25.8577 71.8587 25.0196 71.3444 24.245C70.83 23.4577 70.2903 22.6957 69.7443 21.9401C68.6331 20.4417 67.4712 18.9876 66.1823 17.6606C64.9251 16.3018 63.579 15.0319 62.1377 13.8573C60.7217 12.6382 59.1725 11.6032 57.6169 10.4477L57.5534 10.3969C57.0137 9.99049 56.8994 9.22856 57.2994 8.68251C57.6169 8.2571 58.1629 8.09201 58.6455 8.2444C60.6202 8.86029 62.5567 9.71112 64.3028 10.8794C65.2108 11.4128 66.0108 12.0922 66.849 12.7334C67.268 13.0573 67.6236 13.4382 68.0172 13.7938C68.4046 14.1494 68.7855 14.5113 69.1348 14.905C69.8522 15.6732 70.5126 16.486 71.1539 17.3177C71.7507 18.1813 72.3539 19.0384 72.8492 19.9591C73.8778 21.7941 74.6905 23.6799 75.1286 25.845C75.262 26.5054 74.8365 27.1467 74.1762 27.28C73.6619 27.3816 73.1603 27.1467 72.9 26.7276L72.8174 26.6006Z" fill="white"/>
+</g>
+<path d="M75.8021 81.6124C75.8973 81.3838 75.8148 81.1171 75.5989 80.9838C75.4782 80.9139 75.3386 80.9012 75.2116 80.933C75.1481 80.952 75.0782 80.9774 75.0211 81.0219L75.0084 81.0346C74.2084 81.6568 73.402 82.26 72.5385 82.7807C71.694 83.3204 70.7987 83.7712 69.9034 84.1902C69.1986 84.5141 68.4685 84.7871 67.7383 85.0284C68.3415 86.6729 69.2558 87.7904 70.3987 88.3999C70.9257 88.0126 71.44 87.6062 71.9226 87.1681C72.7797 86.4062 73.5417 85.5363 74.1957 84.6029C74.8687 83.6886 75.364 82.6473 75.8021 81.6124Z" fill="black"/>
+<path d="M83.0972 66.7991C83.0845 66.9007 83.0718 67.015 83.0527 67.1229C83.0718 66.9896 83.0908 66.8562 83.1099 66.7229C83.1035 66.7419 83.0972 66.761 83.0972 66.78V66.7991Z" fill="black"/>
+<path d="M84.3227 69.1358C84.3545 69.0659 84.3799 68.9961 84.4116 68.9262C83.9545 68.6215 83.4338 68.3802 82.856 68.2087C82.856 68.2024 82.856 68.1897 82.8624 68.1833C82.8306 68.3294 82.7989 68.4754 82.7608 68.6151C82.6084 69.231 82.4306 69.8469 82.2211 70.4501C81.802 71.6628 81.2687 72.8375 80.6274 73.9677V73.974C80.5448 74.1137 80.5766 74.2915 80.7099 74.3994C80.8559 74.5137 81.0655 74.4947 81.1798 74.3487C82.0242 73.3073 82.7862 72.1835 83.4338 70.9834C83.7576 70.3866 84.0497 69.7707 84.3227 69.1358Z" fill="black"/>
+</svg>
+</span>
+  </a>
+</nav>
+
+<main id="art">
+
+  <ul class="masonry art-list">
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/star_wars/yoda.png" title="A New Hope">
+        <span class="art-stack">
+          <span><img src="/assets/art/star_wars/yoda.png"></span>
+          <span><img src="/assets/art/star_wars/r2.png"></span>
+          <span><img src="/assets/art/star_wars/leia.png"></span>
+          <span><img src="/assets/art/star_wars/jarjar.png"></span>
+          <span><img src="/assets/art/star_wars/han-solo.png"></span>
+          <span><img src="/assets/art/star_wars/ewok.png"></span>
+          <span><img src="/assets/art/star_wars/chewy.png"></span>
+          <span><img src="/assets/art/star_wars/ackbar.png"></span>
+        </span>
+      </a>
+    </li>
+
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/a_new_hope.jpeg" title="A New Hope">
+        <img src="/assets/art/a_new_hope.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/adventure_in_the_great_wide_somewhere.jpeg" title="I Want Adventure">
+        <img src="/assets/art/adventure_in_the_great_wide_somewhere.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/carl-and-russell.jpeg" title="Those who are the hardest to love, need it most.">
+        <img src="/assets/art/carl-and-russell.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/cobra.jpeg" title="Sailor Jerry &times; Disney">
+        <img src="/assets/art/cobra.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/delorean.jpeg" title="Mid Century Delorean">
+        <img src="/assets/art/delorean.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/curiosity.jpeg" title="Stay Curious">
+        <img src="/assets/art/curiosity.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/coffeetime.jpeg" title="Coffee Time">
+        <img src="/assets/art/coffeetime.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/disneyland_survival_kit.jpeg" title="Disneyland Survival Kit">
+        <img src="/assets/art/disneyland_survival_kit.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/droids.jpeg" title="Look sir, Droids.">
+        <img src="/assets/art/droids.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/ducati.jpeg" title="1980 Ducati 900 SS">
+        <img src="/assets/art/ducati.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/ellies_adventure.jpeg" title="Adventure is Out There!">
+        <img src="/assets/art/ellies_adventure.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/epic_armory.jpeg" title="Epic Armory">
+        <img src="/assets/art/epic_armory.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/fatherhood.jpeg" title="Fatherhood">
+        <img src="/assets/art/fatherhood.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/funcycled.jpeg" title="Funcycled">
+        <img src="/assets/art/funcycled.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/groot.jpeg" title="I am Groot">
+        <img src="/assets/art/groot.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/ice-sniper.jpeg" title="Future 52: Ice Sniper">
+        <img src="/assets/art/ice-sniper.jpeg">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/mulan_for_honor.jpeg" title="For Honor">
+        <img src="/assets/art/mulan_for_honor.jpeg" alt="For Honor">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/mickey_christmas.jpeg" title="Merry Christmas from Mickey Mouse">
+        <img src="/assets/art/mickey_christmas.jpeg" alt="Merry Christmas from Mickey Mouse">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/nicki-minaj.jpeg" title="Nicki">
+        <img src="/assets/art/nicki-minaj.jpeg" alt="Nicki">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/ray.jpeg" title="Be a Light">
+        <img src="/assets/art/ray.jpeg" alt="Be a Light">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/walle.gif" title="Be a Light">
+        <img src="/assets/art/walle.gif" alt="Be a Light">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/yoda.gif" title="Do. Or do not. There is no try.">
+        <img src="/assets/art/yoda.gif" alt="Do. Or do not. There is no try.">
+      </a>
+    </li>
+    <li class="masonry-brick art-thumb">
+      <a href="/assets/art/ohana.jpeg" title="Ohana means Family">
+        <img src="/assets/art/ohana.jpeg" alt="Ohana means Family">
+      </a>
+    </li>
+
+  </ul>
+
+  <hr />
+
+  <article class="text-center">
+    <h1 class="fun-letters">My Insta</h1>
+    <p>Follow my art in progress on <a href="http://www.instagram.com/rogie/">Instagram</a>.</p>
+  </article>
+  <script type="text/html" id="insta_tmpl">
+    <% var shown = 0; %>
+    <ul class="masonry">
+      <% data.forEach(function(gram,i){ %>
+        <li class="masonry-brick art-thumb">
+          <a href="<%= gram.link %>">
+            <img alt="<%= gram.caption %>" width="<%= gram.images.standard_resolution.width %>" height="<%= gram.images.standard_resolution.height %>" src="<%= gram.images.standard_resolution.url %>"></li>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </script>
+  <div id="instagram-feed"></div>
+  <script>
+    fetch('https://api.instagram.com/v1/users/1988548/media/recent?access_token=1988548.1677ed0.4f38c51401b6481691c825fa3c06e393&count=24')
+      .then(function(res){
+        res.text().then(function(json) {
+          var data = JSON.parse(json);
+          var grams = document.getElementById("instagram-feed");
+          grams.innerHTML = tmpl("insta_tmpl", data );
+          Rogie.initArt(grams);
+        });
+      }).catch(function(){
+        console.error('Error in fetching the website');
+      });
+  </script>
+</main>
+
+
+  <footer>
+  </footer>
+
+  <!--span class="switch night-mode">
+    <input type="checkbox" id="light-mode" />
+    <label></label>
+  </span-->
+
+  </body>
+  <script>
+    Rogie.init();
+  </script>
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4d9b563d588f4f6e7500000f');
+      t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+      t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+</html>
+
+<!--
+Mascot
+Tattoo illos
+Star Wars characters
+Star Wars ships
+Ice Sniper
+Avatars
+Vices
+Wall-e series
+Epic Armory
+-->
