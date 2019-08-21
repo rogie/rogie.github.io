@@ -37,6 +37,9 @@
     top: 0;
     z-index: 2;
     left: .075rem; }
+  .rgb-text-shift a {
+    position: relative;
+    z-index: 3; }
 
 @font-face {
   font-family: 'Cooper';
@@ -248,12 +251,12 @@ main {
             backface-visibility: hidden;
     transition: all .65s ease-in-out;
     transform-origin: 50% 50%;
-    max-width: 22rem;
+    max-width: 26rem;
     width: 100%;
     box-sizing: border-box; }
     main > section > *, main > nav > * {
       background: #333;
-      padding: 2rem 0; }
+      padding: 0; }
   main > section:target, main > nav {
     transform: rotateY(0deg); }
   main > section:target ~ nav {
@@ -264,10 +267,9 @@ main {
         order: 2;
     color: #fff;
     font-family: 'Gooper';
-    overflow: hidden;
     text-align: center;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transform: rotateY(180deg) translateZ(-100px);
     transform-origin: 50% 50%;
     position: absolute;
@@ -289,8 +291,8 @@ main {
       text-shadow: 1.5px 1.5px 0 #111; }
     main > section .close.btn {
       position: absolute;
-      right: 0.25rem;
-      top: 0.25rem; }
+      right: -0.5rem;
+      top: -0.75rem; }
   main nav #about:target ~ .nav-links a[href="#about"] .text:before {
     transform: translate(0);
     opacity: 1; }
