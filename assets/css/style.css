@@ -339,15 +339,15 @@ main {
         content: '';
         background: url(../cursor-noblend.svg) center center no-repeat;
         background-size: contain;
-        width: 2.75rem;
-        height: 2.25rem;
+        width: 3.5rem;
+        height: 2.75rem;
         display: inline-block;
         vertical-align: middle;
         margin-right: 1rem;
         opacity: 0;
         transform: translateX(-50%);
         position: absolute;
-        left: -3.75rem; }
+        left: -4.5rem; }
         @supports (mix-blend-mode: screen) {
           main nav .nav-links a .text:before {
             background-image: url(../cursor.svg); } }
