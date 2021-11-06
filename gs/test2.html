@@ -363,6 +363,7 @@
         window.addEventListener('deviceorientation', event => {
             const z = event.alpha; // rotation degrees from 0 to 360
             rotateY = z
+            rotate()
         });
       }
       function requestOrientationPermission() {
