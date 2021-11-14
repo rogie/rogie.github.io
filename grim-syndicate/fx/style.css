@@ -1,0 +1,93 @@
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+  color: #ECEDEA;
+  font-family: "Nunito", sans-serif;
+}
+
+#app {
+  background: radial-gradient(25vw 25vw at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #221F20;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+#logo {
+  margin: 2rem auto;
+}
+
+#grim-drop {
+  border: 3px dashed rgba(255, 255, 255, 0.1);
+  width: 40vw;
+  height: 40vw;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#grim-drop svg ~ * {
+  display: none;
+}
+
+#grim-drop p {
+  padding: 2rem;
+}
+
+#grim-drop input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+#grim-drop img,
+#grim-drop svg {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  margin: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #221F20;
+  padding: 12px 32px;
+  cursor: pointer;
+  background: #ECEDEA;
+  border: 2px solid black;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 0px black, inset 4px 4px 0px #FFFFFF;
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px black, inset 4px 4px 0px #FFFFFF;
+}
+
+.button:active {
+  transform: translate(0, 0);
+  box-shadow: 0px 0px 0px black, inset 4px 4px 0px #FFFFFF;
+}
