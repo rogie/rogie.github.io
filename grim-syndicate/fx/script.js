@@ -1,3 +1,5 @@
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+
 let svgFX = {
   addFilter: (svgElement,selectors,filter) => {
     let defs =  document.createElementNS("http://www.w3.org/2000/svg",'defs')
