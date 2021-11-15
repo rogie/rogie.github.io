@@ -86,23 +86,15 @@ let svgFX = {
          in2="result7"
          result="result8"/>
        <feGaussianBlur 
-        in="result8"
-        stdDeviation="${blur}" />  
-       <feGaussianBlur 
         in="SourceGraphic"
-        result="blurOut"
-        stdDeviation="${blur*4}" />
-       <feColorMatrix 
-        in="blurOut"
-        type="matrix"
-        out="blurAlpha"
-        values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 0.3 0" />
+        result="blurred"
+        stdDeviation="${blur*6}" />
+      <feComponentTransfer in="blurred" result="alphablur">
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
       <feMerge> 
         <feMergeNode in="result8"/>
-        <feMergeNode in="blurAlpha"/> 
+        <feMergeNode in="alphablur" /> 
       </feMerge>
     </filter>`
       svgFX.addFilter(element,selectors,filter)
