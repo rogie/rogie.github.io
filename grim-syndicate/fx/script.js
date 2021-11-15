@@ -106,7 +106,7 @@ async function svgStringToCanvas({svgString, width = null, height = null} = {}) 
   return new Promise((resolve, reject) => {
     let canvas = document.createElement('canvas')
     let ctx = canvas.getContext('2d')
-    let dpr = (window.devicePixelRatio || 1) * 2
+    let dpr = (window.devicePixelRatio || 1)
 
     const createSVGElement = (svg) => {
       let div = document.createElement('div')
@@ -117,8 +117,9 @@ async function svgStringToCanvas({svgString, width = null, height = null} = {}) 
 
     let canvasWidth = width || svgElement.getAttribute("width")
     let canvasHeight = height || svgElement.getAttribute("height")
-    svgElement.clientWidth = width * dpr
-    svgElement.clientHeight = height * dpr
+    
+    svgElement.style.width = width * dpr + "px"
+    svgElement.style.height = height * dpr + "px"
 
     let img = new Image()
     img.onload = () => {
@@ -169,7 +170,17 @@ new Vue({
       
     },
     async download(){  
-      let canvas = await svgStringToCanvas({svgString: this.svg, width: 640, height: 640})
+      let width = 1280
+      let height = 1280
+      let tmpSVG = atob(this.image.replace("data:image/svg+xml;base64,",""))
+      let svgElement = this.createSVGElement(tmpSVG)
+      svgFX.chromaticAberration({
+        element: svgElement,
+        offset: 1.5,
+        selectors: null,
+        blur: 0.25 
+      })
+      let canvas = await svgStringToCanvas({svgString: svgElement.outerHTML, width: width, height: height})
       let downloadLink = document.createElement('a')
       downloadLink.setAttribute('download', this.file.name.replace(".svg",".png"))
 

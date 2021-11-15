@@ -27,14 +27,17 @@ html, body, #app {
 
 #grim-drop {
   border: 3px dashed rgba(255, 255, 255, 0.1);
-  width: 40vw;
-  height: 40vw;
+  width: 480px;
+  height: 480px;
   border-radius: 1rem;
   position: relative;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+#grim-drop.has-image{
+  border-color: transparent;
 }
 
 #grim-drop svg ~ * {
@@ -56,6 +59,7 @@ html, body, #app {
   opacity: 0;
 }
 
+#grim-drop .image,
 #grim-drop img,
 #grim-drop svg {
   width: 100%;
