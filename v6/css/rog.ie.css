@@ -1,0 +1,927 @@
+@import "fonts.css";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100..900&display=swap');
+
+/* Notion/Super.so overrides */
+:root{
+    --color-text-default: rgba(255,255,255,0.8) !important;
+    --color-text-default-light: rgba(255,255,255,0.5) !important;
+
+    /* Width of content */
+  --max-width: 700px !important;
+
+  /* Column Spacing (Spacing between columns) */
+  --column-spacing: 46px;
+
+  /* Hide Notion Header (Page title, icon and cover) */
+  --notion-header-display: block!important;
+
+	/* Top Spacing (If you remove the Notion header, change to '20px' or more) */
+  --top-spacing: 0px!important;
+
+  /* Hide collection/database titles */
+  --collection-header-display: flex!important;
+
+  /* Collection top border (set to 0 to hide) */
+  --collection-header-border: 1px solid var(--color-border-dark)!important;
+
+  /* Super Navbar CTA Button */
+  --cta-padding: 14px 16px!important;
+  --cta-border-radius: 5px!important;
+  --cta-border: none!important;
+  --cta-shadow: none!important;
+
+  /* Callouts */
+  --callout-padding: 16px 16px 16px 12px!important;
+  --callout-margin: 2px 0px 4px 0px!important;
+  --callout-border: 1px solid var(--color-border-default)!important;
+  --callout-border-radius: 3px!important;
+  --callout-shadow: 0!important;
+  --callout-icon-size: 18px0!important;
+  --callout-emoji-size: 18px!important;
+
+  /* Collections */
+  /* List */
+  --collection-list-item-border-radius: 4px!important;
+  --collection-list-item-padding: 1px 4px!important;
+
+  /* Spacing between gallery cards */
+  --collection-gallery-gap: 16px!important;
+
+  /* Collection Card */
+  --collection-card-border-radius: 0!important;
+  --collection-card-border: 1px solid black!important;
+  --collection-card-text-color: black;
+  --collection-card-shadow: none!important;
+  --collection-card-cover-size-small: 172px!important;
+  --collection-card-cover-size-medium: 200px!important;
+  --collection-card-cover-size-large: 320px!important;
+  --collection-title-text-size: 14px !important;
+
+  /* Spacing inside table collections */
+  --table-padding: 6px 8px!important;
+
+  /* Pill */
+  --notion-pill-padding: 0px!important;
+  --notion-pill-margin: 3px 0!important;
+  --notion-pill-border-radius: 0px!important;
+  --notion-pill-text-size: 14px!important;
+
+  /* Rounded edges on images */
+  --image-border-radius: 0!important;
+
+  /* Divider block */
+  --divider-margin: 8px 0px!important;
+  --divider-opacity: 1!important;
+
+  /* Typography */
+  /* heading 1 block font size and weight */
+  --h1-size: 3rem!important;
+  --h1-weight: 700!important;
+
+  /* heading 2 block font size and weight */
+  --h2-size: 2rem!important;
+  --h2-weight: 600!important;
+
+  /* heading 3 block font size and weight */
+  --h3-size: 1.5rem!important;
+  --h3-weight: 700!important;
+
+	/* code font size */
+  --code-size: 0.75rem!important;
+
+  /* Quote block font size */
+  --quote-size: 1em!important;
+
+  /* Colors (Use RGB Values) */
+  --color-default: 55, 53, 47!important;
+  --color-white: 255, 255, 255!important;
+  --color-gray: 155, 154, 151!important;
+  --color-brown: 100, 71, 58!important;
+  --color-orange: 217, 115, 13!important;
+  --color-yellow: 223, 171, 1!important;
+  --color-green: 15, 123, 108!important;
+  --color-blue: 11, 110, 153!important;
+  --color-purple: 105, 64, 165!important;
+  --color-pink: 173, 26, 114!important;
+  --color-red: 225, 62, 62!important;
+
+  /* UI Colors */
+  --color-ui-hover-bg: rgba(55, 53, 47, 0.08)!important;
+  --color-ui-hover-bg-light: rgba(55, 53, 47, 0.03)!important;
+  --color-card-bg: rgb(255, 255, 255)!important;
+  --color-border-default:  rgba(255,255,255,0.1) !important;
+  --color-border-dark: rgba(55, 53, 47, 0.16)!important;
+  --color-bg-default: #222 !important;
+
+  /* Callout */
+  --callout-margin: 1rem 0 !important;
+  --callout-border-radius: 0 !important;
+  --callout-padding: 1.5rem !important;
+  --callout-shadow: none !important;
+
+  /* Colors */
+  --horror-red: #FF5C00;
+
+}
+.super-navbar{
+    display: none !important;
+}
+.super-navbar__item{
+    opacity: 1 !important;
+}
+.super-content {
+    padding-bottom: 0vh!important;
+    position: relative;
+    z-index: 3;
+ }
+.notion-header{
+    position: relative;
+    z-index: 3;
+}
+
+div[class^="page__"]:not(.page__index){
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.notion-header__cover.no-cover{
+    max-height: 0 !important;
+    height: 0 !important;
+}
+.notion-header__content.no-cover .notion-header__title-wrapper,
+.notion-header.collection .notion-header__content.no-cover.no-icon .notion-header__title-wrapper{
+    margin-top: 10rem !important;
+}
+.notion-property__title__icon-wrapper{
+    display:none !important;
+}
+
+.notion-image{
+    border: 2px solid black !important;
+    position: relative !important;
+    z-index: 1001 !important; /* over tinting */
+    /*-webkit-mask-box-image: url(../assets/image-mask.svg) 24 stretch;*/
+}
+
+.notion-pill{
+    background: none !important;
+    padding: none !important;
+}
+.notion-pill:after{
+    content: '•';
+    opacity: 0.5;
+    margin: 0 0.5rem;
+}
+.notion-pill:last-of-type:after{
+    display: none;
+}
+
+.notion-collection-gallery, 
+.notion-collection-board, 
+.notion-collection-list{
+    border: none !important;
+    position: relative;
+}
+
+.notion-collection-gallery:not(.grouped){
+    padding-top: 1rem !important;
+}
+.notion-collection-gallery:before, 
+.notion-collection-board:before, 
+.notion-collection-list:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid var(--color-border-default);
+}
+.notion-collection-gallery:before, 
+.notion-collection-board:before, 
+.notion-collection-list:before,
+.notion-divider{
+    border-width: 2px !important;
+    filter: url(#turbulence);
+}
+.notion-collection.inline{
+    margin-top: 1rem;
+}
+.notion-heading + .notion-collection.inline{
+    margin-top: 0;
+}
+
+
+/* Notion Embeds */
+.notion-embed__content{
+    display: block !important;
+    position: relative;
+}
+.notion-embed__content>div[style*="width"]{
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    max-width: 100vw;
+}
+.notion-embed__content .notion-embed__container{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Notion Gallery View */
+
+.notion-collection-gallery{
+    display: block !important;
+    widows: 2;
+}
+.notion-collection-gallery.medium{
+    columns: 2 !important;
+    column-gap: 1rem !important;
+    /*width: 50vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);*/
+}
+.notion-collection-gallery.small{
+    columns: 3 !important;
+    column-gap: 1rem !important;
+}
+.notion-collection-gallery .notion-collection-card{
+    display: block !important;
+    margin: 0 0 1rem 0 !important;
+    width: 100% !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+/* Notion Collection Card */
+.notion-collection-card__cover{
+    border: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+ }
+ .notion-collection-gallery{
+     grid-auto-rows: auto !important;
+ }
+ .notion-collection-card__cover>span, 
+ .notion-collection-card__cover>span>img{
+     position: static !important;
+     width: auto !important;
+     height: auto !important;
+ }
+ .notion-collection-card{
+     background: #ccc !important;
+     padding: 0.5rem;
+     color: var(--collection-card-text-color);
+     transform: none;
+     transition: all .2s ease-in-out !important;
+ }
+ .notion-collection-card__content .notion-property .notion-semantic-string .date{
+     color: var(--collection-card-text-color);
+ }
+ .notion-collection-card .notion-property__title .notion-semantic-string{
+     line-height: 1.2 !important;
+ }
+ .notion-collection-card:hover{
+     transform: rotate(1deg);
+     background: #ccc !important;
+ }
+ .notion-collection-card:nth-child(2n + 1):hover{
+    transform: rotate(-1deg);
+ }
+ .notion-collection-card__cover:after{
+    content: '';
+    display: block;
+    filter: url(#turbulence);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+ }
+ .notion-collection-card:after{
+     content: '';
+     position: absolute;
+     left: 0.5rem;
+     top: 0.5rem;
+     bottom: 0.5rem;
+     right: 0.5rem;
+     border: 1px solid rgba(0,0,0,0.5);
+     filter: url(#turbulence);
+ }
+ .notion-collection-card__cover>span>img{
+     transition: all .2s ease-in-out;
+ }
+ .notion-collection-card:hover .notion-collection-card__cover>span>img{
+     filter: none;
+ }
+ .notion-collection-card.gallery .notion-property__title .notion-semantic-string{
+     white-space: normal !important;
+     widows: 3; 
+     orphans: 3;
+ }
+ .notion-collection__header-wrapper{
+     margin-top: 0 !important;
+ }
+ .notion-page__icon{
+    background: url(../assets/cursor-noblend.svg) center center no-repeat;
+    background-size: contain;
+ }
+ .notion-page__icon img{
+     display: none !important;
+ }
+ a:hover .notion-page__icon{
+    animation: point-right 0.3s ease-out alternate infinite;
+ }
+ .error-text{
+     color: inherit !important;
+ }
+
+/* Notion footer block */
+#block-6820a04f36824fa287eb4ae4dbac0be0{
+    background: none !important;
+    border: 0 !important;
+    position: relative;
+    margin: 2rem 0 !important;
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 24px solid #eee;
+    background: #111111;
+    border-image: url(../assets/borders.svg) 24 stretch;
+    background-clip: padding-box;
+    z-index: -1;
+    filter: url(#turbulence);
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0>.notion-callout__icon{
+    width: 6rem;
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0>.notion-callout__icon>span{
+    width: 6rem !important;
+    height: 6rem !important;
+    filter: url(#chromatic-aberration);
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0>.notion-callout__content{
+    margin-inline-start: 0;
+    padding-left: 0rem;
+    display: flex !important;
+    width: auto !important;
+    overflow: visible !important;
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0 .notion-callout__content{
+    overflow: visible !important;
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0 .notion-callout{
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+#block-6820a04f36824fa287eb4ae4dbac0be0 .notion-callout>.notion-callout__icon{
+    display: none !important;
+}
+@media screen and (max-width:600px){
+    #block-6820a04f36824fa287eb4ae4dbac0be0>.notion-callout__content{
+        flex-direction: column;
+    }
+}
+
+/* Notion Page */
+.notion-header__icon-wrapper{
+    display: none !important;
+}
+
+/* Rog.ie global styles */
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    font-size: 14px;
+    min-height: 100%;
+    background: #111;
+}
+html{
+    cursor:url(../assets/pointer.svg) 12 12,auto;
+}
+html a:hover{
+    cursor:url(../assets/pointer.svg) 12 12,auto;
+}
+html,body{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+html body{
+    min-height: 100vh;
+    font-family: 'Gooper' !important;
+    font-variation-settings: "slnt" 1, "wght" 300;
+    font-size: 14px;
+    background-color: #111 !important;
+}
+body{
+    font-size: inherit;
+}
+h1,h2,h3{
+    font-family: 'phosphatesolid';
+    font-weight: normal;
+    text-transform: uppercase;
+}
+h1{
+    font-size: 3rem !important;
+}
+h2{
+    font-size: 2.5rem !important;
+}
+h3{
+    font-size: 2rem !important;
+}
+
+.fun-letters {
+    letter-spacing: 0.15em;
+    font-family: 'phosphatesolid';
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.fun-letters .word,
+.fun-letters .letter {
+    min-width: 0.25em;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+}
+.fun-letters .letter{
+    filter:  url(#chromatic-aberration) url(#stroked-text) url(#solid-shadow);
+}
+.fun-letters a{
+    opacity: 1 !important;
+    border: 0 !important;
+}
+
+body:before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-size: contain, contain;
+    background: radial-gradient(150% 100% at 50% 65%, rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0) 20%, #000 80%), url(../assets/noise.svg);     
+    filter: contrast(180%) brightness(500%) grayscale(100%);
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+/*  tint  */
+body:after{
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #EADBAC url(../assets/noise.png);
+    opacity: 0.5;
+    position: fixed;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 1000;
+}
+
+/* Navigation */
+
+nav{
+    position: fixed !important;
+    z-index: 999;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    filter: url(#grainy-shadow);
+    --nav-item-size: min(4rem,10vw);
+}
+
+nav:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 24px solid #eee;
+    background: #111111;
+    border-image: url(../assets/borders.svg) 24 stretch;
+    filter: url(#turbulence);
+    background-clip: padding-box;
+    will-change: border-image, filter;
+}
+
+nav>ul{
+    padding: 0 1rem;
+    margin: -0.25rem; 
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: var(--nav-item-size);
+    filter: url(#chromatic-aberration);
+}
+nav>ul>li{
+    width:  var(--nav-item-size);
+    height: var(--nav-item-size);
+    display: block;
+    overflow: visible;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    will-change: width, height;
+}
+
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    overflow: visible;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    will-change: filter, background-image;
+}
+nav>ul a>span{
+    opacity: 0;
+    transform: scale(0) translateX(-50%);
+    transform-origin: 0 100%;
+    position: absolute;
+    left: 50%;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    bottom: -1.5rem;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    background: #000;
+    border: 2px solid #494949;
+    pointer-events: none;
+    will-change: transform;
+    
+}
+
+nav>ul a:hover>span{
+    opacity: 1;
+    transform: scale(1) translateX(-50%) translateY(1rem);
+}
+nav a[href*="twitter"]{
+    background: center center url(../assets/twitter.svg) no-repeat;
+    background-size: contain;
+}
+nav a[href*="twitter"]:hover{
+    background-image: url(../assets/twitter.svg#play);
+}
+nav a[href*="art"]{
+    background: center center url(../assets/art.svg) no-repeat;
+    background-size: contain;
+}
+nav a[href*="art"]:hover{
+    background-image: url(../assets/art.svg#play);
+}
+nav a[href*="figma"]{
+    background: center center url(../assets/figma.svg) no-repeat;
+    background-size: contain;
+}
+nav a[href^="/horror"]{
+    background: center center url(../assets/slasher.svg) no-repeat;
+    background-size: contain;
+    width: 120%;
+    height: 120%;
+    margin-left: -10%;
+    margin-top: -10%;
+}
+nav a[href^="/horror"]:hover{
+    background: center center url(../assets/slasher.svg#play) no-repeat;
+    background-size: contain;
+}
+nav a[href*="mailto:hi@rog.ie"]{
+    background: center center url(../assets/hello.svg) no-repeat;
+    background-size: contain;
+}
+nav a[href*="mailto:hi@rog.ie"]:hover{
+    background-image: url(../assets/hello.svg#play);
+}
+nav ul>.rogie{
+    box-sizing: content-box;
+    padding: 0 min(2.5rem,6vw);
+}
+nav ul>.rogie>a{
+    background: center center url(../assets/rog.ie-logo.svg) no-repeat;
+    background-size: contain;
+    width: 200%;
+    height: 200%;
+    transform: translate(-25%,-25%);
+}
+nav ul>.rogie>a>span{
+    bottom: 1rem;
+    pointer-events: none;
+}
+
+
+/* Horror Page */
+html[page^="/horror"] body:before{
+    background: radial-gradient(150% 150% at 50% 80%, black 0%,black 25%, transparent 80%), url(../assets/noise.svg);     
+    filter: contrast(600%) brightness(700%) grayscale(100%);
+    mix-blend-mode: multiply;
+}
+html[page^="/horror"] body{
+    background: #C30303 !important;
+}
+html[page^="/horror"] nav:before{
+    border-image: url(../assets/borders-horror.svg) 24 stretch;
+    filter: url(#turbulence);
+    background-color: #000000;
+}
+
+html[page^="/horror"] h1.fun-letters{
+    font-family: 'Mausoleum';
+    font-variation-settings: "wght" 950;
+    font-feature-settings: "liga" 0, "dlig" 0;
+    color: var(--horror-red);
+    text-transform: none;
+    font-size: 3.5rem !important;
+    text-align: center;
+    -webkit-text-stroke-width: 0 !important;
+}
+html[page^="/horror"] h1.fun-letters .letter{
+    filter:  url(#stroked-text) url(#inset-grainy-shadow) url(#solid-shadow);
+}
+html[page^="/horror"] h1.fun-letters .letter:hover{
+    font-variation-settings: "wght" 600;
+}
+html[page^="/horror"] .fun-letters{
+    font-family: 'Mausoleum';
+    font-variation-settings: "wght" 700;
+    font-feature-settings: "liga" 0, "dlig" 0;
+    color: var(--horror-red);
+    -webkit-text-stroke-width: 0 !important;
+    filter: url(#horror-shadow);
+}
+html[page^="/horror"] .fun-letters .letter{
+    letter-spacing: -0.05em;
+    filter:url(#stroked-text) url(#inset-grainy-shadow-small) url(#solid-shadow) ;
+}
+
+/* Home Page */
+html[page="/"] h1{
+    display: none;
+}
+html[page="/"] .notion-header{
+    display: none !important;
+}
+html[page="/"] #block-595cc37020f340c08b098bb3575a1dcd{
+    position: relative;
+    z-index: 0;
+}
+html[page="/"] .rogie-intro{
+    display: block;
+}
+
+/* Intro Area */
+.rogie-intro{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 50px 0 50px 0;
+    will-change: transform, filter;
+    --orange: #FF9800;
+    --pink: #EB5D72;
+    --blue: #51CAE4;
+    --green: #B6C25E;
+    --grey: #666;
+    --purple: #4C3744;
+    --plum: #94739D;
+    overflow: hidden;
+    margin: 0;
+    width: calc(100% - 6vw);
+    height: 600px;
+    margin: 3vw;
+    -webkit-mask-box-image: url(../assets/image-mask.svg) 24 stretch;
+    display: none;
+}
+.rogie-intro:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, #8B6F82 0%, #030B16 100%);
+    z-index: -1;
+}
+.rogie-intro .film-grain{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 1;
+    background: url(../assets/film-scratches.png) center center repeat;
+    background-size: 500px;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: film-grain 2s steps(4) infinite;
+}
+.rogie-intro:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-size: contain, contain;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 20%, #000 100%), url(../assets/noise.svg);     
+    filter: contrast(200%) brightness(600%) grayscale(100%) opacity(100%);
+    mix-blend-mode: multiply;
+    opacity:1;
+}
+.rogie-intro a{
+    color: inherit;
+}
+.rogie-illustration{
+    position: relative;
+    height: 100%;   
+}
+
+.rogie-intro .face{
+    width: 10rem;
+    height: 10rem;
+    background: red;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: url(../assets/rogie.svg) center center no-repeat;
+    background-size: contain;
+    filter: url(#chromatic-aberration) url(#grainy-shadow);
+}
+
+/* Circular text */
+.rogie-intro .circular-text{
+    overflow: visible;
+    will-change: transform, filter;
+    filter:  url(#solid-shadow) url(#grainy-shadow);
+    animation: rotate-circular-text 100s linear infinite forwards;
+    animation-play-state: paused;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+}
+.rogie-intro:hover .circular-text{
+    animation-play-state: running;
+}
+.rogie-intro .circular-text text{
+    font-family: 'phosphatesolid';
+    text-transform: uppercase;
+    fill: grey;
+    font-size: 2.22rem;
+    paint-order: stroke;
+    stroke: #000000;
+    stroke-width: 6px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+}
+.rogie-intro .circular-text text{
+    letter-spacing: 0.2em;
+    filter: url(#chromatic-aberration);
+}
+.rogie-intro .circular-text text a{
+    fill: white;
+    letter-spacing: -.01em;
+    pointer-events: all;
+}
+.rogie-intro .circular-text text a:hover{
+    fill: var(--orange);
+}
+.rogie-intro .circular-text text a:nth-of-type(2):hover{
+    fill: var(--pink);
+}
+.rogie-intro .circular-text text a:nth-of-type(3):hover{
+    fill: var(--blue);
+}
+.rogie-intro .circular-text text a:nth-of-type(4):hover{
+    fill: var(--green);
+}
+.rogie-intro .circular-text text a:nth-of-type(5):hover{
+    fill: var(--plum);
+}
+.rogie-intro .circular-text text a tspan:last-of-type{
+    letter-spacing: 0.2rem;
+}
+
+.rogie-intro .flash{
+    background: url(../assets/deco-flash.svg) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.75;
+    filter: grayscale(100%) url(#turbulence);
+    mix-blend-mode: multiply;
+}
+
+/* Page Load */
+body > *{
+    opacity: 0 !important;
+    transition: opacity 0.5s ease-in-out;
+}
+body.loaded > *{
+    opacity: 1 !important;
+}
+body:not(.loaded) .fun-letters .letter{
+    transform: translateY(30%) rotate(-10deg) scale(0.5) !important;
+}
+.fun-letters .letter{
+    transition: transform .2s 1s ease-in-out, font-variation-settings .2s ease-in-out;
+}
+.fun-letters .letter:nth-child(1){
+    transition-delay: 0s;
+}
+.fun-letters .letter:nth-child(2){
+    transition-delay: 0.025s;
+    
+}
+body:not(.loaded) .fun-letters .letter:nth-child(2){
+    transform: translateY(30%) rotate(10deg) scale(0.5) !important;
+}
+.fun-letters .letter:nth-child(3){
+    transition-delay: 0.05s;
+}
+body:not(.loaded) .fun-letters .letter:nth-child(3){
+    transform: translateY(30%) rotate(-20deg) scale(0.5) !important;
+}
+.fun-letters .letter:nth-child(4){
+    transition-delay: 0.075s;
+}
+body:not(.loaded) .fun-letters .letter:nth-child(4){
+    transform: translateY(30%) rotate(-10deg) scale(0.5) !important;
+}
+.fun-letters .letter:nth-child(5){
+    transition-delay: 0.1s;
+}
+body:not(.loaded) .fun-letters .letter:nth-child(5){
+    transform: translateY(30%) rotate(-30deg) scale(0.5) !important;
+}
+.fun-letters .letter:nth-child(6){
+    transition-delay: 0.125s;
+}
+body:not(.loaded) .fun-letters .letter:nth-child(6){
+    transform: translateY(30%) rotate(30deg) scale(0.5) !important;
+}
+.fun-letters .letter:nth-child(7){
+    transition-delay: 0.15s;
+}
+body:not(.loaded) .fun-letters .letter:nth-child(7){
+    transform: translateY(30%) rotate(0deg) scale(0.5) !important;
+}
+
+
+
+/* Animations */
+@keyframes point-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-20%);
+    }
+}
+@keyframes rotate-circular-text{
+    from{
+        transform:  translate(-50%,-50%) rotate(0);
+    }
+    to{
+        transform:  translate(-50%,-50%) rotate(-360deg);
+    }
+}
+@keyframes film-grain{
+    from{
+        transform:  rotate(0deg);
+    }
+    to{
+        transform:  rotate(360deg);
+    }
+}
