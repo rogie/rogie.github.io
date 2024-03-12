@@ -1,0 +1,178 @@
+<script type="importmap">
+{
+    "imports": {
+        "react": "https://cdn.skypack.dev/react@18.0.2",
+        "react-dom": "https://cdn.skypack.dev/react-dom@18.0.2",
+        "three": "https://cdn.skypack.dev/three@0.148.0",
+        "react-three/fiber": "https://cdn.skypack.dev/@react-three/fiber@7.0.24"
+    }
+}
+</script>
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .nt-embed{
+        width: 100%;
+        height: 100%;
+    }
+    .nt-embed canvas{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<script type="module">
+    import React, {useRef,useMemo} from 'react';
+    import ReactDOM from 'react-dom';
+    import * as THREE from 'three';
+    import {Canvas, useFrame, useThree} from 'react-three/fiber';
+
+    let embedRoot = document.createElement('div');
+    embedRoot.className = "nt-embed";
+    document.body.appendChild(embedRoot);
+
+    const TextureMesh = () => {
+        const mesh = useRef(null)
+        useFrame(state => {
+            const { clock, mouse, gl, scene, camera } = state
+            if(mesh.current){
+                mesh.current.material.uniforms.u_mouse.value = [mouse.x / 2 + 0.5, mouse.y / 2 + 0.5]
+                mesh.current.material.uniforms.u_time.value = clock.getElapsedTime()
+                let c = gl.domElement.getBoundingClientRect()
+                mesh.current.material.uniforms.u_resolution.value = [c.width,c.height]
+            }
+        })
+        
+        return React.createElement('mesh',
+            {
+                ref:mesh,
+                position: [0,0,0],
+                scale: 1,
+                rotation: [0,0,0]
+            },
+            React.createElement('planeGeometry',{args:[100,100]}), 
+            React.createElement('shaderMaterial',{
+                fragmentShader: `// Fragment shader
+
+/* 
+Credit: 
+Author:[Fabio Ottaviani](https://twitter.com/supahfunk),
+Inspiration: [Discoteq 2](https://www.shadertoy.com/view/DtXfDr)
+*/
+
+//Credit: Code & Mods: [Rogie](https://twitter.com/rogie)
+
+// Uniforms
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+uniform float u_time;
+uniform vec3 u_colors[4];
+uniform vec4 u_background;
+uniform float u_scale; //units:%
+uniform int u_waves; //min:1, max: 32
+uniform float u_thickness; //units:%,min:0.01,max:0.25
+uniform float u_stretch_x;//units:%
+uniform float u_stretch_y;//units:%
+uniform float u_blur; //units:%,min:0,max:0.2
+uniform float u_speed; //units:%
+uniform float u_coil; //units:%,min:0,max:8
+
+vec4 wave(vec2 uv, float speed, float height, vec3 col) {
+    float taper = abs(uv.x) * 1.;
+
+    uv.y += smoothstep(1., 0., taper) * sin(u_time * speed + uv.x * height) * .2;
+
+    return vec4(
+      smoothstep(u_blur * smoothstep(.1, .9, taper),
+      0.,
+      abs(uv.y)*(1.-u_blur) - .2*u_thickness) * col, 1.)
+      * smoothstep(1., .5, abs(uv.x));
+}
+
+#ifndef RENDER 
+  vec4 render(vec2 uv) {
+    vec4 color = vec4(0.);
+    
+    //scaling
+    uv *= (1.-u_scale);
+    
+    //lines
+    for (int i = 1; i <= u_waves; i += 1) {
+        //color
+        vec3 c = u_colors[int(mod(float(i),float(u_colors.length())))];
+
+        float t = float(i) / float(u_waves);
+
+        vec4 l = wave(
+          uv * vec2(1.5 - 1.5*u_stretch_x,4.-4.*u_stretch_y), //uv
+          1. + t*u_speed*8.0, //speed
+          u_coil * t, //height
+          c * vec3(.2 + t * .7, .2 + t * .4, 1.0 * t)
+        );
+
+        color += vec4(l.rgb,clamp(l.r+l.g+l.b,0.,1.));
+    }
+    
+    return color;
+  }
+  #define RENDER(UV) render(UV)
+#endif
+
+void main() {
+    vec2 uv = (gl_FragCoord.xy - .5 * u_resolution.xy) / u_resolution.y;
+    
+    vec4 color = RENDER(uv);
+    
+    // Background color
+    color = (color * color.a) + (u_background * (1. - color.a));
+
+    gl_FragColor = color;
+    
+}`,
+                vertexShader: `// Vertex shader
+
+void main() {
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}`,
+                uniforms: {u_colors: {value: [new THREE.Vector4(0.9372549019607843,0,1,1),new THREE.Vector4(0.8745098039215686,1,0,1),new THREE.Vector4(0,1,1,1),new THREE.Vector4(0.4666666666666667,0.2196078431372549,1,1)]},u_background: {value: [0,0,0,0]},u_scale: {value: 0},u_waves: {value: 8},u_thickness: {value: 0.04},u_stretch_x: {value: 0},u_stretch_y: {value: 0.677},u_blur: {value: 0.04},u_speed: {value: 0.196},u_coil: {value: 6.084},u_pixel_size: {value: 0.337},u_time: {value: 0},u_mouse: {value: [0,0]},u_resolution: {value: [100,100]}},
+                wireframe: false, 
+                wireframeLinewidth: 0,
+                dithering: false,
+                flatShading: true,
+                doubleSided: true,
+                glslVersion: "100"
+            })
+        );  
+    }
+
+    ReactDOM.render(React.createElement(Canvas,{
+            gl: {
+                preserveDrawingBuffer: true,
+                premultipliedAlpha: false,
+                alpha: true,
+                transparent: true,
+                antialias: true,
+                precision: "highp",
+                powerPreference: "high-performance"
+            },
+            resize:{
+                debounce: 0,
+                scroll: false,
+                offsetSize: true
+            },
+            dpr: 1,
+            camera: {
+                fov: 75,
+                near: 0.1,
+                far: 1000,
+                position: [0,0,5]
+            },
+            style:{ height: "100%", width: "100%" }
+        },
+        React.createElement(TextureMesh)                           
+    ), embedRoot);
+</script>
